@@ -1,6 +1,6 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Georgy Nikitin](https://up.htmlacademy.ru/adaptive/18/user/1118677).
+* Студент: Georgy Nikitin
 * Наставник: [Вадим Новаш] (https://up.htmlacademy.ru/adaptive/18/user/8589)
 
 ---
