@@ -1,0 +1,46 @@
+.nav-list {
+  @include ul-reset;
+}
+
+.nav-list__item {
+  padding-left: 76px;
+  padding-top: 32px;
+
+  height: 79px;
+  box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
+}
+
+.nav-list__link {
+  font-weight: 700;
+  color: #000000;
+}
+
+.nav-list__link--search {
+  position: relative;
+}
+
+.nav-list__link--basket {
+  position: relative;
+}
+
+.nav-list__link--search::before {
+  position: absolute;
+  content: "";
+  left: -47px;
+  top: 3px;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icon-search.svg");
+  opacity: 0.2;
+}
+
+.nav-list__link--basket::before {
+  position: absolute;
+  content: "";
+  left: -47px;
+  top: 3px;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icon-cart.svg");
+  opacity: 0.2;
+}

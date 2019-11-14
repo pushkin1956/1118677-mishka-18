@@ -1,0 +1,41 @@
+.page-catalog {
+  margin-bottom: 58px;
+}
+
+.page-catalog__title {
+  @include page__title;
+}
+
+.catalog-list {
+  @include ul-reset;
+}
+
+.catalog-list__wrapper {
+  padding-top: 31px;
+  padding-left: 28px;
+  padding-right: 28px;
+  border: solid 1px #ececec;
+}
+
+.catalog-list__link-text {
+  @include title-h3;
+}
+
+.catalog-list__description {
+  margin-bottom: 27px;
+  font-size: 13px;
+  line-height: 2.31;
+
+  color: #444444;
+}
+
+.catalog-list__line {
+  margin-bottom: 27px;
+  border-top: 1px solid #ececec;
+}
+
+.catalog-list__price {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.6;
+}

@@ -1,0 +1,61 @@
+@mixin ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin title-h1 {
+  margin: 0;
+
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+}
+
+@mixin title-h2 {
+  margin: 0;
+
+  /* gjcnfdbk 24px так как требуемые 25 не промещаются */
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@mixin title-h3($color: #000000) {
+  margin: 0;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.18;
+  color: $color;
+}
+
+@mixin btn($button-field-border-color: #444444, $button-bg-color: #ffffff) {
+  display: block;
+  width: 100%;
+  padding: 22px 0;
+  border: 2px solid $button-field-border-color;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.18px;
+  color: #444444;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $button-bg-color;
+}
+
+@mixin page__title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 177px;
+  margin-bottom: 30px;
+
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  background-color: #ececec;
+}
