@@ -1,0 +1,39 @@
+.contacts {
+  margin-bottom: 42px;
+}
+
+.contacts__title {
+  margin-bottom: 42px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.67;
+}
+
+.contacts__mail,
+.contacts__adress {
+  display: flex;
+}
+
+.contacts__mail-title,
+.contacts__mail-link,
+.contacts__adress-title,
+.contacts__adress-text {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  color: #444444;
+}
+
+.contacts__mail-title,
+.contacts__adress-title {
+  padding-right: 32px;
+}
+
+.contacts__adress-text {
+  width: 141px;
+}

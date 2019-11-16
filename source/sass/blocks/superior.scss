@@ -1,0 +1,52 @@
+.superior {
+
+  margin-bottom: 36px;
+}
+
+.superior__title {
+  @include title-h2;
+  margin-bottom: 8px;
+}
+
+.superior__type {
+  @include title-h3(#63d1bb);
+  margin-bottom: 30px;
+}
+
+.superior__decription {
+  margin-bottom: 33px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444444;
+}
+
+.superior__list {
+  margin-bottom: 15px;
+}
+
+.superior__field,
+.superior__value {
+  padding-bottom: 20px;
+
+  font-size: 15px;
+  line-height: 1.33;
+  color: #444444;
+}
+
+.superior__field {
+  padding-right: 19px;
+}
+
+.superior__price {
+  margin-bottom: 28px;
+
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.41;
+  color: #444444;
+  text-align: center;
+}
+
+.button {
+  @include btn;
+}

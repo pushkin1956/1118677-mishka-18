@@ -1,0 +1,59 @@
+.about-us {
+  margin-bottom: 61px;
+}
+
+.about-us__title {
+  @include title-h2;
+  margin-bottom: 31px;
+}
+
+.about-us__list {
+  @include ul-reset;
+  margin-bottom: 61px;
+}
+
+.about-us__item {
+  @include title-h3;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+
+    width: 55px;
+    height: 38px;
+    top: -15px;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    fill: #63d1bb;
+  }
+
+  &--ecology::before {
+    background-image: url("../img/icon-feature-flower.svg");
+  }
+
+  &--style::before {
+    background-image: url("../img/icon-feature-money.svg");
+  }
+
+  &--likes::before {
+    background-image: url("../img/icon-feature-heart.svg");
+  }
+
+  &--by-hand::before {
+    background-image: url("../img/icon-feature-ball.svg");
+  }
+
+  &--support::before {
+    background-image: url("../img/icon-feature-rocket.svg");
+  }
+
+  &--gift::before {
+    background-image: url("../img/icon-feature-gift.svg");
+  }
+}
