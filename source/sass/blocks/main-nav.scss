@@ -1,3 +1,20 @@
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  background-color: red;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  height: 79px;
+}
+
 .nav-list {
   @include ul-reset;
 }
@@ -43,4 +60,15 @@
   height: 18px;
   background-image: url("../img/icon-cart.svg");
   opacity: 0.2;
+}
+
+@media (min-width: 572px) {
+  .main-nav {
+    justify-content: space-between;
+  }
+
+  .logo {
+    /* для проверки изменения меняю цвет фона */
+    background-color: red;
+  }
 }

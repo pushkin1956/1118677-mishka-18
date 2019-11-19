@@ -21,11 +21,7 @@
   padding: 0;
   margin: 0;
   font-size: 15px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 2;
-  letter-spacing: normal;
   color: #444444;
 }
 
@@ -36,4 +32,5 @@
 
 .contacts__adress-text {
   width: 141px;
+  font-style: normal;
 }

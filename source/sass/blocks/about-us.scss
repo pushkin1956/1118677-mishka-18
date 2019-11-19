@@ -3,7 +3,6 @@
 }
 
 .about-us__title {
-  @include title-h2;
   margin-bottom: 31px;
 }
 
@@ -13,7 +12,6 @@
 }
 
 .about-us__item {
-  @include title-h3;
   position: relative;
   padding-top: 40px;
   padding-bottom: 30px;
@@ -22,15 +20,12 @@
     position: absolute;
     content: "";
     display: block;
-
     width: 55px;
     height: 38px;
     top: -15px;
     left: 0;
     background-repeat: no-repeat;
     background-position: top center;
-
-    fill: #63d1bb;
   }
 
   &--ecology::before {

@@ -4,33 +4,6 @@
   list-style: none;
 }
 
-@mixin title-h1 {
-  margin: 0;
-
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 30px;
-  text-align: center;
-}
-
-@mixin title-h2 {
-  margin: 0;
-
-  /* gjcnfdbk 24px так как требуемые 25 не промещаются */
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-@mixin title-h3($color: #000000) {
-  margin: 0;
-
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.18;
-  color: $color;
-}
-
 @mixin btn($button-field-border-color: #444444, $button-bg-color: #ffffff) {
   display: block;
   width: 100%;

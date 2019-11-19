@@ -3,7 +3,6 @@
 }
 
 .reviews__title {
-  @include title-h2;
   margin-bottom: 38px;
 }
 
@@ -28,6 +27,7 @@
 .reviews__author-mail {
   font-size: 17px;
   font-weight: bold;
+  font-style: normal;
 
   line-height: 1.41;
 }
@@ -64,6 +64,6 @@
   margin-bottom: 41px;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
-  width: 320px;
+  width: 800px;
   height: 6px;
 }

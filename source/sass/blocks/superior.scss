@@ -4,13 +4,12 @@
 }
 
 .superior__title {
-  @include title-h2;
   margin-bottom: 8px;
 }
 
 .superior__type {
-  @include title-h3(#63d1bb);
   margin-bottom: 30px;
+  color: #63d1bb;
 }
 
 .superior__decription {

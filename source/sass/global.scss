@@ -9,14 +9,13 @@ html {
 }
 
 body {
-  width: 320px;
-
+  min-width: 550px;
   font-family: "Open Sans",
     "Arial",
     sans-serif;
   font-size: 17px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: normal;
   color: #000000;
 }
 
@@ -42,4 +41,32 @@ input[type="radio"].visually-hidden {
   border: 0;
   white-space: nowrap;
   clip-path: inset(100%);
+}
+
+h1 {
+  margin-top: 0;
+
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+
+  /* поставил 24px так как требуемые 25 не промещаются */
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h3 {
+  margin-top: 0;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.18;
+  font-stretch: normal;
+  letter-spacing: normal;
 }
