@@ -14,14 +14,14 @@
   display: block;
 }
 
-.catalog-list__wrapper {
+.catalog-list__description {
   padding-top: 31px;
   padding-left: 28px;
   padding-right: 28px;
   border: solid 1px #ececec;
 }
 
-.catalog-list__description {
+.catalog-list__text {
   margin-bottom: 27px;
   font-size: 13px;
   line-height: 2.31;
@@ -36,4 +36,104 @@
   line-height: 1.6;
 
   border-top: 1px solid #ececec;
+}
+
+@media (min-width: $tablet-width) {
+  .page-catalog__title {
+    @include page__title;
+    font-size: 20px;
+  }
+
+  .catalog-list__item {
+    margin-bottom: 54px;
+  }
+
+  .catalog-list__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .catalog-list__image-wrap,
+  .catalog-list__description {
+    width: 50%;
+  }
+
+  .catalog-list__image {
+    display: block;
+  }
+
+  .catalog-list__description {
+    padding-top: 29px;
+    padding-left: 28px;
+    border: solid 1px #ececec;
+  }
+
+  .catalog-list__link-text {
+    font-size: 20px;
+  }
+
+  .catalog-list__text {
+    margin-bottom: 80px;
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .catalog-list__price {
+    padding-top: 27px;
+    margin-right: 33px;
+    margin-left: 10px;
+
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.6;
+
+    border-top: 1px solid #ececec;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-catalog__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .catalog-list__wrapper {
+    display: flex;
+    flex-wrap: column;
+  }
+
+  .catalog-list__image-wrap,
+  .catalog-list__description {
+    width: 312px;
+  }
+
+  .catalog-list__item {
+    margin-bottom: 0;
+    margin-right: 51px;
+  }
+
+  .catalog-list__item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .catalog-list__image {
+    display: block;
+  }
+
+  .catalog-list__description {
+    padding-top: 29px;
+    padding-left: 28px;
+    border: solid 1px #ececec;
+  }
+
+  .catalog-list__text {
+    margin-bottom: 40px;
+  }
+
+  .catalog-list__price {
+    padding-top: 27px;
+    margin-right: 33px;
+    margin-left: 10px;
+  }
 }

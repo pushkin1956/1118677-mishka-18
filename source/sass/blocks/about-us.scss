@@ -8,13 +8,16 @@
 
 .about-us__list {
   @include ul-reset;
-  margin-bottom: 61px;
 }
 
 .about-us__item {
   position: relative;
   padding-top: 40px;
   padding-bottom: 30px;
+
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.18;
 
   &::before {
     position: absolute;
@@ -50,5 +53,84 @@
 
   &--gift::before {
     background-image: url("../img/icon-feature-gift.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    margin-bottom: 82px;
+  }
+
+  .about-us__title {
+    margin-bottom: 80px;
+    font-size: 43px;
+    line-height: 1.16;
+  }
+
+  .about-us__wrapper-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .about-us__list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .about-us__item {
+    position: relative;
+    padding-top: 50px;
+    padding-right: 85px;
+    padding-bottom: 50px;
+
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1;
+
+    /* проверить размеры и можно блок удалить */
+    &::before {
+      top: -15px;
+      left: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    margin-bottom: 89px;
+    margin-left: 175px;
+  }
+
+  .about-us__title {
+    margin-bottom: 54px;
+    font-size: 53px;
+    line-height: 1.08;
+  }
+
+  .about-us__wrapper-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .about-us__list {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  .about-us__item {
+
+    padding-top: 50px;
+    padding-right: 85px;
+    padding-bottom: 50px;
+
+    /* проверить размеры и можно блок удалить */
+    &::before {
+      top: -15px;
+      left: 0;
+    }
   }
 }

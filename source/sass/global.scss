@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  min-width: 550px;
+  min-width: 320px;
   font-family: "Open Sans",
     "Arial",
     sans-serif;
@@ -55,7 +55,7 @@ h1 {
 h2 {
   margin-top: 0;
 
-  /* поставил 24px так как требуемые 25 не промещаются */
+  /* поставил 24px так как требуемые 25 не помещаются */
   font-size: 24px;
   font-weight: 700;
   line-height: 1.2;
@@ -67,6 +67,4 @@ h3 {
   font-size: 17px;
   font-weight: 700;
   line-height: 1.18;
-  font-stretch: normal;
-  letter-spacing: normal;
 }
