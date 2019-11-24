@@ -18,17 +18,58 @@
   background-color: $button-bg-color;
 }
 
-@mixin page__title {
+@mixin centering {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
 
-  min-height: 177px;
-  margin-bottom: 30px;
+@mixin container {
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 0 30px;
 
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 30px;
-  background-color: #ececec;
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
+@mixin mobile-container {
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    width: inherit;
+    padding: 0;
+    margin: 0;
+  }
+  /*@media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }*/
+}
+
+@mixin max-container {
+  width: 1150px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+@mixin zigzag-line ($height-zigzag: 26px) {
+  margin-bottom: 41px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  width: 100%;
+  height: $height-zigzag;
 }

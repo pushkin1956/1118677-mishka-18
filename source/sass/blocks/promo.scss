@@ -8,11 +8,6 @@
 .promo__title {
   padding-top: 80px;
   padding-bottom: 120px;
-
-  font-size: 27px;
-  font-weight: bold;
-  line-height: 30px;
-  text-align: center;
 }
 
 .promo__list {
@@ -33,6 +28,8 @@
   font-weight: bold;
   line-height: 1.26;
   color: #ffffff;
+
+  z-index: 2;
 
   &::after {
     position: absolute;
@@ -68,13 +65,14 @@
   }
 }
 
-
 @media (min-width: $tablet-width) {
   .promo {
+    position: relative;
     margin-bottom: 42px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position-x: 50%;
     background-repeat: no-repeat;
+    z-index: 10;
   }
 
   .promo__title {
@@ -102,6 +100,7 @@
 @media (min-width: $desktop-width) {
   .promo {
     margin-bottom: 60px;
+
     background-image: url("../img/hero-desktop@1x.jpg");
     background-position-x: 50%;
     background-repeat: no-repeat;
@@ -113,5 +112,9 @@
 
     font-size: 53px;
     line-height: 1.08;
+  }
+
+  .promo__list {
+    @include max-container;
   }
 }

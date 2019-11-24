@@ -3,11 +3,20 @@
 }
 
 .page-catalog__title {
-  @include page__title;
+  @include centering;
+
+  margin-bottom: 30px;
+  min-height: 177px;
+
+  background-color: #ececec;
 }
 
 .catalog-list {
   @include ul-reset;
+}
+
+.catalog-list__item {
+  margin-bottom: 30px;
 }
 
 .catalog-list__image {
@@ -46,13 +55,13 @@
 .catalog-list__cart svg {
   fill: #231f20;
   opacity: 0.2;
+  cursor: pointer;
 }
 
 
 @media (min-width: $tablet-width) {
   .page-catalog__title {
-    @include page__title;
-    font-size: 20px;
+    @include centering;
   }
 
   .catalog-list__item {
@@ -81,7 +90,8 @@
 
   .catalog-list__link-text {
     margin-bottom: 5px;
-    font-size: 20px;
+
+    color: #000000;
   }
 
   .catalog-list__text {

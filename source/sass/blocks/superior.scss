@@ -7,6 +7,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin-bottom: 36px;
 }
 
 .superior__title {
@@ -76,6 +78,10 @@
   @include btn;
 }
 
+.superior__zigzag-line {
+  @include zigzag-line;
+}
+
 @media (min-width: $tablet-width) {
   .superior {
     margin-bottom: 40px;
@@ -91,19 +97,12 @@
 
   .superior__title {
     margin-bottom: 55px;
-
-    font-size: 43px;
-    font-weight: bold;
-    line-height: 1.16;
   }
 
   .superior__type {
     width: 80px;
     padding-right: 90px;
     margin-left: auto;
-
-    font-size: 17px;
-    line-height: 1;
   }
 
   .superior__wrapper-inner {
@@ -147,10 +146,6 @@
     z-index: 5;
     margin-left: 58px;
     margin-bottom: 55px;
-
-    font-size: 43px;
-    font-weight: bold;
-    line-height: 1.16;
   }
 
   .superior__type {
@@ -158,8 +153,6 @@
 
     margin-left: 50px;
     width: 80px;
-    font-size: 17px;
-    line-height: 1;
   }
 
   .superior__wrapper-inner {

@@ -1,3 +1,8 @@
 .page-form__title {
-  @include page__title;
+  @include centering;
+
+  margin-bottom: 30px;
+  min-height: 177px;
+
+  background-color: #ececec;
 }
