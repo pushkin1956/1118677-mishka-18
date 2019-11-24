@@ -54,11 +54,3 @@
     width: $desktop-width;
   }
 }
-
-@mixin zigzag-line ($height-zigzag: 26px) {
-  margin-bottom: 41px;
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: repeat-x;
-  width: 100%;
-  height: $height-zigzag;
-}

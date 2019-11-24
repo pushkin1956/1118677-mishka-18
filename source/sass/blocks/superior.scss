@@ -1,5 +1,19 @@
 .superior {
-  margin-bottom: 36px;
+  position: relative;
+  margin-bottom: 80px;
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    bottom: -60px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    height: 6px;
+    /*transform: scale(0.5, 0.5);*/
+    background-repeat: repeat-x;
+    background-size: auto 6px;
+    width: 100%;
+  }
 }
 
 .superior__wrapper {
@@ -7,8 +21,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  margin-bottom: 36px;
 }
 
 .superior__title {
@@ -78,13 +90,15 @@
   @include btn;
 }
 
-.superior__zigzag-line {
-  @include zigzag-line;
-}
-
 @media (min-width: $tablet-width) {
   .superior {
-    margin-bottom: 40px;
+    margin-bottom: 125px;
+
+    &::after {
+      bottom: -80px;
+      height: 13px;
+      background-size: auto 13px;
+    }
   }
 
   .superior__wrapper {
@@ -131,7 +145,13 @@
 
 @media (min-width: $desktop-width) {
   .superior {
-    margin-bottom: 40px;
+    margin-bottom: 160px;
+
+    &::after {
+      bottom: -100px;
+      height: 23px;
+      background-size: auto 23px;
+    }
   }
 
   .superior__wrapper {

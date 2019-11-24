@@ -91,7 +91,7 @@
 
   .main-nav__logo {
     margin-left: 50px;
-    margin-right: 240px;
+    margin-right: 225px;
     min-width: 85px;
   }
 
@@ -105,6 +105,8 @@
 
   .main-nav__inner {
     width: inherit;
+    padding: 0;
+    margin: 0;
   }
 
   .nav-list--first {
@@ -145,11 +147,19 @@
     font-weight: 700;
   }
 
+
   .nav-list__link--search {
     width: 0;
     font-size: 0;
   }
 
+  .main-nav__inner--search {
+    width: 82px;
+  }
+
+  .main-nav__inner--basket {
+    padding-left: 32px;
+  }
   /* после установки собсвенноых лого возможно удалить - чтоб строки не перскакивали */
   .nav-list__link--knitting {
     padding-right: 20px;
@@ -185,7 +195,7 @@
 
   .nav-list--second {
     order: 3;
- }
+  }
 
   .nav-list--third {
     order: 4;
