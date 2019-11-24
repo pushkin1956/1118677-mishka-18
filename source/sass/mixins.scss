@@ -40,30 +40,19 @@
   }
 }
 
-@mixin mobile-container {
+@mixin container {
   width: $mobile-width;
   margin: 0 auto;
   padding: 0 30px;
 
   @media (min-width: $tablet-width) {
-    width: inherit;
-    padding: 0;
-    margin: 0;
-  }
-  /*@media (min-width: $tablet-width) {
     width: $tablet-width;
     padding: 0 50px;
   }
 
   @media (min-width: $desktop-width) {
     width: $desktop-width;
-  }*/
-}
-
-@mixin max-container {
-  width: 1150px;
-  margin: 0 auto;
-  padding: 0 50px;
+  }
 }
 
 @mixin zigzag-line ($height-zigzag: 26px) {

@@ -108,13 +108,13 @@
 
   .promo__title {
     padding-top: 160px;
-    padding-bottom: 270px;
+    padding-bottom: 308px;
 
     font-size: 53px;
     line-height: 1.08;
   }
 
   .promo__list {
-    @include max-container;
+    @include container;
   }
 }
