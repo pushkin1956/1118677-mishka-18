@@ -23,7 +23,6 @@
   padding-bottom: 30px;
   padding-right: 150px;
 
-
   font-size: 19px;
   font-weight: bold;
   line-height: 1.26;
@@ -73,6 +72,19 @@
     background-position-x: 50%;
     background-repeat: no-repeat;
     z-index: 10;
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      bottom: -11px;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      /*background-size: auto 6px;*/
+      width: 100%;
+      z-index: 2;
+    }
   }
 
   .promo__title {
@@ -102,8 +114,11 @@
     margin-bottom: 60px;
 
     background-image: url("../img/hero-desktop@1x.jpg");
-    background-position-x: 50%;
-    background-repeat: no-repeat;
+
+    &::after {
+      bottom: -19px;
+      height: 34px;
+    }
   }
 
   .promo__title {
