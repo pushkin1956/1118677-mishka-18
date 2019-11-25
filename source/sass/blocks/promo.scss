@@ -6,12 +6,8 @@
 }
 
 .promo__title {
-  padding: 80px 37px 120px 37px;
-
-  font-size: 27px;
-  font-weight: bold;
-  line-height: 30px;
-  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 120px;
 }
 
 .promo__list {
@@ -31,6 +27,8 @@
   font-weight: bold;
   line-height: 1.26;
   color: #ffffff;
+
+  z-index: 2;
 
   &::after {
     position: absolute;
@@ -63,5 +61,75 @@
     top: 21px;
     right: 27px;
     background-image: url("../img/icon-toy.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    position: relative;
+    margin-bottom: 42px;
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    z-index: 10;
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      bottom: -11px;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      /*background-size: auto 6px;*/
+      width: 100%;
+      z-index: 2;
+    }
+  }
+
+  .promo__title {
+    padding-top: 160px;
+    padding-bottom: 350px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .promo__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .promo__item {
+    width: 50%;
+  }
+
+  .promo__link {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    margin-bottom: 60px;
+
+    background-image: url("../img/hero-desktop@1x.jpg");
+
+    &::after {
+      bottom: -19px;
+      height: 34px;
+    }
+  }
+
+  .promo__title {
+    padding-top: 160px;
+    padding-bottom: 308px;
+
+    font-size: 53px;
+    line-height: 1.08;
+  }
+
+  .promo__list {
+    @include container;
   }
 }

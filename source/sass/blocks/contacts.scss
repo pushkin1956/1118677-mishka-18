@@ -4,6 +4,7 @@
 
 .contacts__title {
   margin-bottom: 42px;
+
   font-size: 18px;
   font-weight: bold;
   line-height: 1.67;
@@ -20,12 +21,9 @@
 .contacts__adress-text {
   padding: 0;
   margin: 0;
+
   font-size: 15px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 2;
-  letter-spacing: normal;
   color: #444444;
 }
 
@@ -36,4 +34,25 @@
 
 .contacts__adress-text {
   width: 141px;
+  font-style: normal;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    margin-bottom: 40px;
+  }
+
+  .contacts__title {
+    margin-bottom: 40px;
+
+    font-size: 43px;
+    line-height: 1.16;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__title {
+    font-size: 53px;
+    line-height: 1.08;
+  }
 }

@@ -1,22 +1,23 @@
 .social {
   padding-top: 25px;
   padding-bottom: 58px;
+  width: 61%;
 }
 
 .social__list {
   @include ul-reset;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .social__link {
   display: block;
 
-  padding-bottom: 30px;
+
   margin-left: 40px;
 
-  width: 55px;
+  width: 22px;
   height: 38px;
 
   background-repeat: no-repeat;
@@ -52,4 +53,12 @@
   font-size: 19px;
   font-weight: bold;
   line-height: 0.95;
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 21.7%;
+  }
 }

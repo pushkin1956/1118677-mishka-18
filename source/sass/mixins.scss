@@ -4,33 +4,6 @@
   list-style: none;
 }
 
-@mixin title-h1 {
-  margin: 0;
-
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 30px;
-  text-align: center;
-}
-
-@mixin title-h2 {
-  margin: 0;
-
-  /* gjcnfdbk 24px так как требуемые 25 не промещаются */
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-@mixin title-h3($color: #000000) {
-  margin: 0;
-
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.18;
-  color: $color;
-}
-
 @mixin btn($button-field-border-color: #444444, $button-bg-color: #ffffff) {
   display: block;
   width: 100%;
@@ -45,17 +18,39 @@
   background-color: $button-bg-color;
 }
 
-@mixin page__title {
+@mixin centering {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
 
-  min-height: 177px;
-  margin-bottom: 30px;
+@mixin container {
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 0 30px;
 
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 30px;
-  background-color: #ececec;
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
+@mixin container {
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
 }

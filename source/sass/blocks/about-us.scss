@@ -3,57 +3,116 @@
 }
 
 .about-us__title {
-  @include title-h2;
   margin-bottom: 31px;
 }
 
 .about-us__list {
   @include ul-reset;
-  margin-bottom: 61px;
 }
 
 .about-us__item {
-  @include title-h3;
   position: relative;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 55px;
+  margin-bottom: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.18;
+  background-position: top left;
+  background-repeat: no-repeat;
 
-  &::before {
+  /*&::before {
     position: absolute;
     content: "";
     display: block;
-
     width: 55px;
     height: 38px;
-    top: -15px;
+    top: 0;
     left: 0;
     background-repeat: no-repeat;
     background-position: top center;
+  }*/
 
-    fill: #63d1bb;
-  }
+  /*&--ecology::before {
+    background-image: url("../img/icon-feature-flower.svg");
+  }*/
 
-  &--ecology::before {
+  &--ecology {
     background-image: url("../img/icon-feature-flower.svg");
   }
 
-  &--style::before {
+  &--style {
     background-image: url("../img/icon-feature-money.svg");
   }
 
-  &--likes::before {
+  &--likes {
     background-image: url("../img/icon-feature-heart.svg");
   }
 
-  &--by-hand::before {
+  &--by-hand {
     background-image: url("../img/icon-feature-ball.svg");
   }
 
-  &--support::before {
+  &--support {
     background-image: url("../img/icon-feature-rocket.svg");
   }
 
-  &--gift::before {
+  &--gift {
     background-image: url("../img/icon-feature-gift.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    margin-bottom: 82px;
+  }
+
+  .about-us__title {
+    margin-bottom: 80px;
+  }
+
+  .about-us__wrapper-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .about-us__list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .about-us__item {
+    position: relative;
+    padding-top: 60px;
+    padding-right: 40px;
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    margin-bottom: 89px;
+    padding-left: 225px;
+  }
+
+  .about-us__title {
+    margin-bottom: 54px;
+  }
+
+  .about-us__wrapper-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .about-us__list {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
   }
 }
