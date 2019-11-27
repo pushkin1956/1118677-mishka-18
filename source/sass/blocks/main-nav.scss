@@ -1,7 +1,6 @@
 .main-nav {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -21,40 +20,56 @@
   font-size: 0;
   cursor: pointer;
 
-  &--close {
+  &--opened {
     top: 28px;
     width: 21px;
     height: 20px;
     background: url("../img/icon-menu-close.svg") no-repeat;
   }
 
-  &--open {
+  &--closed {
     top: 31px;
     width: 20px;
     height: 14px;
     background: url("../img/icon-menu-open.svg") no-repeat;
   }
+
+  &--nojs {
+    display: none;
+  }
 }
 
 .main-nav__list {
   width: 100%;
-}
 
-.nav-list {
   @include ul-reset;
 }
 
 .nav-list__item {
-  min-height: 79px;
+  min-height: 80px;
   box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
+
+  /* исплользовать в <li class="nav-list__item nav-list__item--active"> в catalog.html form.html*/
+  &--active {
+    padding-top: 74px;
+    padding-bottom: 74px;
+    background-color: #f1f1f1;
+  }
+
+  &--active .nav-list__link {
+    margin: 0 auto;
+
+    font-size: 27px;
+    font-weight: bold;
+  }
 }
 
-.main-nav__inner {
+.nav-list__inner {
   @include container;
   display: flex;
   justify-content: flex-start;
 
-  padding-top: 30px;
+  padding-top: 27px;
 }
 
 .nav-list__item svg {
@@ -65,16 +80,27 @@
 
 .nav-list__link {
   /*display: block;*/
-
-  margin-left: 46px;
-
   font-weight: 700;
   color: #000000;
-}
 
-.nav-list__link--search,
-.nav-list__link--basket {
-  margin-left: 26px;
+  &--catalog,
+  &--knitting {
+    margin-left: 46px;
+  }
+
+  &--search,
+  &--basket {
+    margin-left: 26px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .nav-list--third,
@@ -82,17 +108,31 @@
   display: none;
 }
 
+@media (max-width: $mobile-width-only) {
+  .main-nav__toggle--closed ~ .main-nav__list .nav-list__item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .main-nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    /*@include container;*/
   }
 
   .main-nav__logo {
+    /* удалить после центровки */
     margin-left: 50px;
-    margin-right: 225px;
-    min-width: 85px;
+    margin-right: 185px; /* чтоб разрыв был между блоками */
+    min-width: 112px;
+    min-height: 88px;
   }
 
   .main-nav__toggle {
@@ -103,33 +143,41 @@
     width: inherit;
   }
 
-  .main-nav__inner {
-    width: inherit;
-    padding: 0;
-    margin: 0;
-  }
-
   .nav-list--first {
     order: 3;
+    /* удалить после центрирования */
+    margin-left: 50px;
+    padding-top: 25px;
+    min-width: 310px;
   }
 
   .nav-list--second {
     order: 2;
-
+    /* удалить после центрирования */
     margin-right: 50px;
+    /*margin-left: auto;*/
+    min-width: 260px;
   }
 
   .nav-list--first,
   .nav-list--second {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     z-index: 2;
+  }
+
+  .nav-list__inner {
+    width: inherit;
+    padding: 0;
+  }
+
+  .nav-list li:first-child {
+    margin-right: 32px;
   }
 
   .nav-list--first .nav-list__item,
   .nav-list--third .nav-list__item {
-    padding: 0;
     font-size: 15px;
   }
 
@@ -145,30 +193,33 @@
 
   .nav-list__link {
     font-weight: 700;
+
+    &--search {
+      @include visually-hidden;
+    }
   }
 
-
-  .nav-list__link--search {
-    width: 0;
-    font-size: 0;
-  }
-
-  .main-nav__inner--search {
+  /*.nav-list__inner--search {
     width: 82px;
+  }*/
+
+  .nav-list--first li:last-child {
+    padding-right: 35px;
   }
 
-  .main-nav__inner--basket {
-    padding-left: 32px;
-  }
-  /* после установки собсвенноых лого возможно удалить - чтоб строки не перскакивали */
+
+  .nav-list__link--catalog,
   .nav-list__link--knitting {
-    padding-right: 20px;
+    margin-left: 0;
   }
 
   .main-nav__delivery {
     display: block;
     order: 4;
 
+    margin: 0;
+    padding-top: 25px;
+    /* удалить после центрирования */
     margin-right: 50px;
 
     font-size: 15px;
@@ -188,6 +239,11 @@
     margin-right: 100px;
   }
 
+  /* обнуляем с десктопа */
+  .nav-list--first li:last-child {
+    padding-right: 0;
+  }
+
   .nav-list--first {
     order: 1;
     /*width: 375px;*/
@@ -203,7 +259,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    /* удалить после центрирования */
+    margin-left: 50px;
     z-index: 2;
   }
 
