@@ -1,13 +1,13 @@
 .promo {
   margin-bottom: 34px;
   background-image: url("../img/hero-mobile@1x.jpg");
-  background-position-x: 50%;
+  background-position: 50% -18px;
   background-repeat: no-repeat;
 }
 
 .promo__title {
-  padding-top: 80px;
-  padding-bottom: 120px;
+  padding-top: 68px;
+  padding-bottom: 106px;
 }
 
 .promo__list {
@@ -67,10 +67,11 @@
 @media (min-width: $tablet-width) {
   .promo {
     position: relative;
-    margin-bottom: 42px;
+    margin-bottom: 54px;
+
     background-image: url("../img/hero-tablet@1x.jpg");
-    background-position-x: 50%;
-    background-repeat: no-repeat;
+    background-position: 50% -42px;
+
     z-index: 10;
 
     &::after {
@@ -88,8 +89,8 @@
   }
 
   .promo__title {
-    padding-top: 160px;
-    padding-bottom: 350px;
+    padding-top: 112px;
+    padding-bottom: 345px;
 
     font-size: 43px;
     line-height: 50px;
@@ -98,6 +99,8 @@
   .promo__list {
     display: flex;
     flex-wrap: wrap;
+
+    @include container;
   }
 
   .promo__item {
