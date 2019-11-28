@@ -10,9 +10,13 @@
   <header class="page-header">
       <div class="page-header__wrapper">
         <nav class="main-nav">
-          <a class="main-nav__logo logo" href="index.html">
-            <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
-          </a>
+            <a class="main-nav__logo logo" href="index.html">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
+              </picture>
+            </a>
           <button class="main-nav__toggle main-nav__toggle--close" type="button">Меню</button>
           <ul class="main-nav__list nav-list nav-list--first">
             <li class="nav-list__item">
@@ -145,5 +149,21 @@
         </div>
       </footer>
   </body>
+
+  <script>
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navToggle.classList.remove('main-nav__toggle--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navToggle.classList.contains('main-nav__toggle--closed')) {
+          navToggle.classList.remove('main-nav__toggle--closed');
+          navToggle.classList.add('main-nav__toggle--opened');
+        } else {
+          navToggle.classList.add('main-nav__toggle--closed');
+          navToggle.classList.remove('main-nav__toggle--opened');
+        }
+      });
+    </script>
 
 </html>
