@@ -47,22 +47,27 @@
 }
 
 .nav-list__item {
-  min-height: 80px;
+  min-height: 79px;
   box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
 }
 
 .nav-list__svg-search,
 .nav-list__svg-basket {
-  margin-right: 26px;
+  margin-right: 24px;
   fill: #231f20;
   opacity: 0.2;
   cursor: pointer;
+  transform: translateY(3px);
+}
+
+  .nav-list__svg-basket {
+    margin-right: 21px;
 }
 
 .nav-list__link {
   display: block;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 29px;
   max-width: 260px;
   font-weight: 700;
   color: #000000;
@@ -70,6 +75,7 @@
   &--catalog,
   &--knitting {
     padding-left: 46px;
+
   }
 
   &:hover,
@@ -121,7 +127,6 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      padding-top: 25px;
       font-size: 15px;
       background-color: #f9f9f9;
     }
@@ -144,10 +149,8 @@
     /*border: 1px solid blue;  */
 
     &--search {
-      padding-top: 22px;
-      border-left: 1px solid transparent;
-      border-right: 1px solid transparent;
-      box-shadow: 0 0 1px rgba(0, 0, 0, 1);
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -159,12 +162,15 @@
     }
 
     &--search {
+      /* потом запись сократить */
+      padding-top: 29px;
       padding-left: 31px;
+      padding-bottom: 32px;
       padding-right: 31px;
     }
 
     &--basket {
-      padding-top: 23px;
+      margin-top: 23px;
       margin-left: 31px;
     }
 
@@ -175,7 +181,7 @@
 
   .nav-list__svg-search {
     /*width: 82px;*/
-    /*margin-right: 31px;*/
+    margin-right: 0;
   }
 
 
@@ -183,12 +189,12 @@
     margin-right: 28px;
   }
 
-  .main-nav__delivery {
+ .main-nav__delivery {
     display: block;
     order: 4;
 
     margin: 0;
-    padding-top: 25px;
+    margin-top: 25px;
 
     font-size: 15px;
     line-height: 1.6;
@@ -207,6 +213,9 @@
 
   .nav-list--first {
     order: 1;
+    padding-top: 0;
+
+    min-height: 88px;
     font-size: 17px;
 
     background-color: #ffffff;
@@ -230,14 +239,20 @@
     background-color: #f9f9f9;
   }
 
+  .nav-list__item--catalog {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
   /* после установки собсвенноых лого возможно удалить - чтоб строки не перскакивали */
   .nav-list__link--knitting {
-    padding-right: 0;
+    margin-top: 22px;
+    margin-left:31px;
   }
 
   .nav-list__link {
     &--catalog {
-      margin-right: 71px;
+      margin-top: 22px;
+      margin-right: 31px;
     }
 
     &--new {

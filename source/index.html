@@ -20,7 +20,7 @@
           </a>
           <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button">Меню</button>
           <ul class="main-nav__list nav-list nav-list--first">
-            <li class="nav-list__item nav-list__item----catalog">
+            <li class="nav-list__item nav-list__item--catalog">
               <a class="nav-list__link nav-list__link--catalog" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="nav-list__item nav-list__item--knitting">
@@ -77,30 +77,33 @@
 
       <section class="superior">
         <div class="superior__wrapper container">
-          <h2 class="superior__title">Вязанные корзинки</h2>
+          <h2 class="superior__title">Вязаные корзинки</h2>
           <p class="superior__type">Товар недели</p>
           <div class="superior__wrapper-inner">
             <p class="superior__decription">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
             <table class="superior__list">
-              <tr>
+              <tr class="superior__item">
                 <td class="superior__field">Цвет:</td>
                 <td class="superior__value">«Тиффани»/серый</td>
               </tr>
-              <tr>
+              <tr class="superior__item">
                 <td class="superior__field">Диаметр:</td>
                 <td class="superior__value">25 см</td>
               </tr>
-              <tr>
+              <tr class="superior__item">
                 <td class="superior__field">Высота:</td>
                 <td class="superior__value">15 см</td>
               </tr>
             </table>
-            <p class="superior__price">Цена: 990 руб.</p>
+          </div>
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="superior__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
+          </picture>
+          <p class="superior__price">Цена: 990 руб.</p>
             <a class="superior__order button" href="#">Заказать</a>
-          </div>
-          <div class="superior__img-wrap">
-            <img class="superior__img" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
-          </div>
+
         </div>
 
       </section>

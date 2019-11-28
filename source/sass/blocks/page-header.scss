@@ -16,9 +16,10 @@
 
 @media (min-width: $tablet-width) {
   .page-header::before {
-    height: 88px;
-    border-bottom: 1px solid transparent;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 1);
+    height: 89px;
+    box-shadow: none;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .page-header__wrapper {
