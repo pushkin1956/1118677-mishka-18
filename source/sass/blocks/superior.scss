@@ -41,6 +41,7 @@
 .superior__img {
   display: block;
   margin-bottom: 25px;
+  width: 100%;
 }
 
 .superior__decription {
@@ -90,47 +91,65 @@
 
 @media (min-width: $tablet-width) {
   .superior {
-    margin-bottom: 125px;
+    margin-bottom: 118px;
 
     &::after {
-      bottom: -80px;
+      bottom: -67px;
       height: 13px;
       background-size: auto 13px;
     }
   }
 
   .superior__wrapper {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .superior__title {
-    margin-bottom: 55px;
+    margin-bottom: 51px;
   }
 
   .superior__type {
+    margin: 0;
+    margin-right: 23px;
+    padding-top: 11px;
+    text-align: center;
+
     width: 80px;
-    padding-right: 90px;
-    margin-left: auto;
+    /*padding-right: 90px;
+    margin-left: auto;*/
   }
 
   .superior__wrapper-inner {
+    position: relative;
 
-    width: 38%;
-    margin-right: auto;
+    width: calc(100% - 44px - 333px); /*292px от 768*/
+    /*margin-right: auto;*/
+  }
+
+  .superior__img {
+    position: absolute;
+    bottom: 0;
+    left: calc(100% + 44px);
+    margin: 0;
+    width: 333px;
   }
 
   .superior__decription {
-    margin-bottom: 33px;
+    margin-bottom: 39px;
+
     font-size: 17px;
-    line-height: 1.6;
+    line-height: 1.76;
+  }
+
+  .superior__list {
+    margin-bottom: 56px;
   }
 
   .superior__price {
-    margin-bottom: 28px;
+    margin-bottom: 30px;
 
     font-size: 20px;
     line-height: 1.41;

@@ -29,8 +29,6 @@
   line-height: 1.26;
   color: #ffffff;
 
-  z-index: 2;
-
   &::after {
     position: absolute;
     content: "";
@@ -68,30 +66,29 @@
 @media (min-width: $tablet-width) {
   .promo {
     position: relative;
-    margin-bottom: 54px;
+    margin-bottom: 48px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
-    background-position: 50% -42px;
-
-    z-index: 10;
+    background-position: 50% -95px;
 
     &::after {
       position: absolute;
       content: "";
-
-      bottom: -11px;
+      bottom: -10px;
       height: 24px;
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
       /*background-size: auto 6px;*/
       width: 100%;
-      z-index: 2;
     }
   }
 
+  .promo .container {
+    margin-bottom: 273px;
+  }
+
   .promo__title {
-    padding-top: 112px;
-    padding-bottom: 345px;
+    padding-top: 57px;
 
     font-size: 43px;
     line-height: 50px;
@@ -102,6 +99,7 @@
     flex-wrap: wrap;
 
     @include container;
+    min-width: 768px;
   }
 
   .promo__item {
@@ -109,7 +107,22 @@
   }
 
   .promo__link {
+    padding-left: 36px;
+    padding-top: 27px;
+    padding-bottom: 28px;
+    /*padding-right: 150px;*/
+
     font-size: 20px;
+    line-height: 1.5;
+
+    &--interior::after {
+      top: 28px;
+    }
+
+    &--toys::after {
+      top: 28px;
+      right: 34px;
+    }
   }
 }
 

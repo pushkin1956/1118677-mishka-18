@@ -6,9 +6,9 @@
   position: relative;
 }
 
-.main-nav__logo {
+.main-nav__link-logo {
   padding-top: 22px;
-  height: 79px;
+  min-height: 79px;
 }
 
 .main-nav__toggle {
@@ -103,12 +103,22 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
+    min-width: 668px;
   }
 
-  .main-nav__logo {
-    /*padding-top: 22px;*/
+  .main-nav__img-logo {
     width: 112px;
     height: 46px;
+  }
+
+  .main-nav__link-logo {
+    flex-grow: 1;
+    margin-bottom: 17px;
+    margin-right: 190px;
+    padding-top: 22px; /* 22px такой же в мобайл - после всего можно удалить */
+
+    min-height: 88px;
   }
 
   .main-nav__toggle {
@@ -144,7 +154,6 @@
   }
 
   .nav-list__item {
-    min-height: 20px;
     box-shadow: none;
     /*border: 1px solid blue;  */
 
@@ -163,19 +172,23 @@
 
     &--search {
       /* потом запись сократить */
-      padding-top: 29px;
+      padding-top: 32px;
       padding-left: 31px;
-      padding-bottom: 32px;
+      padding-bottom: 31px;
       padding-right: 31px;
     }
 
     &--basket {
-      margin-top: 23px;
+      margin-top: 30px;
       margin-left: 31px;
     }
 
     &--catalog {
-      margin-right: 32px;
+      margin-right: 36px;
+    }
+    /*чтоб не наезжало на верхнюю строку */
+    &--knitting {
+      margin-right: 110px;
     }
   }
 
@@ -194,7 +207,6 @@
     order: 4;
 
     margin: 0;
-    margin-top: 25px;
 
     font-size: 15px;
     line-height: 1.6;
@@ -203,12 +215,16 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav__logo {
+  .main-nav__img-logo {
+    width: 112px;
+    height: 46px;
+  }
+
+  .main-nav__link-logo {
     order: 2;
+    flex-grow: 0;
 
     margin: 0;
-    margin-left: 100px;
-    margin-right: 100px;
   }
 
   .nav-list--first {
@@ -246,6 +262,8 @@
   /* после установки собсвенноых лого возможно удалить - чтоб строки не перскакивали */
   .nav-list__link--knitting {
     margin-top: 22px;
+    /* обнуляю сдвиг  в tablet */
+    margin-right: 0;
     margin-left: 31px;
   }
 

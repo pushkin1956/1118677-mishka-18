@@ -56,11 +56,11 @@
 
 .reviews__control-wrapper {
   margin-bottom: 50px;
-  margin-left: 37px;
+  margin-left: 14.2%;/*37px;*/
 
   display: flex;
   justify-content: space-between;
-  width: 186px;
+  width: 71.5%; /*186px;*/
 }
 
 .reviews__control-btn {
@@ -103,15 +103,15 @@
   .reviews__title {
     order: 1;
 
-    padding-top: 86px;
-    margin-bottom: 65px;
+    padding-top: 78px;
+    margin-bottom: 50px;
   }
 
   .reviews__item {
     order: 3;
 
     width: 100%;
-    margin-bottom: 68px;
+    margin-bottom: 59px;
   }
 
   .reviews__text {
@@ -132,17 +132,18 @@
 
   .reviews__control-wrapper {
     order: 5;
-    margin-bottom: 80px;
-  }
+    margin: 0;
 
-  .reviews__control-btn--prew {
-    margin-left: 38px;
-    margin-right: 80px;
+    margin-right: 19px;
+    padding-top: 17px;
+
+    width: 137px; /*71.5%; /*186px;*/
   }
 
   .reviews__write {
     order: 2;
-    align-self: center;
+
+    margin-top: 79px;
 
     width: 175px;
     height: 52px;
