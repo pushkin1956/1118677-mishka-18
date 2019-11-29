@@ -3,7 +3,7 @@
 }
 
 .contacts__title {
-  margin-bottom: 42px;
+  margin-bottom: 26px;
 
   font-size: 18px;
   font-weight: bold;
@@ -13,6 +13,14 @@
 .contacts__mail,
 .contacts__adress {
   display: flex;
+}
+
+.contacts__mail {
+  margin-bottom: 30px;
+}
+
+.contacts__adress {
+  margin: 0;
 }
 
 .contacts__mail-title,
@@ -29,7 +37,11 @@
 
 .contacts__mail-title,
 .contacts__adress-title {
-  padding-right: 32px;
+  padding-right: 30px;
+}
+
+.contacts__mail-link {
+  border-bottom: 1px solid $contrast-color;
 }
 
 .contacts__adress-text {

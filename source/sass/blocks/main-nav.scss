@@ -60,8 +60,8 @@
   transform: translateY(3px);
 }
 
-  .nav-list__svg-basket {
-    margin-right: 21px;
+.nav-list__svg-basket {
+  margin-right: 21px;
 }
 
 .nav-list__link {
@@ -75,7 +75,6 @@
   &--catalog,
   &--knitting {
     padding-left: 46px;
-
   }
 
   &:hover,
@@ -107,8 +106,9 @@
   }
 
   .main-nav__logo {
-    padding-top: 22px;
-    height: 88px;
+    /*padding-top: 22px;*/
+    width: 112px;
+    height: 46px;
   }
 
   .main-nav__toggle {
@@ -189,7 +189,7 @@
     margin-right: 28px;
   }
 
- .main-nav__delivery {
+  .main-nav__delivery {
     display: block;
     order: 4;
 
@@ -246,7 +246,7 @@
   /* после установки собсвенноых лого возможно удалить - чтоб строки не перскакивали */
   .nav-list__link--knitting {
     margin-top: 22px;
-    margin-left:31px;
+    margin-left: 31px;
   }
 
   .nav-list__link {
