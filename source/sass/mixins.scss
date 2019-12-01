@@ -66,3 +66,14 @@
   white-space: nowrap;
   clip-path: inset(100%);
 }
+
+@mixin bg-zigzag-fill($height-zigzag: 24px) {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  height: $height-zigzag;
+  background-image: url("../img/bg-zigzag-fill.svg");
+  background-repeat: repeat-x;
+  /*background-size: auto 6px;*/
+  width: 100%;
+}

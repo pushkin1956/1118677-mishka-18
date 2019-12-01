@@ -2,6 +2,10 @@
   position: relative;
   background-color: #f9f9f9;
 
+  &--bg-color {
+    background-color: $background-color;
+  }
+
   &::before {
     position: absolute;
     content: "";
