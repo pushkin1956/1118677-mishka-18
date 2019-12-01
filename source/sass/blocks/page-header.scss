@@ -1,4 +1,3 @@
-
 .page-header {
   position: relative;
   background-color: #f9f9f9;
@@ -10,7 +9,7 @@
     width: 100%;
     height: 79px;
     background-color: #ffffff;
-    box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
+    box-shadow: 0 1px 0 0 $border-extra-color, inset 0 1px 0 0 $border-extra-color;
   }
 }
 
@@ -27,17 +26,3 @@
     min-width: 668px; /* почему то сдивагается на 15px до 653px */
   }
 }
-
-/*.page-header__wrapper-index::before {
-position: absolute;
-content: "";
-top: 88px;
-left: 0;
-width: 100%;
-height: 748px;
-background-color: #f1f1f1;
-border-top: 1px solid transparent;
-box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-
-z-index: 1;
-}*/
