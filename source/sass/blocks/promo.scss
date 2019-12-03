@@ -45,7 +45,7 @@
     content: "";
     display: block;
 
-    opacity: 0.2;
+    opacity: 0.5;
     background-repeat: no-repeat;
   }
 
@@ -62,15 +62,15 @@
     right: 36px;
     height: 62px;
     width: 40px;
-    background-image: url("img/icon-interior.svg");
+    background-image: url("../img/icon-interior.svg");
   }
 
   &--toys::after {
-    height: 60px;
-    width: 60px;
     top: 21px;
     right: 27px;
-    background-image: url("img/icon-toy.svg");
+    height: 60px;
+    width: 60px;
+    background-image: url("../img/icon-toy.svg");
   }
 }
 
