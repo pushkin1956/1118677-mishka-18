@@ -1,9 +1,9 @@
 .contacts {
-  margin-bottom: 42px;
+  margin-bottom: 623px;
 }
 
 .contacts__title {
-  margin-bottom: 42px;
+  margin-bottom: 26px;
 
   font-size: 18px;
   font-weight: bold;
@@ -13,6 +13,14 @@
 .contacts__mail,
 .contacts__adress {
   display: flex;
+}
+
+.contacts__mail {
+  margin-bottom: 30px;
+}
+
+.contacts__adress {
+  margin: 0;
 }
 
 .contacts__mail-title,
@@ -29,7 +37,11 @@
 
 .contacts__mail-title,
 .contacts__adress-title {
-  padding-right: 32px;
+  padding-right: 30px;
+}
+
+.contacts__mail-link {
+  border-bottom: 1px solid $contrast-color;
 }
 
 .contacts__adress-text {
@@ -39,11 +51,11 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    margin-bottom: 40px;
+    margin-bottom: 583px;
   }
 
   .contacts__title {
-    margin-bottom: 40px;
+    margin-bottom: 51px;
 
     font-size: 43px;
     line-height: 1.16;
@@ -51,6 +63,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .contacts {
+    margin-bottom: 288px;
+  }
+
   .contacts__title {
     font-size: 53px;
     line-height: 1.08;

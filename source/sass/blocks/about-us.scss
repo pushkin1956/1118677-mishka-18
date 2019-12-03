@@ -1,5 +1,5 @@
 .about-us {
-  margin-bottom: 61px;
+  margin-bottom: 55px;
 }
 
 .about-us__title {
@@ -11,33 +11,19 @@
 }
 
 .about-us__item {
-  position: relative;
   padding-top: 55px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
+
+  width: 260px;
   font-size: 17px;
   font-weight: bold;
   line-height: 1.18;
-  background-position: top left;
+  background-position: 0 0;
   background-repeat: no-repeat;
-
-  /*&::before {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 55px;
-    height: 38px;
-    top: 0;
-    left: 0;
-    background-repeat: no-repeat;
-    background-position: top center;
-  }*/
-
-  /*&--ecology::before {
-    background-image: url("../img/icon-feature-flower.svg");
-  }*/
 
   &--ecology {
     background-image: url("../img/icon-feature-flower.svg");
+    background-position: 10px 0;
   }
 
   &--style {
@@ -46,28 +32,41 @@
 
   &--likes {
     background-image: url("../img/icon-feature-heart.svg");
+    background-position: 7px 7px;
   }
 
   &--by-hand {
     background-image: url("../img/icon-feature-ball.svg");
+    background-position: 4px 4px;
   }
 
   &--support {
     background-image: url("../img/icon-feature-rocket.svg");
+    background-position: -7px 4px;
   }
 
   &--gift {
     background-image: url("../img/icon-feature-gift.svg");
+    background-position: 3px 3px;
+  }
+
+  &--shorter {
+    width: 194px;
+  }
+
+  &--wider {
+    width: 224px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .about-us {
-    margin-bottom: 82px;
+    margin-bottom: 32px;
   }
 
   .about-us__title {
-    margin-bottom: 80px;
+    margin-bottom: 44px;
+    margin-left: -5px;
   }
 
   .about-us__wrapper-inner {
@@ -86,22 +85,32 @@
     position: relative;
     padding-top: 60px;
     padding-right: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 31px;
+
+    width: 340px;
 
     font-size: 20px;
     font-weight: bold;
     line-height: 1.1;
+
+    &--shorter {
+      width: 265px;
+    }
+
+    &--wider {
+      width: 300px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .about-us {
-    margin-bottom: 89px;
+    margin-bottom: 39px;
     padding-left: 225px;
   }
 
   .about-us__title {
-    margin-bottom: 54px;
+    margin-bottom: 43px;
   }
 
   .about-us__wrapper-inner {

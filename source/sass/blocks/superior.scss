@@ -1,15 +1,15 @@
 .superior {
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 68px;
 
   &::after {
     position: absolute;
     content: "";
 
-    bottom: -60px;
+    bottom: -45px;
     background-image: url("../img/bg-zigzag-line.svg");
     height: 6px;
-    /*transform: scale(0.5, 0.5);*/
+    /*transform: rotate(180deg);*/
     background-repeat: repeat-x;
     background-size: auto 6px;
     width: 100%;
@@ -20,20 +20,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .superior__title {
-  order: 1;
-
-  margin-bottom: 38px;
+  margin-bottom: 7px;
 }
 
 .superior__type {
-  order: 2;
-
-  margin-top: -15px;
-  margin-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 26px;
 
   font-size: 17px;
   font-weight: bold;
@@ -43,40 +38,44 @@
   color: #63d1bb;
 }
 
-.superior__wrapper-inner {
-  order: 4;
-}
-
-.superior__img-wrap {
-  order: 3;
+.superior__img {
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
 }
 
 .superior__decription {
   margin-top: 0;
-  margin-bottom: 33px;
+  margin-bottom: 18px;
+
   font-size: 15px;
   line-height: 1.6;
   color: #444444;
 }
 
 .superior__list {
-  margin-bottom: 15px;
+  margin-bottom: 27px;
+  width: 100%;
 }
 
-.superior__field,
-.superior__value {
+.superior__item {
   padding-bottom: 20px;
+  height: 39px;
+  width: 100%;
 
   font-size: 15px;
   line-height: 1.33;
   color: #444444;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .superior__field {
-  padding-right: 19px;
+  padding-right: 28px;
+  width: 68px;
 }
 
 .superior__price {
+  margin-top: 0;
   margin-bottom: 28px;
 
   font-size: 17px;
@@ -92,60 +91,76 @@
 
 @media (min-width: $tablet-width) {
   .superior {
-    margin-bottom: 125px;
+    margin-bottom: 118px;
 
     &::after {
-      bottom: -80px;
+      bottom: -67px;
       height: 13px;
       background-size: auto 13px;
     }
   }
 
   .superior__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    position: relative;
 
-    justify-content: center;
+    /*justify-content: space-between;*/
   }
 
-  .superior__title {
-    margin-bottom: 55px;
+  .superior__wrapper-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 51px;
+    width: 100%;
   }
 
   .superior__type {
+    margin: 0;
+    margin-right: 23px;
+    padding-top: 11px;
+    text-align: center;
+
     width: 80px;
-    padding-right: 90px;
-    margin-left: auto;
   }
 
-  .superior__wrapper-inner {
-    order: 3;
-    width: 38%;
-    margin-right: auto;
+  .superior__decription,
+  .superior__list,
+  .superior__price,
+  .superior__order {
+    width: calc(100% - 44px - 333px); /*292px от 768*/
+  }
+
+  .superior__img {
+    position: absolute;
+    bottom: 0;
+    left: calc(100% - 333px);
+    margin: 0;
+    width: 333px;
   }
 
   .superior__decription {
-    margin-bottom: 33px;
+    margin-bottom: 39px;
+
     font-size: 17px;
-    line-height: 1.6;
+    line-height: 1.76;
+  }
+
+  .superior__list {
+    margin-bottom: 56px;
   }
 
   .superior__price {
-    margin-bottom: 28px;
+    margin-bottom: 30px;
 
     font-size: 20px;
     line-height: 1.41;
-  }
-
-  .superior__img-wrap {
-    order: 4;
   }
 }
 
 @media (min-width: $desktop-width) {
   .superior {
-    margin-bottom: 160px;
+    margin-bottom: 154px;
 
     &::after {
       bottom: -100px;
@@ -155,46 +170,55 @@
   }
 
   .superior__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: flex-start;
   }
 
+  .superior__wrapper-title {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-bottom: 50px;
+  }
+
   .superior__title {
-    order: 2;
-    z-index: 5;
-    margin-left: 58px;
-    margin-bottom: 55px;
+    z-index: 2;
+
+    margin-left: 24px;
   }
 
   .superior__type {
-    order: 1;
+    order: -1;
 
-    margin-left: 50px;
-    width: 80px;
+    margin-left: 42px;
+    padding-top: 18px;
   }
 
-  .superior__wrapper-inner {
-    order: 3;
-    width: 290px;
+  .superior__decription,
+  .superior__list,
+  .superior__price,
+  .superior__order {
     margin-left: 175px;
+    width: 292px;
+  }
+
+  .superior__img {
+    left: calc(100% - 525px);
+    width: 525px;
   }
 
   .superior__decription {
-    margin-bottom: 33px;
-    font-size: 17px;
-    line-height: 1.6;
+    margin-bottom: 47px;
+
+    line-height: 30px;
+  }
+
+  .superior__list {
+    margin-bottom: 114px;
   }
 
   .superior__price {
-    margin-bottom: 28px;
+    margin-bottom: 32px;
 
-    font-size: 20px;
     line-height: 1.2;
-  }
-
-  .superior__img-wrap {
-    transform: translateY(-130px);
   }
 }

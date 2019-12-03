@@ -1,34 +1,37 @@
 .page-footer {
-
-  background-color: #f1f1f1;
+  background-color: $background-color;
 }
 
 .page-footer__inner {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
 
   min-height: 160px;
 }
 
-.page-footer__logo {
+.page-footer__link-logo {
   display: none;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer__inner {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
 
     min-height: 143px;
   }
 
-  .page-footer__logo {
+  .page-footer__link-logo {
     display: block;
+    margin-right: 80px;
     height: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__link-logo {
+    margin-right: 79px;
   }
 }

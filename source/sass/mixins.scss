@@ -7,7 +7,7 @@
 @mixin btn($button-field-border-color: #444444, $button-bg-color: #ffffff) {
   display: block;
   width: 100%;
-  padding: 22px 0;
+  padding: 24px 0;
   border: 2px solid $button-field-border-color;
   font-size: 17px;
   font-weight: bold;
@@ -41,16 +41,39 @@
 }
 
 @mixin container {
-  width: $mobile-width;
+  width: 100%;
   margin: 0 auto;
   padding: 0 30px;
 
   @media (min-width: $tablet-width) {
-    width: $tablet-width;
     padding: 0 50px;
   }
 
   @media (min-width: $desktop-width) {
     width: $desktop-width;
   }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
+
+@mixin bg-zigzag-fill($height-zigzag: 24px) {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  height: $height-zigzag;
+  background-image: url("../img/bg-zigzag-fill.svg");
+  background-repeat: repeat-x;
+  /*background-size: auto 6px;*/
+  width: 100%;
 }
