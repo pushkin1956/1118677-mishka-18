@@ -161,13 +161,22 @@
 
 @media (min-width: $desktop-width) {
   .superior {
-    padding-bottom: 96px;
-    margin-bottom: 70px;
+    @include container;
 
     &::after {
       height: 23px;
+      width: 1050px;
+
       background-size: auto 23px;
     }
+  }
+
+  .superior .container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 1050px;
+    padding-bottom: 96px;
+    margin-bottom: 70px;
   }
 
   .superior__wrapper {

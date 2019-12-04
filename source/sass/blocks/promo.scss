@@ -145,8 +145,7 @@
     background-position: 50% -98px;
 
     &::after {
-      bottom: -19px;
-      height: 34px;
+      @include bg-zigzag-fill(34px);
     }
   }
 
