@@ -1,12 +1,13 @@
 .reviews {
   position: relative;
-  margin-bottom: 86px;
+  padding-bottom: 45px;
+  margin-bottom: 40px;
 
   &::after {
     position: absolute;
     content: "";
 
-    bottom: -55px;
+    bottom: 0;
     background-image: url("../img/bg-zigzag-line.svg");
     height: 6px;
     background-repeat: repeat-x;
@@ -81,12 +82,13 @@
 
 @media (min-width: $tablet-width) {
   .reviews {
-    margin-bottom: 150px;
+    padding-bottom: 84px;
+    margin-bottom: 70px;
 
     &::after {
-      bottom: -80px;
-      height: 13px;
-      background-size: auto 13px;
+      height: 15px;
+
+      background-size: auto 15px;
     }
   }
 
@@ -161,18 +163,27 @@
 
 @media (min-width: $desktop-width) {
   .reviews {
-    margin-bottom: 155px;
+    @include container;
 
     &::after {
-      bottom: -100px;
       height: 23px;
+      width: 1050px;
 
       background-size: auto 23px;
     }
   }
 
+  .reviews .container {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 90px;
+    margin-bottom: 60px;
+
+    width: 1050px;
+  }
+
   .reviews__wrapper {
-    padding-left: 225px;
+    padding-left: 175px;
     background-position: 50px 0;
   }
 

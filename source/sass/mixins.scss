@@ -70,10 +70,10 @@
 @mixin bg-zigzag-fill($height-zigzag: 24px) {
   position: absolute;
   content: "";
-  bottom: -10px;
+  bottom: calc(#{-$height-zigzag} / 2);
   height: $height-zigzag;
   background-image: url("../img/bg-zigzag-fill.svg");
   background-repeat: repeat-x;
-  /*background-size: auto 6px;*/
+  background-size: auto $height-zigzag;
   width: 100%;
 }
