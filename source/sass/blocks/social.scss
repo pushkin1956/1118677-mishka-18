@@ -18,26 +18,11 @@
 
   margin-left: 40px;
 
-  width: 22px;
-  height: 38px;
-
-  background-repeat: no-repeat;
-  background-position: top center;
+  width: 24px;
+  height: 28px;
 
   &:last-child {
     margin-left: 0;
-  }
-
-  &--instagram {
-    background-image: url("../img/icon-insta.svg");
-  }
-
-  &--facebook {
-    background-image: url("../img/icon-fb.svg");
-  }
-
-  &--twitter {
-    background-image: url("../img/icon-twitter.svg");
   }
 }
 
@@ -75,16 +60,6 @@
 
 @media (min-width: $desktop-width) {
   .social {
-    padding: 0;
-    padding-top: 23px;
-
     width: 140px;
-
-
-    border: none;
-  }
-
-  .copyright {
-    margin-bottom: -30px;
   }
 }
