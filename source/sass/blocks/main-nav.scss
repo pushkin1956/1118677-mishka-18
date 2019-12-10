@@ -52,7 +52,7 @@
 }
 
 .nav-list__svg-search,
-.nav-list__svg-basket {
+.nav-list__svg-cart {
   margin-right: 24px;
   fill: #231f20;
   opacity: 0.2;
@@ -60,7 +60,7 @@
   transform: translateY(3px);
 }
 
-.nav-list__svg-basket {
+.nav-list__svg-cart {
   margin-right: 21px;
 }
 
@@ -179,7 +179,7 @@
       padding-right: 31px;
     }
 
-    &--basket {
+    &--cart {
       margin-top: 30px;
       margin-left: 31px;
     }
@@ -199,7 +199,7 @@
   }
 
 
-  .nav-list__svg-basket {
+  .nav-list__svg-cart {
     margin-right: 28px;
   }
 
