@@ -86,10 +86,6 @@
   text-align: center;
 }
 
-.button {
-  @include btn;
-}
-
 @media (min-width: $tablet-width) {
   .superior {
     padding-bottom: 66px;
@@ -128,7 +124,7 @@
   .superior__decription,
   .superior__list,
   .superior__price,
-  .superior__order {
+  .superior__btn {
     width: calc(100% - 44px - 333px); /*292px от 768*/
   }
 
@@ -206,7 +202,7 @@
   .superior__decription,
   .superior__list,
   .superior__price,
-  .superior__order {
+  .superior__btn {
     margin-left: 175px;
     width: 292px;
   }

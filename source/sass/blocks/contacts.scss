@@ -49,6 +49,10 @@
   font-style: normal;
 }
 
+.contacts__image {
+  width: 100%;
+}
+
 @media (min-width: $tablet-width) {
   .contacts {
     margin-bottom: 583px;

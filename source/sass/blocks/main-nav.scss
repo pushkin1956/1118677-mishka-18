@@ -13,25 +13,25 @@
 
 .main-nav__toggle {
   position: absolute;
-  right: 30px;
+  right: 20px;
   display: block;
-  padding: 0;
+  padding: 10px;
   border: none;
   font-size: 0;
   cursor: pointer;
 
   &--opened {
-    top: 28px;
-    width: 21px;
-    height: 20px;
-    background: url("../img/icon-menu-close.svg") no-repeat;
+    top: 18px;
+    width: 41px;
+    height: 40px;
+    background: url("../img/icon-menu-close.svg") no-repeat 50% 50%;
   }
 
   &--closed {
-    top: 31px;
-    width: 20px;
-    height: 14px;
-    background: url("../img/icon-menu-open.svg") no-repeat;
+    top: 21px;
+    width: 40px;
+    height: 34px;
+    background: url("../img/icon-menu-open.svg") no-repeat 50% 50%;
   }
 
   &--nojs {
@@ -47,12 +47,12 @@
 }
 
 .nav-list__item {
-  min-height: 79px;
+
   box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
 }
 
 .nav-list__svg-search,
-.nav-list__svg-basket {
+.nav-list__svg-cart {
   margin-right: 24px;
   fill: #231f20;
   opacity: 0.2;
@@ -60,15 +60,17 @@
   transform: translateY(3px);
 }
 
-.nav-list__svg-basket {
+.nav-list__svg-cart {
   margin-right: 21px;
 }
 
 .nav-list__link {
-  display: block;
+  display: flex;
+  align-items: center;
   margin: 0 auto;
-  padding-top: 29px;
+
   max-width: 260px;
+  min-height: 79px;
   font-weight: 700;
   color: #000000;
 
@@ -173,15 +175,15 @@
 
     &--search {
       /* потом запись сократить */
-      padding-top: 32px;
+      /*padding-top: 32px;*/
       padding-left: 31px;
-      padding-bottom: 31px;
+      /*padding-bottom: 31px;*/
       padding-right: 31px;
     }
 
-    &--basket {
-      margin-top: 30px;
+    &--cart {
       margin-left: 31px;
+      min-height: 88px;
     }
 
     &--catalog {
@@ -199,7 +201,7 @@
   }
 
 
-  .nav-list__svg-basket {
+  .nav-list__svg-cart {
     margin-right: 28px;
   }
 
@@ -208,6 +210,7 @@
     order: 4;
 
     margin: 0;
+    padding-top: 22px;
 
     font-size: 15px;
     line-height: 1.6;
@@ -255,7 +258,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      padding-top: 19px;
+      padding-top: 1px;
       font-size: 15px;
 
       background-color: #f9f9f9;
@@ -272,7 +275,6 @@
 
   /* после установки собсвенноых лого возможно удалить - чтоб строки не перскакивали */
   .nav-list__link--knitting {
-    margin-top: 31px;
     /* обнуляю сдвиг  в tablet */
     margin-right: 0;
     margin-left: 35px;
@@ -280,7 +282,6 @@
 
   .nav-list__link {
     &--catalog {
-      margin-top: 31px;
       margin-right: 35px;
     }
 
