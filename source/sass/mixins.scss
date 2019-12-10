@@ -4,40 +4,11 @@
   list-style: none;
 }
 
-@mixin btn($button-field-border-color: #444444, $button-bg-color: #ffffff) {
-  display: block;
-  width: 100%;
-  padding: 24px 0;
-  border: 2px solid $button-field-border-color;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 1.18px;
-  color: #444444;
-  text-transform: uppercase;
-  text-align: center;
-  background-color: $button-bg-color;
-}
-
 @mixin centering {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-
-@mixin container {
-  width: $mobile-width;
-  margin: 0 auto;
-  padding: 0 30px;
-
-  @media (min-width: $tablet-width) {
-    width: $tablet-width;
-    padding: 0 50px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: $desktop-width;
-  }
 }
 
 @mixin container {

@@ -84,10 +84,10 @@ gulp.task("html", function () {
 gulp.task("server", function () {
   server.init({
     server: "build/",
-    /*notify: false,
+    notify: false,
     open: true,
     cors: true,
-    ui: false*/
+    ui: false
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));

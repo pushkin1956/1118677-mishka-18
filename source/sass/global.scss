@@ -94,3 +94,17 @@ h3 {
     line-height: 1.1;
   }
 }
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 24px 0;
+  border: 2px solid $button-field-border-color;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.18px;
+  color: #444444;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $button-bg-color;
+}
