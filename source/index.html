@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.min.css" rel="stylesheet">
     <script>
-        // Picture element HTML5 shiv
-        document.createElement( "picture" );
+      document.createElement( "picture" );
     </script>
     <script src="picturefill.min.js" async></script>
   </head>
@@ -147,16 +146,18 @@
         </div>
       </section>
 
-      <section class="contacts container">
-        <h2 class="contacts__title">Контакты</h2>
-        <div class="contacts__mail">
-          <p class="contacts__mail-title">e-mail:</p>
-          <a class="contacts__mail-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+      <section class="contacts">
+        <div class= "container">
+          <h2 class="contacts__title">Контакты</h2>
+          <div class="contacts__mail">
+            <p class="contacts__mail-title">e-mail:</p>
+            <a class="contacts__mail-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </div>
+          <dl class="contacts__adress">
+            <dt class="contacts__adress-title">адрес:</dt>
+            <dd class="contacts__adress-text">г. Санкт-Петербург, ул. Большая Конюшенная,<br>д. 19/8, офис 101</dd>
+          </dl>
         </div>
-        <dl class="contacts__adress">
-          <dt class="contacts__adress-title">адрес:</dt>
-          <dd class="contacts__adress-text">г. Санкт-Петербург, ул. Большая Конюшенная,<br>д. 19/8, офис 101</dd>
-        </dl>
         <picture>
           <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 7680px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
@@ -165,7 +166,9 @@
           <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
           <img class="contacts__image" src="img/map-mobile@1x.jpg" srcet="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="Зайчик-попрыгайчик">
         </picture>
-        <a class="contacts__btn button" href="feedback-create.html">Напишите нам</a>
+        <div class= "container">
+          <a class="contacts__btn button" href="feedback-create.html">Напишите нам</a>
+        </div>
 
 
       </section>
