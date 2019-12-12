@@ -1895,6 +1895,12 @@ h3 {
   min-height: 177px;
   background-color: #f1f1f1; }
 
+.form__type-list,
+.form__color-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 @media (min-width: 768px) {
   .page-form__title {
     position: relative;

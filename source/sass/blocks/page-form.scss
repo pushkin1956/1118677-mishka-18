@@ -7,6 +7,11 @@
   background-color: $background-color;
 }
 
+.form__type-list,
+.form__color-list {
+  @include ul-reset;
+}
+
 @media (min-width: $tablet-width) {
   .page-form__title {
     position: relative;
