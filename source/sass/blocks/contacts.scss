@@ -146,7 +146,7 @@
   .contacts .container {
     flex-direction: column;
 
-    margin-left: 175px;
+    padding-left: 175px;
   }
 
   .contacts__title {
@@ -164,18 +164,15 @@
     content: "";
 
     top: 0;
-    right: 50px;
+    left: 50%;
 
     width: 525px;
     height: 457px;
-
   }
 
   .contacts__wrapper-btn {
     display: flex;
     justify-content: flex-start;
-    margin-left: 175px;
+    padding-left: 175px;
   }
-
-
 }
