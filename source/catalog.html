@@ -139,6 +139,27 @@
           </li>
         </ul>
       </div>
+
+      <article class="video">
+        <div class="container">
+          <h3 class="video__title">Процесс производства</h3>
+          <div class="video__picture">
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 7680px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img class="video__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Видео производства">
+            </picture>
+            <button class="video__play-btn" type="button">
+                <svg class="video__svg" width="101" height="77"><use xlink:href="#icon-play"></use></svg>
+            </button>
+          </div>
+          <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="video_btn button" href="form.html">Cделать заказ</a>
+        </div>
+      </article>
     </main>
 
     <footer class="page-footer">
