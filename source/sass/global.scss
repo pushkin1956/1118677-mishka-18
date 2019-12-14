@@ -99,8 +99,6 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 41px;
-  padding-left: 41px;
   height: 52px;
   border: 2px solid $button-field-border-color;
   font-size: 17px;
@@ -108,6 +106,5 @@ h3 {
   line-height: 1.18px;
   color: #444444;
   text-transform: uppercase;
-  /*text-align: center;*/
   background-color: $button-bg-color;
 }
