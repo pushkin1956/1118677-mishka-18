@@ -375,6 +375,7 @@ th {
 
 /*исп в button */
 /*исп в button */
+/* исп */
 @font-face {
   font-family: "Open Sans";
   font-weight: 400;
@@ -1989,9 +1990,11 @@ h3 {
     margin-left: 682px;
     padding-left: 80px;
     padding-right: 57px;
-    min-height: 15px; } }
+    min-height: 15px; }
+  .video__description {
+    margin-bottom: 51px; } }
 
-.page-form__title {
+.form__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2007,21 +2010,105 @@ h3 {
   min-height: 177px;
   background-color: #f1f1f1; }
 
+.form__description {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 24px;
+  color: #444444; }
+
+form fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  border: none; }
+
+form legend {
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 16px;
+  color: #63d1bb;
+  text-transform: uppercase; }
+  form legend::after {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 62px;
+    width: 76.15%;
+    /* 198px от 260px */
+    height: 1px;
+    background-color: #63d1bb; }
+
 .form__type-list,
 .form__color-list {
   margin: 0;
   padding: 0;
   list-style: none; }
 
+.form__type-item:not(:last-child),
+.form__color-item:not(:last-child) {
+  margin-bottom: 35px; }
+
+.form__label {
+  padding-left: 62px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #000000; }
+  .form__label--radio {
+    position: relative; }
+    .form__label--radio::before {
+      position: absolute;
+      content: "";
+      top: -8px;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #444444;
+      border-radius: 50%; }
+  .form__label--checkbox {
+    position: relative; }
+    .form__label--checkbox::before {
+      position: absolute;
+      content: "";
+      top: -8px;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #444444; }
+
+.form__input--radio:checked + .form__label--radio::after {
+  position: absolute;
+  content: "";
+  top: 6px;
+  left: 14px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #62d1ba; }
+
+.form__input--checkbox:checked + .form__label--checkbox::after {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 9px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/icon-tick.svg");
+  background-size: 22px 16px; }
+
 @media (min-width: 768px) {
-  .page-form__title {
+  .form__title {
     position: relative;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-bottom: 79px;
+    margin-bottom: 66px;
     min-height: 127px; }
-    .page-form__title::after {
+    .form__title::after {
       position: absolute;
       content: "";
       bottom: calc(-24px / 2);
@@ -2029,15 +2116,19 @@ h3 {
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
       background-size: auto 24px;
-      width: 100%; } }
+      width: 100%; }
+  .form__description {
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 30px; } }
 
 @media (min-width: 1150px) {
-  .page-form {
+  .form {
     margin-bottom: 58px; }
-  .page-form__title {
+  .form__title {
     margin-bottom: 122px;
     min-height: 162px; }
-    .page-form__title::after {
+    .form__title::after {
       position: absolute;
       content: "";
       bottom: calc(-34px / 2);
@@ -2045,4 +2136,8 @@ h3 {
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
       background-size: auto 34px;
-      width: 100%; } }
+      width: 100%; }
+  .form__description {
+    margin-bottom: 10px;
+    margin-left: 175px;
+    width: 672px; } }
