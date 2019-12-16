@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Интернет-магазин «Мишка»</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preloud" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preloud" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <script>
       document.createElement( "picture" );
@@ -139,8 +141,12 @@
           </blockquote>
           <cite class="reviews__author-mail">Анастасия Красильникова <span> @misssssiskras</span></cite>
           <div class="reviews__control-wrapper">
-            <button class="reviews__control-btn reviews__control-btn--prew" type="button"></button>
-            <button class="reviews__control-btn reviews__control-btn--next" type="button"></button>
+            <button class="reviews__control-btn" type="button">
+              <svg class="reviews__svg-left" width="50" height="26"><use xlink:href="#icon-left-arrow"></use></svg>
+            </button>
+            <button class="reviews__control-btn" type="button">
+              <svg class="reviews__svg-right" width="50" height="26"><use xlink:href="#icon-right-arrow"></use></svg>
+            </button>
           </div>
           <a class="reviews__btn button" href="feedback-reviews.html">Написать</a>
         </div>
@@ -155,22 +161,22 @@
           </div>
           <dl class="contacts__adress">
             <dt class="contacts__adress-title">адрес:</dt>
-            <dd class="contacts__adress-text">г. Санкт-Петербург, ул. Большая Конюшенная,<br>д. 19/8, офис 101</dd>
+            <dd class="contacts__adress-text">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</dd>
           </dl>
         </div>
-        <picture>
-          <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 7680px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
-          <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-          <img class="contacts__image" src="img/map-mobile@1x.jpg" srcet="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="Зайчик-попрыгайчик">
-        </picture>
-        <div class= "container">
+        <div class="contacts__map">
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 7680px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="contacts__image" src="img/map-mobile@1x.jpg" srcet="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="Зайчик-попрыгайчик">
+          </picture>
+        </div>
+        <div class="contacts__wrapper-btn">
           <a class="contacts__btn button" href="feedback-create.html">Напишите нам</a>
         </div>
-
-
       </section>
     </main>
 

@@ -1,0 +1,164 @@
+.video {
+  margin-bottom: 58px;
+}
+
+.video__wrapper {
+  /*padding-top: 20px;*/
+  border: solid 1px $border-extra-color;
+}
+
+.video__title-wrapper {
+  padding-left: 31px;
+  padding-right: 31px;
+  padding-top: 29px;
+  padding-bottom: 26px;
+}
+
+
+.video__title {
+  padding-left: 57px;
+  margin: 0;
+
+  width: 71%; /*183px от 258 */
+
+  line-height: 24px;
+
+  background-image: url("../img/icon-video.svg");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 32px 32px;
+}
+
+.video__picture {
+  position: relative;
+  margin-bottom: 34px;
+}
+
+.video__image {
+  width: 100%;
+}
+
+.video__play-btn {
+  position: absolute;
+  content: "";
+
+  top: 50%;
+  left: 50%;
+
+  width: 101px;
+  height: 77px;
+
+  transform: translate(-50%, -50%);
+}
+
+.video__description-wrapper {
+  padding-left: 34px;
+  padding-right: 34px;
+  padding-bottom: 31px;
+}
+
+.video__description {
+  margin-top: 0;
+  margin-bottom: 29px;
+
+  font-size: 13px;
+  line-height: 1.85;
+  color: $text-color;
+}
+
+@media (min-width: $tablet-width) {
+  .video__wrapper {
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+
+  .video__title-wrapper {
+    padding-left: 41px;
+    padding-right: 41px;
+
+    border: solid 3px $border-extra-color;
+    border-bottom: none;
+  }
+
+  .video__title {
+    padding-top: 41px;
+
+    padding-left: 66px;
+    margin-bottom: 20px;
+
+    width: 71%; /*183px от 258 */
+
+    font-size: 20px;
+
+    background-position: 0 100%;
+  }
+
+  .video__picture {
+    order: -1;
+    margin-bottom: 0;
+  }
+
+  .video__description-wrapper {
+    padding-left: 41px;
+    padding-right: 41px;
+    padding-bottom: 46px;
+    border: solid 3px $border-extra-color;
+    border-top: none;
+  }
+
+  .video__description {
+    font-size: 15px;
+    line-height: 24px;
+    color: $text-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    position: relative;
+    min-height: 455px;
+  }
+
+  .video__title-wrapper {
+    width: 368px;
+    padding-bottom: 0;
+  }
+
+  .video__title {
+    padding-top: 47px;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    width: 148px;
+
+    background-position: 0 0;
+  }
+
+  .video__picture {
+    position: absolute;
+    content: "";
+
+    top: 0;
+    left: 0;
+
+    width: 682px;
+    height: 455px;
+  }
+
+  .video__title-wrapper,
+  .video__description-wrapper {
+    margin-left: 682px;
+    padding-left: 80px;
+    padding-right: 57px;
+
+    min-height: 15px;
+  }
+
+  .video__description {
+    margin-bottom: 51px;
+  }
+}

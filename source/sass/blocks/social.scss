@@ -37,6 +37,7 @@
 .copyright__text {
   margin: 0;
   margin-right: 30px;
+  padding-top: 8px;
 
   font-size: 19px;
   font-weight: bold;
@@ -46,7 +47,7 @@
 @media (min-width: $tablet-width) {
   .social {
     padding: 0;
-    padding-top: 29px;
+    /*padding-top: 1px;*/
 
     width: 21%; /* 140px */
 
@@ -54,7 +55,7 @@
   }
 
   .copyright {
-    margin-bottom: -30px;
+    margin-bottom: 0;
   }
 }
 
