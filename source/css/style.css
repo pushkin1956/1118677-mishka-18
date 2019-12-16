@@ -574,17 +574,15 @@ h3 {
   -webkit-box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
           box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec; }
 
-.nav-list__svg-search,
-.nav-list__svg-cart {
+.nav-list__svg {
   margin-right: 24px;
   fill: #231f20;
   opacity: 0.2;
   cursor: pointer;
   -webkit-transform: translateY(3px);
           transform: translateY(3px); }
-
-.nav-list__svg-cart {
-  margin-right: 21px; }
+  .nav-list__svg--cart {
+    margin-right: 21px; }
 
 .nav-list__link {
   display: -webkit-box;
@@ -680,26 +678,23 @@ h3 {
     .nav-list__item--search {
       border-left: 1px solid rgba(0, 0, 0, 0.1);
       border-right: 1px solid rgba(0, 0, 0, 0.1); }
+  .nav-list__span-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%); }
   .nav-list__link {
     padding: 0;
     /*чтоб не наезжало на верхнюю строку */ }
-    .nav-list__link--hidden {
-      position: absolute;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      padding: 0;
-      border: 0;
-      white-space: nowrap;
-      -webkit-clip-path: inset(100%);
-              clip-path: inset(100%); }
     .nav-list__link--search {
-      /* потом запись сократить */
-      /*padding-top: 32px;*/
       padding-left: 31px;
-      /*padding-bottom: 31px;*/
       padding-right: 31px;
       min-height: 88px; }
     .nav-list__link--cart {
@@ -709,10 +704,10 @@ h3 {
       margin-right: 36px; }
     .nav-list__link--knitting {
       margin-right: 110px; }
-  .nav-list__svg-search {
+  .nav-list__svg--search {
     /*width: 82px;*/
     margin-right: 0; }
-  .nav-list__svg-cart {
+  .nav-list__svg--cart {
     margin-right: 28px; }
   .main-nav__delivery {
     display: block;
@@ -1729,7 +1724,7 @@ h3 {
   line-height: 1.6;
   border-top: 1px solid #ececec; }
 
-.catalog-list__cart svg {
+.catalog-list__svg {
   fill: #231f20;
   opacity: 0.2;
   cursor: pointer; }
@@ -1905,6 +1900,8 @@ h3 {
   left: 50%;
   width: 101px;
   height: 77px;
+  background-color: transparent;
+  border: none;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
 
@@ -1994,6 +1991,9 @@ h3 {
   .video__description {
     margin-bottom: 51px; } }
 
+.form {
+  margin-bottom: 55px; }
+
 .form__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2022,6 +2022,8 @@ h3 {
   margin: 0;
   margin-bottom: 34px;
   border: none; }
+  .form__fieldset--message {
+    margin-bottom: 10px; }
 
 .form__legend {
   position: relative;
@@ -2037,13 +2039,13 @@ h3 {
     content: "";
     top: 8px;
     left: 62px;
-    width: 76.15%;
+    width: calc(100% - 62px);
     /* 198px от 260px */
     height: 1px;
     background-color: #63d1bb; }
   .form__legend--mail::after {
     left: 81px;
-    width: 68.84%;
+    width: calc(100% - 81px);
     /* 179px от 260px */ }
 
 .form__type-list,
@@ -2054,11 +2056,16 @@ h3 {
 
 .form__type-item:not(:last-child),
 .form__color-item:not(:last-child) {
-  margin-bottom: 35px; }
+  margin-bottom: 20px; }
 
 .form__label {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 40px;
   font-size: 17px;
   font-weight: bold;
   line-height: 18px;
@@ -2070,7 +2077,7 @@ h3 {
     .form__label--radio::before {
       position: absolute;
       content: "";
-      top: 2px;
+      top: 0;
       left: 0;
       width: 40px;
       height: 40px;
@@ -2082,7 +2089,7 @@ h3 {
     .form__label--checkbox::before {
       position: absolute;
       content: "";
-      top: 2px;
+      top: 0;
       left: 0;
       width: 40px;
       height: 40px;
@@ -2105,8 +2112,9 @@ h3 {
   font-size: 19px;
   line-height: 18px;
   color: #444444;
-  border: none;
-  border-bottom: 2px solid #000000; }
+  border: none; }
+  .form__input--name, .form__input--tel, .form__input--mail {
+    border-bottom: 2px solid #000000; }
   .form__input::-webkit-input-placeholder {
     font-size: 17px;
     line-height: 18px;
@@ -2130,25 +2138,28 @@ h3 {
   .form__input--radio:checked + .form__label--radio::after {
     position: absolute;
     content: "";
-    top: 14px;
+    top: 50%;
     left: 12px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: #62d1ba; }
+    background-color: #62d1ba;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
   .form__input--checkbox:checked + .form__label--checkbox::after {
     position: absolute;
     content: "";
-    top: 14px;
+    top: 50%;
     left: 9px;
     width: 22px;
     height: 16px;
     background-image: url("../img/icon-tick.svg");
-    background-size: 22px 16px; }
+    background-size: 22px 16px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
   .form__input--message {
     padding-left: 17px;
-    -webkit-box-shadow: inset 0px -2px 0 0 #000000;
-            box-shadow: inset 0px -2px 0 0 #000000;
+    /*box-shadow: inset 0 -2px 0 0 #000000;*/
     border: solid 2px #444444; }
     .form__input--message::-webkit-input-placeholder {
       width: 165px;
@@ -2189,7 +2200,13 @@ h3 {
 
 .form__note {
   margin-top: 0;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #444444; }
+
+.form-btn {
+  width: 100%; }
 
 @media (min-width: 768px) {
   .form__title {
