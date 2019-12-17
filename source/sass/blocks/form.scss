@@ -1,7 +1,4 @@
 .form {
-  margin: 0 auto;
-  padding: 0 30px;
-
   margin-bottom: 55px;
 }
 
@@ -9,7 +6,7 @@
   @include centering;
 
   margin-bottom: 30px;
-  min-height: 178px; /* 177 нельзя - проподает псевдолиния*/
+  min-height: 176px; /* 177 нельзя - проподает псевдолиния*/
 
   background-color: $background-color;
 }
@@ -30,8 +27,8 @@
 }
 
 .form__fieldset {
-  /*padding: 0;
-  margin: 0;*/
+  padding: 0;
+  margin: 0;
   padding-bottom: 34px;
 
   border: none;
@@ -250,13 +247,15 @@
   }
 
   .form__description {
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 
     font-size: 17px;
     line-height: 30px;
   }
 
   .form__inner {
+    padding: 0 50px;
+
     &--bg-color {
       background-color: $background-color;
     }
@@ -280,8 +279,24 @@
   }
 
   .form__type-list,
+  .form__color-list,
+  .form__name-item,
+  .form__message-item {
+    padding-left: 167px;
+  }
+
   .form__color-list {
-    padding-left: 175px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__color-item {
+    width: 50%; /* 225px; */
+  }
+
+  .form__name-item {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 

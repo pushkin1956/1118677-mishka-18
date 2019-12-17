@@ -510,7 +510,7 @@ h3 {
             box-shadow: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   .page-header__wrapper {
-    width: 100%;
+    /*width: 100%;*/
     margin: 0 auto;
     padding: 0 30px;
     min-width: 668px;
@@ -874,7 +874,7 @@ h3 {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: 100%;
+    /*width: 100%;*/
     margin: 0 auto;
     padding: 0 30px;
     min-width: 768px; } }
@@ -927,7 +927,7 @@ h3 {
     font-size: 53px;
     line-height: 1.08; }
   .promo__list {
-    width: 100%;
+    /*width: 100%;*/
     margin: 0 auto;
     padding: 0 30px; } }
   @media (min-width: 1150px) and (min-width: 768px) {
@@ -1081,7 +1081,7 @@ h3 {
 
 @media (min-width: 1150px) {
   .superior {
-    width: 100%;
+    /*width: 100%;*/
     margin: 0 auto;
     padding: 0 30px; } }
   @media (min-width: 1150px) and (min-width: 768px) {
@@ -1373,7 +1373,7 @@ h3 {
 
 @media (min-width: 1150px) {
   .reviews {
-    width: 100%;
+    /*width: 100%;*/
     margin: 0 auto;
     padding: 0 30px;
     margin-bottom: 60px; } }
@@ -1474,7 +1474,7 @@ h3 {
     width: 100%; }
 
 .contacts__wrapper-btn {
-  width: 100%;
+  /*width: 100%;*/
   margin: 0 auto;
   padding: 0 30px; }
   @media (min-width: 768px) {
@@ -1992,7 +1992,7 @@ h3 {
     margin-bottom: 51px; } }
 
 .form {
-  @incl margin-bottom: 55px; }
+  margin-bottom: 55px; }
 
 .form__title {
   display: -webkit-box;
@@ -2007,7 +2007,7 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
-  min-height: 178px;
+  min-height: 176px;
   /* 177 нельзя - проподает псевдолиния*/
   background-color: #f1f1f1; }
 
@@ -2017,6 +2017,10 @@ h3 {
   font-size: 13px;
   line-height: 24px;
   color: #444444; }
+
+.form__inner {
+  margin: 0 auto;
+  padding: 0 30px; }
 
 .form__fieldset {
   padding: 0;
@@ -2227,15 +2231,17 @@ h3 {
       background-size: auto 24px;
       width: 100%; }
   .form__description {
-    margin-bottom: 60px;
+    margin-bottom: 10px;
     font-size: 17px;
     line-height: 30px; }
+  .form__inner {
+    padding: 0 50px; }
+    .form__inner--bg-color {
+      background-color: #f1f1f1; }
   .form__fieldset {
     position: relative;
     padding-top: 50px;
     padding-bottom: 50px; }
-    .form__fieldset--bg-color {
-      background-color: #f1f1f1; }
   .form__legend {
     position: absolute;
     top: 65px;
@@ -2243,8 +2249,25 @@ h3 {
     .form__legend::after {
       display: none; }
   .form__type-list,
+  .form__color-list,
+  .form__name-item,
+  .form__message-item {
+    padding-left: 167px; }
   .form__color-list {
-    padding-left: 175px; } }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .form__color-item {
+    width: 50%;
+    /* 225px; */ }
+  .form__name-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
 
 @media (min-width: 1150px) {
   .form {
