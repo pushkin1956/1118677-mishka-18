@@ -59,59 +59,63 @@
     </header>
 
     <main class="page-form">
+      <h1 class="form__title">Вязание на заказ</h1>
       <section class="form">
-        <h1 class="form__title ">Вязание на заказ</h1>
-        <!-- <h2 class="visually-hidden">Форма для заказа</h2> -->
-        <div class="container">
-          <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <h2 class="visually-hidden">Форма для заказа</h2>
+        <div>
+          <p class="form__description container">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <form class="form__format" method="GET" action="https://echo.htmlacademy.ru">
-            <fieldset class="form__fieldset form__fieldset--type">
-              <legend class="form__legend">
-                Тип
-              </legend>
-              <ul class="form__type-list">
-                <li class="form__type-item">
-                  <input class="form__input form__input--radio visually-hidden" type="radio" name="filter-type" value="accessory" id="filter-accessory" checked>
-                  <label class="form__label form__label--radio" for="filter-accessory">Аксессуар для интерьера</label>
-                </li>
-                <li class="form__type-item">
-                    <input class="form__input form__input--radio visually-hidden" type="radio" name="filter-type" value="toy" id="filter-toy">
-                    <label class="form__label form__label--radio" for="filter-toy">Детская игрушка</label>
-                </li>
-              </ul>
-            </fieldset>
+            <div class="container">
+              <fieldset class="form__fieldset form__fieldset--type">
+                <legend class="form__legend">
+                  Тип
+                </legend>
+                <ul class="form__type-list">
+                  <li class="form__type-item">
+                    <input class="form__input form__input--radio visually-hidden" type="radio" name="filter-type" value="accessory" id="filter-accessory" checked>
+                    <label class="form__label form__label--radio" for="filter-accessory">Аксессуар для интерьера</label>
+                  </li>
+                  <li class="form__type-item">
+                      <input class="form__input form__input--radio visually-hidden" type="radio" name="filter-type" value="toy" id="filter-toy">
+                      <label class="form__label form__label--radio" for="filter-toy">Детская игрушка</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
 
-            <fieldset class="form__fieldset form__fieldset--color">
-              <legend class="form__legend">
-                Цвет
-              </legend>
-              <ul class="form__color-list">
-                <li class="form__color-item">
-                  <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="white" id="filter-white" checked>
-                  <label class="form__label form__label--checkbox" for="filter-white">Белый</label>
-                </li>
-                <li class="form__color-item">
-                  <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="grey" id="filter-grey" checked>
-                  <label class="form__label form__label--checkbox" for="filter-grey">Серый</label>
-                </li>
-                <li class="form__color-item">
-                  <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="tiffany" id="filter-tiffany">
-                  <label class="form__label form__label--checkbox" for="filter-tiffany">"Тиффани"</label>
-                </li>
-                <li class="form__color-item">
-                  <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="black" id="filter-black">
-                  <label class="form__label form__label--checkbox" for="filter-black">Черный</label>
-                </li>
-                <li class="form__color-item">
-                  <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="pink" id="filter-pink">
-                  <label class="form__label form__label--checkbox" for="filter-pink">Розовый</label>
-                </li>
-                <li class="form__color-item">
-                  <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="orange" id="filter-orange">
-                  <label class="form__label form__label--checkbox" for="filter-orange">Оранжевый</label>
-                </li>
-              </ul>
-            </fieldset>
+            <div class="form__inner form__inner--bg-color">
+              <fieldset class="form__fieldset form__fieldset--color">
+                <legend class="form__legend">
+                  Цвет
+                </legend>
+                <ul class="form__color-list">
+                  <li class="form__color-item">
+                    <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="white" id="filter-white" checked>
+                    <label class="form__label form__label--checkbox" for="filter-white">Белый</label>
+                  </li>
+                  <li class="form__color-item">
+                    <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="grey" id="filter-grey" checked>
+                    <label class="form__label form__label--checkbox" for="filter-grey">Серый</label>
+                  </li>
+                  <li class="form__color-item">
+                    <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="tiffany" id="filter-tiffany">
+                    <label class="form__label form__label--checkbox" for="filter-tiffany">"Тиффани"</label>
+                  </li>
+                  <li class="form__color-item">
+                    <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="black" id="filter-black">
+                    <label class="form__label form__label--checkbox" for="filter-black">Черный</label>
+                  </li>
+                  <li class="form__color-item">
+                    <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="pink" id="filter-pink">
+                    <label class="form__label form__label--checkbox" for="filter-pink">Розовый</label>
+                  </li>
+                  <li class="form__color-item">
+                    <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="orange" id="filter-orange">
+                    <label class="form__label form__label--checkbox" for="filter-orange">Оранжевый</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
 
             <fieldset class="form__fieldset form__fieldset--name">
               <legend class="form__legend">
@@ -137,7 +141,7 @@
               </legend>
               <div class="form__tel-item">
                 <input class="form__input form__input--tel" id="user-tel" type="tel" name="user-tel" pattern="\+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-                <svg class="form__svg" width="25" height="25"><use xlink:href="#icon-phone"></use></svg>
+                <svg class="form__svg " width="25" height="25"><use xlink:href="#icon-phone"></use></svg>
               </div>
             </fieldset>
 
@@ -147,7 +151,7 @@
               </legend>
               <div class="form__mail-item">
                 <input class="form__input form__input--mail" id="user-mail" type="email" name="user-mail" placeholder="Ваш Email*" required>
-                <svg class="form__svg" width="32" height="32"><use xlink:href="#icon-mail"></use></svg>
+                <svg class="form__svg " width="32" height="32"><use xlink:href="#icon-mail"></use></svg>
               </div>
             </fieldset>
 

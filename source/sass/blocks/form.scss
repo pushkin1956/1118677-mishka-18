@@ -1,4 +1,7 @@
 .form {
+  margin: 0 auto;
+  padding: 0 30px;
+
   margin-bottom: 55px;
 }
 
@@ -6,7 +9,7 @@
   @include centering;
 
   margin-bottom: 30px;
-  min-height: 177px;
+  min-height: 178px; /* 177 нельзя - проподает псевдолиния*/
 
   background-color: $background-color;
 }
@@ -21,15 +24,20 @@
   color: $text-color;
 }
 
+.form__inner {
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
 .form__fieldset {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 34px;
+  /*padding: 0;
+  margin: 0;*/
+  padding-bottom: 34px;
 
   border: none;
 
   &--message {
-    margin-bottom: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -227,7 +235,6 @@
   width: 100%;
 }
 
-
 @media (min-width: $tablet-width) {
   .form__title {
     position: relative;
@@ -243,10 +250,38 @@
   }
 
   .form__description {
-    margin-bottom: 10px;
+    margin-bottom: 60px;
 
     font-size: 17px;
     line-height: 30px;
+  }
+
+  .form__inner {
+    &--bg-color {
+      background-color: $background-color;
+    }
+  }
+
+  .form__fieldset {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .form__legend {
+    position: absolute;
+
+    top: 65px;
+    left: 61px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form__type-list,
+  .form__color-list {
+    padding-left: 175px;
   }
 }
 

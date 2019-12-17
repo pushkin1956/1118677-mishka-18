@@ -1992,7 +1992,7 @@ h3 {
     margin-bottom: 51px; } }
 
 .form {
-  margin-bottom: 55px; }
+  @incl margin-bottom: 55px; }
 
 .form__title {
   display: -webkit-box;
@@ -2007,7 +2007,8 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
-  min-height: 177px;
+  min-height: 178px;
+  /* 177 нельзя - проподает псевдолиния*/
   background-color: #f1f1f1; }
 
 .form__description {
@@ -2020,10 +2021,10 @@ h3 {
 .form__fieldset {
   padding: 0;
   margin: 0;
-  margin-bottom: 34px;
+  padding-bottom: 34px;
   border: none; }
   .form__fieldset--message {
-    margin-bottom: 10px; }
+    padding-bottom: 10px; }
 
 .form__legend {
   position: relative;
@@ -2226,9 +2227,24 @@ h3 {
       background-size: auto 24px;
       width: 100%; }
   .form__description {
-    margin-bottom: 10px;
+    margin-bottom: 60px;
     font-size: 17px;
-    line-height: 30px; } }
+    line-height: 30px; }
+  .form__fieldset {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    .form__fieldset--bg-color {
+      background-color: #f1f1f1; }
+  .form__legend {
+    position: absolute;
+    top: 65px;
+    left: 61px; }
+    .form__legend::after {
+      display: none; }
+  .form__type-list,
+  .form__color-list {
+    padding-left: 175px; } }
 
 @media (min-width: 1150px) {
   .form {
