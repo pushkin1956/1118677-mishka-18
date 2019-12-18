@@ -6,7 +6,7 @@
   @include centering;
 
   margin-bottom: 30px;
-  min-height: 176px; /* 177 нельзя - проподает псевдолиния*/
+  min-height: 176px; /* 177 178 173 нельзя - проподает псевдолиния*/
 
   background-color: $background-color;
 }
@@ -133,6 +133,10 @@
 
   display: flex;
   flex-direction: column;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__input {
@@ -144,6 +148,7 @@
   line-height: 18px;
   color: $text-color;
   border: none;
+  cursor: pointer;
 
   &--name,
   &--tel,
@@ -228,7 +233,7 @@
   color: $text-color;
 }
 
-.form-btn {
+.form__btn {
   width: 100%;
 }
 
@@ -281,9 +286,45 @@
   .form__type-list,
   .form__color-list,
   .form__name-item,
+  .form__tel-item,
+  .form__mail-item,
   .form__message-item {
     padding-left: 167px;
   }
+
+  .form__type-item:not(:last-child),
+  .form__color-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+
+.form__label {
+  font-size: 19px;
+
+  &--radio {
+    min-height: 53px;
+    padding-left: 80px;
+
+    &::before {
+      width: 52px;
+      height: 53px;
+    }
+  }
+
+  &--name {
+    margin-right: 26px;
+  }
+
+  &--checkbox {
+    min-height: 52px;
+    padding-left: 82px;
+
+    &::before {
+      width: 54px;
+      height: 52px;
+    }
+  }
+}
 
   .form__color-list {
     display: flex;
@@ -295,10 +336,76 @@
   }
 
   .form__name-item {
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin-bottom: 40px;
   }
+
+  .form__input {
+    padding-top: 10px;
+    padding-bottom: 17px;
+    width: 100%;
+
+    background-color: inherit;
+
+    &::placeholder {
+      padding-left: 18px;
+      font-size: 19px;
+    }
+
+    &--radio:checked + .form__label--radio {
+      &::after {
+        left: 15px;
+
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &--checkbox:checked + .form__label--checkbox {
+      &::after {
+        left: 11px;
+
+        width: 33px;
+        height: 22px;
+        background-size: 33px 22px;
+      }
+    }
+
+    &--message {
+      padding-left: 0;
+
+      &::placeholder {
+        width: 100%;
+      }
+    }
+  }
+
+  .form__svg {
+    top: 3px;
+    right: 28px;
+  }
+
+  .form__wrapper-note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__note {
+    margin: 0;
+    
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .form__btn {
+    order: -1;
+    width: 230px;
+  }
+
 }
+
 
 @media (min-width: $desktop-width) {
   .form {
