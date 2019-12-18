@@ -292,9 +292,8 @@
     }
   }
 
-  /*.form__color-item:not(:nth-child(5)),
-  .form__color-item:not(:last-child)*/
-  .form__type-item:not(:last-child) {
+  .form__type-item:not(:last-child),
+  .form__color-item:not(:nth-last-child(-n + 2)) {
     margin-bottom: 24px;
   }
 

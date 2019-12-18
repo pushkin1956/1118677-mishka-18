@@ -413,6 +413,7 @@ a {
   color: inherit; }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto; }
 
@@ -2259,7 +2260,8 @@ h3 {
           -ms-flex-direction: row;
               flex-direction: row;
       margin-bottom: 40px; }
-  .form__type-item:not(:last-child) {
+  .form__type-item:not(:last-child),
+  .form__color-item:not(:nth-last-child(-n + 2)) {
     margin-bottom: 24px; }
   .form__label {
     font-size: 19px; }
