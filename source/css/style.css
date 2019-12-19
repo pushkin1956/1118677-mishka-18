@@ -541,7 +541,7 @@ h3 {
 
 .main-nav__link-logo {
   padding-top: 22px;
-  min-height: 79px; }
+  height: 79px; }
 
 .main-nav__toggle {
   position: absolute;
@@ -593,8 +593,9 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 30px;
   max-width: 260px;
-  min-height: 79px;
   font-weight: 700;
   color: #000000; }
   .nav-list__link--catalog, .nav-list__link--knitting {
@@ -638,7 +639,7 @@ h3 {
     margin-right: 190px;
     padding-top: 22px;
     /* 22px такой же в мобайл - после всего можно удалить */
-    min-height: 88px; }
+    height: 88px; }
   .main-nav__toggle {
     display: none; }
   .nav-list {
@@ -671,7 +672,8 @@ h3 {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      min-height: 88px;
+      height: 88px;
+      /* удалить? */
       /*width: 350px;*/ }
   .nav-list__item {
     -webkit-box-shadow: none;
@@ -697,10 +699,12 @@ h3 {
     .nav-list__link--search {
       padding-left: 31px;
       padding-right: 31px;
-      min-height: 88px; }
+      padding-top: 35px;
+      padding-bottom: 35px; }
     .nav-list__link--cart {
       margin-left: 31px;
-      min-height: 88px; }
+      padding-top: 33px;
+      padding-bottom: 35px; }
     .nav-list__link--catalog {
       margin-right: 36px; }
     .nav-list__link--knitting {
@@ -716,7 +720,7 @@ h3 {
         -ms-flex-order: 4;
             order: 4;
     margin: 0;
-    padding-top: 22px;
+    padding-top: 2px;
     font-size: 15px;
     line-height: 1.6;
     color: #444444; } }
@@ -739,7 +743,8 @@ h3 {
         -ms-flex-order: 1;
             order: 1;
     padding-top: 0;
-    min-height: 88px;
+    margin-bottom: 1px;
+    height: 88px;
     font-size: 17px;
     background-color: #ffffff;
     /*width: 375px;*/ }
@@ -760,20 +765,22 @@ h3 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-top: 1px;
+    padding-top: 21px;
     font-size: 15px;
     background-color: #f9f9f9; }
   .nav-list--bg-color {
     background-color: #f1f1f1; }
   .nav-list__item--catalog {
     border-right: 1px solid rgba(0, 0, 0, 0.1); }
-  /* после установки собсвенноых лого возможно удалить - чтоб строки не перскакивали */
-  .nav-list__link--knitting {
-    /* обнуляю сдвиг  в tablet */
-    margin-right: 0;
-    margin-left: 35px; }
   .nav-list__link--catalog {
-    margin-right: 35px; }
+    margin-right: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px; }
+  .nav-list__link--knitting {
+    margin-right: 0;
+    margin-left: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px; }
   .nav-list__link--search {
     padding-left: 35px; }
   .nav-list__link--new {
@@ -990,7 +997,6 @@ h3 {
   color: #63d1bb; }
 
 .superior__img {
-  display: block;
   margin-bottom: 25px;
   width: 100%; }
 
@@ -1290,16 +1296,18 @@ h3 {
 
 .reviews__control-wrapper {
   margin-bottom: 50px;
-  margin-left: 14.2%;
-  /*37px;*/
+  /*margin-left: 14.2%;/*37px;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 71.5%;
-  /*186px;*/ }
+  width: 100%;
+  /*71.5%; /*186px;*/ }
+
+.reviews__svg-right {
+  background-color: #ffffff; }
 
 .reviews__btn {
   /*width: 100%;*/
@@ -1558,9 +1566,12 @@ h3 {
     padding-left: 175px; } }
 
 .page-footer {
+  padding-top: 25px;
+  padding-bottom: 23px;
   background-color: #f1f1f1; }
 
 .page-footer__inner {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1573,24 +1584,39 @@ h3 {
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  min-height: 160px; }
+          align-items: center; }
+  .page-footer__inner::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444444;
+    /*или $border-extra-color;*/ }
 
 .page-footer__link-logo {
   display: none; }
 
+.page-footer__social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 50px; }
+
 @media (min-width: 768px) {
+  .page-footer {
+    padding-top: 50px;
+    padding-bottom: 58px; }
   .page-footer__inner {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    min-height: 143px; }
+        flex-wrap: wrap; }
+    .page-footer__inner::before {
+      display: none; }
   .page-footer__link-logo {
     display: block;
     margin-right: 80px;
@@ -1601,9 +1627,6 @@ h3 {
     margin-right: 79px; } }
 
 .social {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1620,17 +1643,23 @@ h3 {
   padding-left: 21.9%;
   /* 57px; */
   width: 100%;
-  /*140*/
-  min-height: 80px;
-  border-bottom: 1px solid #f1f1f1; }
+  /*140*/ }
 
 .social__link {
   display: block;
-  margin-left: 40px;
   width: 24px;
   height: 28px; }
-  .social__link:last-child {
-    margin-left: 0; }
+
+@media (min-width: 768px) {
+  .social {
+    padding: 0;
+    /*padding-top: 1px;*/
+    width: 21%;
+    /* 140px */ } }
+
+@media (min-width: 1150px) {
+  .social {
+    width: 140px; } }
 
 .copyright {
   display: -webkit-box;
@@ -1640,8 +1669,7 @@ h3 {
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 15px; }
+          justify-content: center; }
 
 .copyright__text {
   margin: 0;
@@ -1652,18 +1680,8 @@ h3 {
   line-height: 0.95; }
 
 @media (min-width: 768px) {
-  .social {
-    padding: 0;
-    /*padding-top: 1px;*/
-    width: 21%;
-    /* 140px */
-    border: none; }
   .copyright {
     margin-bottom: 0; } }
-
-@media (min-width: 1150px) {
-  .social {
-    width: 140px; } }
 
 .catalog {
   margin-bottom: 58px; }

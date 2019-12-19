@@ -8,7 +8,7 @@
 
 .main-nav__link-logo {
   padding-top: 22px;
-  min-height: 79px;
+  height: 79px;
 }
 
 .main-nav__toggle {
@@ -66,9 +66,11 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 30px;
 
   max-width: 260px;
-  min-height: 79px;
+
   font-weight: 700;
   color: #000000;
 
@@ -118,7 +120,7 @@
     margin-right: 190px;
     padding-top: 22px; /* 22px такой же в мобайл - после всего можно удалить */
 
-    min-height: 88px;
+    height: 88px;
   }
 
   .main-nav__toggle {
@@ -150,7 +152,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      min-height: 88px;
+      height: 88px;  /* удалить? */
       /*width: 350px;*/
     }
   }
@@ -174,12 +176,15 @@
     &--search {
       padding-left: 31px;
       padding-right: 31px;
-      min-height: 88px;
+
+      padding-top: 35px;
+      padding-bottom: 35px;
     }
 
     &--cart {
       margin-left: 31px;
-      min-height: 88px;
+      padding-top: 33px;
+      padding-bottom: 35px;
     }
 
     &--catalog {
@@ -196,7 +201,6 @@
     margin-right: 0;
   }
 
-
   .nav-list__svg--cart {
     margin-right: 28px;
   }
@@ -206,7 +210,7 @@
     order: 4;
 
     margin: 0;
-    padding-top: 22px;
+    padding-top: 2px;
 
     font-size: 15px;
     line-height: 1.6;
@@ -232,8 +236,9 @@
     &--first {
       order: 1;
       padding-top: 0;
+      margin-bottom: 1px;
 
-      min-height: 88px;
+      height: 88px;
       font-size: 17px;
 
       background-color: #ffffff;
@@ -254,7 +259,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      padding-top: 1px;
+      padding-top: 21px;
       font-size: 15px;
 
       background-color: #f9f9f9;
@@ -269,16 +274,20 @@
     border-right: 1px solid rgba(0, 0, 0, 0.1);
   }
 
-  /* после установки собсвенноых лого возможно удалить - чтоб строки не перскакивали */
-  .nav-list__link--knitting {
-    /* обнуляю сдвиг  в tablet */
-    margin-right: 0;
-    margin-left: 35px;
-  }
-
   .nav-list__link {
     &--catalog {
       margin-right: 35px;
+
+      padding-top: 35px;
+      padding-bottom: 35px;
+    }
+
+    &--knitting {
+      margin-right: 0;
+      margin-left: 35px;
+
+      padding-top: 35px;
+      padding-bottom: 35px;
     }
 
     &--search {
