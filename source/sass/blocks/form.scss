@@ -6,7 +6,8 @@
   @include centering;
 
   margin-bottom: 30px;
-  min-height: 176px; /* 177 178 173 нельзя - проподает псевдолиния*/
+  padding-top: 75px;
+  padding-bottom: 74px;
 
   background-color: $background-color;
 }
@@ -237,8 +238,10 @@
     position: relative;
 
     align-items: flex-start;
-    margin-bottom: 66px;
-    min-height: 127px;
+    margin-bottom: 79px;
+
+    padding-top: 7px;
+    padding-bottom: 70px;
 
     &::after {
       @include bg-zigzag-fill;
@@ -401,7 +404,8 @@
   .form__title {
     margin-bottom: 122px;
 
-    min-height: 162px;
+    padding-top: 15px;
+    padding-bottom: 90px;
 
     &::after {
       @include bg-zigzag-fill(34px);
