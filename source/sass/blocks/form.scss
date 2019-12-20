@@ -2,14 +2,16 @@
   margin-bottom: 55px;
 }
 
-.form__title {
-  @include centering;
-
+.form__wrapper-title {
   margin-bottom: 30px;
   padding-top: 75px;
   padding-bottom: 74px;
 
   background-color: $background-color;
+}
+
+.form__title {
+  @include centering;
 }
 
 .form__description {
@@ -234,16 +236,16 @@
 }
 
 @media (min-width: $tablet-width) {
-  .form__title {
-    position: relative;
 
-    align-items: flex-start;
+  .form__wrapper-title {
+    position: relative;
+    align-items: flex-start; /* удалить? ;/
     margin-bottom: 79px;
 
     padding-top: 7px;
     padding-bottom: 70px;
 
-    &::after {
+   &::after {
       @include bg-zigzag-fill;
     }
   }
@@ -401,9 +403,8 @@
     margin-bottom: 58px;
   }
 
-  .form__title {
+  .form__wrapper-title {
     margin-bottom: 122px;
-
     padding-top: 15px;
     padding-bottom: 90px;
 

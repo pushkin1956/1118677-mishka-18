@@ -2,14 +2,17 @@
   margin-bottom: 58px;
 }
 
-.catalog__title {
-  @include centering;
-
+.catalog__wrapper-title {
   margin-bottom: 30px;
+
   padding-top: 75px;
   padding-bottom: 74px;
 
   background-color: $background-color;
+}
+
+.catalog__title {
+  @include centering;
 }
 
 .catalog-list {
@@ -66,16 +69,13 @@
     margin-bottom: 58px;
   }
 
-  .catalog__title {
+  .catalog__wrapper-title {
     position: relative;
-
-    align-items: flex-start;
     margin-bottom: 79px;
-
     padding-top: 7px;
     padding-bottom: 70px;
 
-    &::after {
+&::after {
       @include bg-zigzag-fill;
     }
   }
@@ -146,13 +146,12 @@
     margin-bottom: 58px;
   }
 
-  .catalog__title {
+  .catalog__wrapper-title {
     margin-bottom: 122px;
-
     padding-top: 15px;
     padding-bottom: 90px;
 
-    &::after {
+&::after {
       @include bg-zigzag-fill(34px);
     }
   }

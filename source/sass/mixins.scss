@@ -5,10 +5,16 @@
 }
 
 @mixin centering {
-  display: flex;
+  /*display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;*/
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 30px;
+    padding-bottom: 66px;
+  }
 }
 
 @mixin container {
@@ -43,8 +49,9 @@
   content: "";
   bottom: calc(#{-$height-zigzag} / 2);
   height: $height-zigzag;
+  width: 100%;
+
   background-image: url("../img/bg-zigzag-fill.svg");
   background-repeat: repeat-x;
   background-size: auto $height-zigzag;
-  width: 100%;
 }
