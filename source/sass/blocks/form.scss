@@ -98,7 +98,7 @@
 .form__label {
   display: flex;
   align-items: center;
-  min-height: 40px;
+  height: 40px;
 
   font-size: 17px;
   font-weight: bold;
@@ -236,16 +236,15 @@
 }
 
 @media (min-width: $tablet-width) {
-
   .form__wrapper-title {
     position: relative;
-    align-items: flex-start; /* удалить? ;/
-    margin-bottom: 79px;
+    align-items: flex-start; /* удалить? */
 
+    margin-bottom: 79px;
     padding-top: 7px;
     padding-bottom: 70px;
 
-   &::after {
+    &::after {
       @include bg-zigzag-fill;
     }
   }
@@ -277,6 +276,8 @@
     top: 65px;
     left: 0;
 
+    width: 170px;
+
     &::after {
       display: none;
     }
@@ -306,7 +307,7 @@
     font-size: 19px;
 
     &--radio {
-      min-height: 53px;
+      height: 53px;
       padding-left: 80px;
 
       &::before {
@@ -320,7 +321,7 @@
     }
 
     &--checkbox {
-      min-height: 52px;
+      height: 52px;
       padding-left: 82px;
 
       &::before {
@@ -337,12 +338,14 @@
   .form__input {
     padding-top: 10px;
     padding-bottom: 17px;
+    padding-left: 18px;
+
     width: 100%;
 
     background-color: inherit;
 
     &::placeholder {
-      padding-left: 18px;
+
       font-size: 19px;
     }
 
@@ -366,7 +369,7 @@
     }
 
     &--message {
-      padding-left: 0;
+      padding-left: 18px;
 
       &::placeholder {
         width: 380px;

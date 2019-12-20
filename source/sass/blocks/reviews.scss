@@ -65,12 +65,12 @@
 }
 
 .reviews__control-btn {
-  /*flex-grow: 1;*/
+  flex-grow: 1;
   padding-top: 13px;
   padding-bottom: 13px;
   padding-left: 38px;
   padding-right: 42px;
-  border: none;
+  /*border: none;*/
   border: 1px solid $background-color;
   background-color: #ffffff;
 }
@@ -149,6 +149,11 @@
     padding-top: 17px;
 
     width: 137px; /*71.5%; /*186px;*/
+  }
+
+  .reviews__control-btn {
+    padding: 0;
+    border: none;
   }
 
   .reviews__btn {

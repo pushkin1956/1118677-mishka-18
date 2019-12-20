@@ -1307,12 +1307,14 @@ h3 {
   /*71.5%; /*186px;*/ }
 
 .reviews__control-btn {
-  /*flex-grow: 1;*/
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding-top: 13px;
   padding-bottom: 13px;
   padding-left: 38px;
   padding-right: 42px;
-  border: none;
+  /*border: none;*/
   border: 1px solid #f1f1f1;
   background-color: #ffffff; }
 
@@ -1379,6 +1381,9 @@ h3 {
     padding-top: 17px;
     width: 137px;
     /*71.5%; /*186px;*/ }
+  .reviews__control-btn {
+    padding: 0;
+    border: none; }
   .reviews__btn {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -1573,8 +1578,8 @@ h3 {
     padding-left: 175px; } }
 
 .page-footer {
-  padding-top: 25px;
-  padding-bottom: 23px;
+  /*padding-top: 25px;
+  padding-bottom: 20px;*/
   background-color: #f1f1f1; }
 
 .page-footer__inner {
@@ -1589,14 +1594,9 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-<<<<<<< HEAD
-          align-items: center;
-  padding-top: 50px;
-  padding-bottom: 30px; }
-=======
-          align-items: center; }
+  /*align-items: center;*/
+  padding-top: 25px;
+  padding-bottom: 10px; }
   .page-footer__inner::before {
     position: absolute;
     content: "";
@@ -1606,7 +1606,6 @@ h3 {
     height: 1px;
     background-color: #444444;
     /*или $border-extra-color;*/ }
->>>>>>> 98cd6ab01fadd8cd4f9a48066e3f64023583fd7d
 
 .page-footer__link-logo {
   display: none; }
@@ -1615,32 +1614,29 @@ h3 {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-bottom: 50px; }
+  margin-bottom: 30px; }
 
 @media (min-width: 768px) {
   .page-footer {
-    padding-top: 50px;
-    padding-bottom: 58px; }
+    /* удалить? */ }
   .page-footer__inner {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-wrap: wrap;
-<<<<<<< HEAD
         flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-=======
-        flex-wrap: wrap; }
+    padding-top: 50px;
+    padding-bottom: 48px; }
     .page-footer__inner::before {
       display: none; }
->>>>>>> 98cd6ab01fadd8cd4f9a48066e3f64023583fd7d
   .page-footer__link-logo {
     display: block;
     margin-right: 80px;
-    height: 100%; } }
+    height: 100%; }
+  .page-footer__social {
+    margin-top: 10px;
+    margin-bottom: 0; } }
 
 @media (min-width: 1150px) {
   .page-footer__link-logo {
@@ -1655,21 +1651,12 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 30px;
   padding-right: 24.2%;
   /* 63px */
   padding-left: 21.9%;
   /* 57px; */
   width: 100%;
-<<<<<<< HEAD
-  /*140*/
-  border-bottom: 1px solid #f1f1f1; }
-=======
   /*140*/ }
->>>>>>> 98cd6ab01fadd8cd4f9a48066e3f64023583fd7d
 
 .social__link {
   display: block;
@@ -1714,11 +1701,8 @@ h3 {
 
 .catalog__wrapper-title {
   margin-bottom: 30px;
-<<<<<<< HEAD
   padding-top: 75px;
   padding-bottom: 74px;
-=======
->>>>>>> 98cd6ab01fadd8cd4f9a48066e3f64023583fd7d
   background-color: #f1f1f1; }
 
 .catalog__title {
@@ -1783,18 +1767,10 @@ h3 {
     margin-bottom: 58px; }
   .catalog__wrapper-title {
     position: relative;
-<<<<<<< HEAD
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     margin-bottom: 79px;
     padding-top: 7px;
     padding-bottom: 70px; }
-    .catalog__title::after {
-=======
-    margin-bottom: 79px; }
     .catalog__wrapper-title::after {
->>>>>>> 98cd6ab01fadd8cd4f9a48066e3f64023583fd7d
       position: absolute;
       content: "";
       bottom: calc(-24px / 2);
@@ -1854,17 +1830,11 @@ h3 {
 @media (min-width: 1150px) {
   .catalog {
     margin-bottom: 58px; }
-<<<<<<< HEAD
-  .catalog__title {
+  .catalog__wrapper-title {
     margin-bottom: 122px;
     padding-top: 15px;
     padding-bottom: 90px; }
-    .catalog__title::after {
-=======
-  .catalog__wrapper-title {
-    margin-bottom: 122px; }
     .catalog__wrapper-title::after {
->>>>>>> 98cd6ab01fadd8cd4f9a48066e3f64023583fd7d
       position: absolute;
       content: "";
       bottom: calc(-34px / 2);
@@ -1988,7 +1958,7 @@ h3 {
   .video__title-wrapper {
     padding-left: 41px;
     padding-right: 41px;
-    border: solid 3px #ececec;
+    border: solid 1px #ececec;
     border-bottom: none; }
   .video__title {
     padding-top: 41px;
@@ -2007,7 +1977,7 @@ h3 {
     padding-left: 41px;
     padding-right: 41px;
     padding-bottom: 46px;
-    border: solid 3px #ececec;
+    border: solid 1px #ececec;
     border-top: none; }
   .video__description {
     font-size: 15px;
@@ -2023,10 +1993,11 @@ h3 {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     position: relative;
-    min-height: 455px; }
+    /*height: 455px;*/ }
   .video__title-wrapper {
     width: 368px;
-    padding-bottom: 0; }
+    padding-top: 60px;
+    padding-bottom: 42px; }
   .video__title {
     padding-top: 47px;
     padding-left: 0;
@@ -2044,8 +2015,7 @@ h3 {
   .video__description-wrapper {
     margin-left: 682px;
     padding-left: 80px;
-    padding-right: 57px;
-    min-height: 15px; }
+    padding-right: 57px; }
   .video__description {
     margin-bottom: 51px; } }
 
@@ -2054,11 +2024,8 @@ h3 {
 
 .form__wrapper-title {
   margin-bottom: 30px;
-<<<<<<< HEAD
   padding-top: 75px;
   padding-bottom: 74px;
-=======
->>>>>>> 98cd6ab01fadd8cd4f9a48066e3f64023583fd7d
   background-color: #f1f1f1; }
 
 .form__title {
@@ -2141,7 +2108,7 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 40px;
+  height: 40px;
   font-size: 17px;
   font-weight: bold;
   line-height: 18px;
@@ -2274,18 +2241,14 @@ h3 {
 @media (min-width: 768px) {
   .form__wrapper-title {
     position: relative;
-<<<<<<< HEAD
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    /* удалить? */
     margin-bottom: 79px;
     padding-top: 7px;
     padding-bottom: 70px; }
-    .form__title::after {
-=======
-    margin-bottom: 66px; }
     .form__wrapper-title::after {
->>>>>>> 98cd6ab01fadd8cd4f9a48066e3f64023583fd7d
       position: absolute;
       content: "";
       bottom: calc(-24px / 2);
@@ -2309,7 +2272,8 @@ h3 {
   .form__legend {
     position: absolute;
     top: 65px;
-    left: 0; }
+    left: 0;
+    width: 170px; }
     .form__legend::after {
       display: none; }
   .form__list {
@@ -2332,7 +2296,7 @@ h3 {
   .form__label {
     font-size: 19px; }
     .form__label--radio {
-      min-height: 53px;
+      height: 53px;
       padding-left: 80px; }
       .form__label--radio::before {
         width: 52px;
@@ -2340,7 +2304,7 @@ h3 {
     .form__label--name {
       margin-right: 26px; }
     .form__label--checkbox {
-      min-height: 52px;
+      height: 52px;
       padding-left: 82px; }
       .form__label--checkbox::before {
         width: 54px;
@@ -2351,22 +2315,18 @@ h3 {
   .form__input {
     padding-top: 10px;
     padding-bottom: 17px;
+    padding-left: 18px;
     width: 100%;
     background-color: inherit; }
     .form__input::-webkit-input-placeholder {
-      padding-left: 18px;
       font-size: 19px; }
     .form__input::-moz-placeholder {
-      padding-left: 18px;
       font-size: 19px; }
     .form__input:-ms-input-placeholder {
-      padding-left: 18px;
       font-size: 19px; }
     .form__input::-ms-input-placeholder {
-      padding-left: 18px;
       font-size: 19px; }
     .form__input::placeholder {
-      padding-left: 18px;
       font-size: 19px; }
     .form__input--radio:checked + .form__label--radio::after {
       left: 15px;
@@ -2378,7 +2338,7 @@ h3 {
       height: 22px;
       background-size: 33px 22px; }
     .form__input--message {
-      padding-left: 0; }
+      padding-left: 18px; }
       .form__input--message::-webkit-input-placeholder {
         width: 380px; }
       .form__input--message::-moz-placeholder {
@@ -2416,17 +2376,11 @@ h3 {
 @media (min-width: 1150px) {
   .form {
     margin-bottom: 58px; }
-<<<<<<< HEAD
-  .form__title {
+  .form__wrapper-title {
     margin-bottom: 122px;
     padding-top: 15px;
     padding-bottom: 90px; }
-    .form__title::after {
-=======
-  .form__wrapper-title {
-    margin-bottom: 122px; }
     .form__wrapper-title::after {
->>>>>>> 98cd6ab01fadd8cd4f9a48066e3f64023583fd7d
       position: absolute;
       content: "";
       bottom: calc(-34px / 2);

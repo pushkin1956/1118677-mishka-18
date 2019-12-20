@@ -77,7 +77,7 @@
     padding-left: 41px;
     padding-right: 41px;
 
-    border: solid 3px $border-extra-color;
+    border: solid 1px $border-extra-color;
     border-bottom: none;
   }
 
@@ -103,7 +103,7 @@
     padding-left: 41px;
     padding-right: 41px;
     padding-bottom: 46px;
-    border: solid 3px $border-extra-color;
+    border: solid 1px $border-extra-color;
     border-top: none;
   }
 
@@ -120,12 +120,13 @@
     flex-wrap: wrap;
 
     position: relative;
-    min-height: 455px;
+    /*height: 455px;*/
   }
 
   .video__title-wrapper {
     width: 368px;
-    padding-bottom: 0;
+    padding-top: 60px;
+    padding-bottom: 42px;
   }
 
   .video__title {
@@ -154,8 +155,6 @@
     margin-left: 682px;
     padding-left: 80px;
     padding-right: 57px;
-
-    min-height: 15px;
   }
 
   .video__description {
