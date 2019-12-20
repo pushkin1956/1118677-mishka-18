@@ -1873,10 +1873,9 @@ h3 {
             justify-content: flex-start;
     padding-top: 27px;
     /*padding-left: 28px;*/
-    min-height: 197px;
     border: solid 1px #ececec; }
   .catalog-list__text {
-    margin-bottom: 1px; }
+    margin-bottom: 19px; }
   .catalog-list__buy {
     padding-top: 2px;
     margin-right: 0;
@@ -1950,7 +1949,7 @@ h3 {
   .video__title-wrapper {
     padding-left: 41px;
     padding-right: 41px;
-    border: solid 3px #ececec;
+    border: solid 1px #ececec;
     border-bottom: none; }
   .video__title {
     padding-top: 41px;
@@ -1969,7 +1968,7 @@ h3 {
     padding-left: 41px;
     padding-right: 41px;
     padding-bottom: 46px;
-    border: solid 3px #ececec;
+    border: solid 1px #ececec;
     border-top: none; }
   .video__description {
     font-size: 15px;
@@ -1984,11 +1983,10 @@ h3 {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    position: relative;
-    min-height: 455px; }
+    position: relative; }
   .video__title-wrapper {
     width: 368px;
-    padding-bottom: 0; }
+    padding-bottom: 62px; }
   .video__title {
     padding-top: 47px;
     padding-left: 0;
@@ -2007,7 +2005,7 @@ h3 {
     margin-left: 682px;
     padding-left: 80px;
     padding-right: 57px;
-    min-height: 15px; }
+    padding-bottom: 63px; }
   .video__description {
     margin-bottom: 51px; } }
 
@@ -2095,10 +2093,8 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 40px;
+  height: 40px;
+  padding-top: 10px;
   font-size: 17px;
   font-weight: bold;
   line-height: 18px;
@@ -2279,7 +2275,8 @@ h3 {
   .form__label {
     font-size: 19px; }
     .form__label--radio {
-      min-height: 53px;
+      height: 53px;
+      padding-top: 16px;
       padding-left: 80px; }
       .form__label--radio::before {
         width: 52px;
@@ -2287,7 +2284,7 @@ h3 {
     .form__label--name {
       margin-right: 26px; }
     .form__label--checkbox {
-      min-height: 52px;
+      height: 52px;
       padding-left: 82px; }
       .form__label--checkbox::before {
         width: 54px;
