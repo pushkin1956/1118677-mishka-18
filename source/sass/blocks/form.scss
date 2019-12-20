@@ -345,10 +345,7 @@
 
     width: 100%;
 
-    background-color: inherit;
-
     &::placeholder {
-
       font-size: 19px;
     }
 
@@ -370,6 +367,11 @@
         background-size: 33px 22px;
       }
     }
+
+    &--bg-color {
+      background-color: $background-color;
+    }
+
 
     &--message {
       padding-left: 18px;
