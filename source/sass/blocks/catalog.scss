@@ -2,13 +2,14 @@
   margin-bottom: 58px;
 }
 
-.catalog__title {
-  @include centering;
-
+.catalog__wrapper-title {
   margin-bottom: 30px;
-  min-height: 177px;
 
   background-color: $background-color;
+}
+
+.catalog__title {
+  @include centering;
 }
 
 .catalog-list {
@@ -65,13 +66,9 @@
     margin-bottom: 58px;
   }
 
-  .catalog__title {
+  .catalog__wrapper-title {
     position: relative;
-
-    align-items: flex-start;
     margin-bottom: 79px;
-
-    min-height: 127px;
 
     &::after {
       @include bg-zigzag-fill;
@@ -144,10 +141,8 @@
     margin-bottom: 58px;
   }
 
-  .catalog__title {
+  .catalog__wrapper-title {
     margin-bottom: 122px;
-
-    min-height: 162px;
 
     &::after {
       @include bg-zigzag-fill(34px);

@@ -64,7 +64,14 @@
   width: 100%; /*71.5%; /*186px;*/
 }
 
-.reviews__svg-right {
+.reviews__control-btn {
+  /*flex-grow: 1;*/
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 38px;
+  padding-right: 42px;
+  border: none;
+  border: 1px solid $background-color;
   background-color: #ffffff;
 }
 

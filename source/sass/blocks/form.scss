@@ -2,13 +2,13 @@
   margin-bottom: 55px;
 }
 
+.form__wrapper-title {
+  margin-bottom: 30px;
+  background-color: $background-color;
+}
+
 .form__title {
   @include centering;
-
-  margin-bottom: 30px;
-  min-height: 176px; /* 177 178 173 нельзя - проподает псевдолиния*/
-
-  background-color: $background-color;
 }
 
 .form__description {
@@ -233,12 +233,11 @@
 }
 
 @media (min-width: $tablet-width) {
-  .form__title {
+
+  .form__wrapper-title {
     position: relative;
 
-    align-items: flex-start;
     margin-bottom: 66px;
-    min-height: 127px;
 
     &::after {
       @include bg-zigzag-fill;
@@ -398,10 +397,8 @@
     margin-bottom: 58px;
   }
 
-  .form__title {
+  .form__wrapper-title {
     margin-bottom: 122px;
-
-    min-height: 162px;
 
     &::after {
       @include bg-zigzag-fill(34px);
