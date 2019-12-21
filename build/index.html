@@ -20,16 +20,16 @@
 
     <header class="page-header">
       <div class="page-header__wrapper">
-        <nav class="main-nav">
-          <a class="main-nav__link-logo">
+        <nav class="nav">
+          <a class="nav__link-logo nav__link-logo--current">
             <picture>
               <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="main-nav__img-logo" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
+              <img class="nav__img-logo" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
             </picture>
           </a>
-          <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button">Меню</button>
-          <ul class="main-nav__list nav-list nav-list--first">
+          <button class="nav__toggle nav__toggle--closed nav__toggle--nojs" type="button">Меню</button>
+          <ul class="nav-list nav-list--first">
             <li class="nav-list__item nav-list__item--catalog">
               <a class="nav-list__link nav-list__link--catalog" href="catalog.html">Каталог товаров</a>
             </li>
@@ -37,7 +37,7 @@
               <a class="nav-list__link nav-list__link--knitting" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="main-nav__list nav-list nav-list--second">
+          <ul class="nav__list nav-list--second">
             <li class="nav-list__item nav-list__item--search">
                 <a class="nav-list__link nav-list__link--search" href="#">
                   <svg class="nav-list__svg nav-list__svg--search" width="17.6" height="17.6"><use xlink:href="#icon-search"></use></svg>
@@ -51,7 +51,7 @@
                 </a>
             </li>
           </ul>
-          <ul class="main-nav__list nav-list nav-list--third">
+          <ul class="nav__list nav-list--third">
               <li class="nav-list__item nav-list__item--new">
                 <a class="nav-list__link nav-list__link--new" href="new.html">Новые поступления</a>
               </li>
@@ -59,7 +59,7 @@
                 <a class="nav-list__link" href="sell.html">Распродажа</a>
               </li>
             </ul>
-          <p class="main-nav__delivery">Бесплатная доставка по России</p>
+          <p class="nav__delivery">Бесплатная доставка по России</p>
         </nav>
       </div>
     </header>
@@ -212,17 +212,17 @@
   </body>
 
   <script>
-    var navToggle = document.querySelector('.main-nav__toggle');
+    var navToggle = document.querySelector('.nav__toggle');
 
-    navToggle.classList.remove('main-nav__toggle--nojs');
+    navToggle.classList.remove('nav__toggle--nojs');
 
     navToggle.addEventListener('click', function() {
-      if (navToggle.classList.contains('main-nav__toggle--closed')) {
-        navToggle.classList.remove('main-nav__toggle--closed');
-        navToggle.classList.add('main-nav__toggle--opened');
+      if (navToggle.classList.contains('nav__toggle--closed')) {
+        navToggle.classList.remove('nav__toggle--closed');
+        navToggle.classList.add('nav__toggle--opened');
       } else {
-        navToggle.classList.add('main-nav__toggle--closed');
-        navToggle.classList.remove('main-nav__toggle--opened');
+        navToggle.classList.add('nav__toggle--closed');
+        navToggle.classList.remove('nav__toggle--opened');
       }
     });
   </script>
