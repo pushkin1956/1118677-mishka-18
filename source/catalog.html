@@ -31,7 +31,7 @@
           <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button">Меню</button>
           <ul class="main-nav__list nav-list nav-list--first nav-list--first-bg-color">
             <li class="nav-list__item nav-list__item--catalog">
-              <a class="nav-list__link nav-list__link--catalog">Каталог товаров</a>
+              <a class="nav-list__link nav-list__link--catalog nav-list__link--current">Каталог товаров</a>
             </li>
             <li class="nav-list__item nav-list__item--knitting">
               <a class="nav-list__link nav-list__link--knitting" href="form.html">Вязание на заказ</a>
@@ -158,45 +158,46 @@
               <img class="video__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Видео производства">
             </picture>
             <button class="video__play-btn" type="button">
-                <svg class="video__svg-play" width="101" height="77"><use xlink:href="#icon-play"></use></svg>
+              <svg class="video__svg-play" width="101" height="77"><use xlink:href="#icon-play"></use></svg>
             </button>
           </div>
-            <div class="video__description-wrapper">
-              <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-              <a class="video_btn button" href="form.html">Cделать заказ</a>
-            </div>
+          <div class="video__description-wrapper">
+            <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+            <a class="video_btn button" href="form.html">Cделать заказ</a>
           </div>
         </div>
       </article>
     </main>
 
-    <footer class="page-footer container">
-      <div class="page-footer__inner">
-        <a class="page-footer__link-logo" href="index.html" aria-label="Cсылка на главную страницу">
-          <svg class="page-footer__svg-logo" width="102" height="34"><use xlink:href="#icon-logo-footer"></use></svg>
-        </a>
-          <ul class="page-footer__social social">
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Мы в Инстаграме">
-                <svg class="social__svg social__svg--instagram" width="21.769" height="21.334"><use xlink:href="#icon-insta"></use></svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Мы в Фейсбуке">
-                <svg class="social__svg" width="14.962" height="27.718"><use xlink:href="#icon-fb"></use></svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Мы в Твиттере">
-                <svg class="social__svg" width="23.494" height="20.168"><use xlink:href="#icon-twitter"></use></svg>
-              </a>
-            </li>
-          </ul>
-        <div class="page-footer__copyright copyright">
-          <p class="copyright__text">Разработано</p>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-            <svg class="copyright__svg " width="26.943" height="34.09"><use xlink:href="#icon-logo-htmlacademy"></use></svg>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="page-footer__inner">
+          <a class="page-footer__link-logo" href="index.html" aria-label="Cсылка на главную страницу">
+            <svg class="page-footer__svg-logo" width="102" height="34"><use xlink:href="#icon-logo-footer"></use></svg>
           </a>
+            <ul class="page-footer__social social">
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Мы в Инстаграме">
+                  <svg class="social__svg social__svg--instagram" width="21.769" height="21.334"><use xlink:href="#icon-insta"></use></svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Мы в Фейсбуке">
+                  <svg class="social__svg" width="14.962" height="27.718"><use xlink:href="#icon-fb"></use></svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Мы в Твиттере">
+                  <svg class="social__svg" width="23.494" height="20.168"><use xlink:href="#icon-twitter"></use></svg>
+                </a>
+              </li>
+            </ul>
+          <div class="page-footer__copyright copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <svg class="copyright__svg " width="26.943" height="34.09"><use xlink:href="#icon-logo-htmlacademy"></use></svg>
+            </a>
+            <p class="copyright__text">Разработано</p>
+          </div>
         </div>
       </div>
     </footer>

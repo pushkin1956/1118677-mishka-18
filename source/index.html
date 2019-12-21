@@ -15,13 +15,13 @@
 
   <body>
     <div style="display: none">
-      <include src="source/img/sprite.svg"></include>
+      <include src="build/img/sprite.svg"></include>
     </div>
 
     <header class="page-header">
       <div class="page-header__wrapper">
         <nav class="main-nav">
-          <a class="main-nav__link-logo">
+          <a class="main-nav__link-logo main-nav__link-logo--current">
             <picture>
               <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -141,10 +141,10 @@
           <cite class="reviews__author-mail">Анастасия Красильникова <span> @misssssiskras</span></cite>
           <div class="reviews__control-wrapper">
             <button class="reviews__control-btn" type="button">
-              <svg class="reviews__svg-left" width="50" height="26"><use xlink:href="#icon-left-arrow"></use></svg>
+              <svg class="reviews__svg" width="50" height="26"><use xlink:href="#icon-left-arrow"></use></svg>
             </button>
             <button class="reviews__control-btn" type="button">
-              <svg class="reviews__svg-right" width="50" height="26"><use xlink:href="#icon-right-arrow"></use></svg>
+              <svg class="reviews__svg" width="50" height="26"><use xlink:href="#icon-right-arrow"></use></svg>
             </button>
           </div>
           <a class="reviews__btn button" href="feedback-reviews.html">Написать</a>
@@ -179,33 +179,35 @@
       </section>
     </main>
 
-    <footer class="page-footer container">
-      <div class="page-footer__inner">
-        <a class="page-footer__link-logo logo">
-          <svg class="page-footer__svg-logo" width="102" height="34"><use xlink:href="#icon-logo-footer"></use></svg>
-        </a>
-          <ul class="page-footer__social social">
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Мы в Инстаграме">
-                <svg class="social__svg social__svg--instagram" width="21.769" height="21.334"><use xlink:href="#icon-insta"></use></svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Мы в Фейсбуке">
-                <svg class="social__svg" width="14.962" height="27.718"><use xlink:href="#icon-fb"></use></svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Мы в Твиттере">
-                <svg class="social__svg" width="23.494" height="20.168"><use xlink:href="#icon-twitter"></use></svg>
-              </a>
-            </li>
-          </ul>
-        <div class="page-footer__copyright copyright">
-          <p class="copyright__text">Разработано</p>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-            <svg class="copyright__svg " width="26.943" height="34.09"><use xlink:href="#icon-logo-htmlacademy"></use></svg>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="page-footer__inner">
+          <a class="page-footer__link-logo page-footer__link-logo--current">
+            <svg class="page-footer__svg-logo" width="102" height="34"><use xlink:href="#icon-logo-footer"></use></svg>
           </a>
+            <ul class="page-footer__social social">
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Мы в Инстаграме">
+                  <svg class="social__svg social__svg--instagram" width="21.769" height="21.334"><use xlink:href="#icon-insta"></use></svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Мы в Фейсбуке">
+                  <svg class="social__svg" width="14.962" height="27.718"><use xlink:href="#icon-fb"></use></svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Мы в Твиттере">
+                  <svg class="social__svg" width="23.494" height="20.168"><use xlink:href="#icon-twitter"></use></svg>
+                </a>
+              </li>
+            </ul>
+          <div class="page-footer__copyright copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <svg class="copyright__svg " width="26.943" height="34.09"><use xlink:href="#icon-logo-htmlacademy"></use></svg>
+            </a>
+            <p class="copyright__text">Разработано</p>
+          </div>
         </div>
       </div>
     </footer>

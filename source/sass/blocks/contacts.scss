@@ -48,6 +48,15 @@
 
 .contacts__mail-link {
   border-bottom: 1px solid $contrast-color;
+
+  &:hover,
+  &:focus {
+    color: $link-color--hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__adress-text {

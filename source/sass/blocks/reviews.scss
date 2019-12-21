@@ -73,6 +73,14 @@
   /*border: none;*/
   border: 1px solid $background-color;
   background-color: #ffffff;
+
+  &:hover .reviews__svg {
+    opacity: 0.6;
+  }
+
+  &:active .reviews__svg {
+    opacity: 0.3;
+  }
 }
 
 .reviews__btn {

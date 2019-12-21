@@ -124,6 +124,16 @@
       border: 2px solid $button-border-color;
       border-radius: 50%;
     }
+
+    &:hover::before,
+    &:focus::before {
+      border: 2px solid $contrast-extra-color;
+    }
+
+    &:active::before {
+      border: 2px solid #444444;
+      opacity: 0.3;
+    }
   }
 
   &--checkbox {
@@ -141,11 +151,21 @@
       height: 40px;
       border: 2px solid $button-border-color;
     }
+
+    &:hover::before,
+    &:focus::before {
+      border: 2px solid $contrast-extra-color;
+    }
+
+    &:active::before {
+      border: 2px solid #444444;
+      opacity: 0.3;
+    }
   }
 }
 
 .form__input {
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 17px;
   width: 100%;
 
@@ -155,16 +175,30 @@
   border: none;
   cursor: pointer;
 
-  &--name,
-  &--tel,
-  &--mail {
+  &--decorate {
     border-bottom: 2px solid #000000;
-  }
 
-  &::placeholder {
-    font-size: 17px;
-    line-height: 18px;
-    color: rgba(68, 68, 68, 0.3);
+    &::placeholder {
+      font-size: 17px;
+      line-height: 18px;
+      color: rgba(68, 68, 68, 0.3);
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom: 2px solid #62d1ba;
+    }
+
+    &:active {
+      border-bottom: 2px solid #62d1ba;
+    }
+
+    &:hover + .form__svg,
+    &:focus + .form__svg,
+    &:active + .form__svg {
+      fill: #62d1ba;
+      opacity: 1;
+    }
   }
 
   &--radio:checked + .form__label--radio {
@@ -211,6 +245,12 @@
       font-size: 17px;
       line-height: 18px;
       color: rgba(37, 14, 14, 0.3);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: solid 2px #62d1ba;
     }
   }
 }
