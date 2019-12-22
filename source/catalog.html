@@ -236,6 +236,7 @@
 
       var addLink = document.querySelectorAll(".catalog-list__cart");
       var addPopup = document.querySelector(".modal--add-cart");
+      var addClose = document.querySelector(".modal__btn");
 
       for (var i=0; i < addLink.length; i++) {
         addLink[i].addEventListener("click", function (evt) {
@@ -243,6 +244,11 @@
           addPopup.classList.add("modal--show");
         });
       };
+
+      addClose.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        addPopup.classList.remove("modal--show");
+      });
 
       window.addEventListener("keydown", function (evt) {
         if (evt.keyCode === 27) {
