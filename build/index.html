@@ -173,7 +173,7 @@
             <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img class="contacts__image" src="img/map-mobile@1x.jpg" srcet="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="Зайчик-попрыгайчик">
+            <img class="contacts__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="Зайчик-попрыгайчик">
           </picture>
         </div>
         <div class="contacts__wrapper-btn">
@@ -214,22 +214,39 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal modal--add-cart">
+
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="modal__description">Выберите размер:</p>
+        <div class="modal__wrapper">
+          <input class="modal__input visually-hidden" id="s-size" type="checkbox" name="s-size">
+          <label class="modal__label" for="s-size">S</label>
+          <input class="modal__input visually-hidden" id="m-size" type="checkbox" name="m-size">
+          <label class="modal__label" for="m-size">M</label>
+          <input class="modal__input visually-hidden" id="l-size" type="checkbox" name="l-size">
+          <label class="modal__label" for="l-size">L</label>
+        </div>
+        <button class="modal__btn button button--not-change" type="submit">Добавить</button>
+      </form>
+    </section>
+
+    <script>
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navToggle.classList.remove('main-nav__toggle--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navToggle.classList.contains('main-nav__toggle--closed')) {
+          navToggle.classList.remove('main-nav__toggle--closed');
+          navToggle.classList.add('main-nav__toggle--opened');
+        } else {
+          navToggle.classList.add('main-nav__toggle--closed');
+          navToggle.classList.remove('main-nav__toggle--opened');
+        }
+      });
+    </script>
+
   </body>
-
-  <script>
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navToggle.classList.remove('main-nav__toggle--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navToggle.classList.contains('main-nav__toggle--closed')) {
-        navToggle.classList.remove('main-nav__toggle--closed');
-        navToggle.classList.add('main-nav__toggle--opened');
-      } else {
-        navToggle.classList.add('main-nav__toggle--closed');
-        navToggle.classList.remove('main-nav__toggle--opened');
-      }
-    });
-  </script>
-
 </html>
