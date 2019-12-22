@@ -232,7 +232,6 @@
       var navToggle = document.querySelector('.main-nav__toggle');
 
       navToggle.classList.remove('main-nav__toggle--nojs');
-
       navToggle.addEventListener('click', function() {
         if (navToggle.classList.contains('main-nav__toggle--closed')) {
           navToggle.classList.remove('main-nav__toggle--closed');
@@ -251,7 +250,6 @@
         evt.preventDefault();
         addPopup.classList.add("modal--show");
       });
-
       window.addEventListener("keydown", function (evt) {
         if (evt.keyCode === 27) {
           evt.preventDefault();
