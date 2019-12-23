@@ -8,10 +8,7 @@
 }
 
 .video__title-wrapper {
-  padding-left: 31px;
-  padding-right: 31px;
-  padding-top: 29px;
-  padding-bottom: 26px;
+  padding: 23px 31px 26px;
 }
 
 .video__title {
@@ -30,7 +27,7 @@
 
 .video__picture {
   position: relative;
-  margin-bottom: 34px;
+  margin-bottom: 27px;
 }
 
 .video__image {
@@ -42,7 +39,7 @@
   content: "";
 
   top: 50%;
-  left: 50%;
+  left: 47%;
 
   width: 101px;
   height: 77px;
@@ -76,7 +73,7 @@
 
 .video__description {
   margin-top: 0;
-  margin-bottom: 29px;
+  margin-bottom: 26px;
 
   font-size: 13px;
   line-height: 1.85;

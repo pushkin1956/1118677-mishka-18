@@ -14,6 +14,11 @@
   width: 24px;
   height: 28px;
 
+  &--fb {
+    margin-top: -6px;
+    margin-left: 10px;
+  }
+
   &:hover .social__svg,
   &:focus .social__svg {
     fill: #46c1ae;

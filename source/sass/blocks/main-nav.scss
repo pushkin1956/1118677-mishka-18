@@ -62,23 +62,23 @@
 }
 
 .nav-list__svg {
-  margin-right: 24px;
+  margin-right: 28px;
   fill: #231f20;
   opacity: 0.2;
   cursor: pointer;
   transform: translateY(3px);
 
   &--cart {
-    margin-right: 21px;
+    margin-right: 25px;
   }
 }
 
 .nav-list__link {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   margin: 0 auto;
-  padding-top: 32px;
-  padding-bottom: 30px;
+  padding-top: 29px;
+  padding-bottom: 26px;
 
   max-width: 260px;
 
