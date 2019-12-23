@@ -98,7 +98,7 @@
     margin-bottom: 48px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
-    background-position: 50% -95px;
+    background-position: 48% -41px;
 
     &::after {
       @include bg-zigzag-fill;
@@ -118,7 +118,8 @@
   }
 
   .promo__title {
-    padding-top: 57px;
+    padding-top: 112px;
+    padding-left: 14px;
 
     font-size: 43px;
     line-height: 50px;
