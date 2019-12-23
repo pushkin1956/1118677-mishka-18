@@ -221,6 +221,8 @@
         </form>
       </section>
 
+      <div class="overlay"></div>
+
     <script>
       var navToggle = document.querySelector('.main-nav__toggle');
 
@@ -239,18 +241,22 @@
 
       var addLink = document.querySelectorAll(".catalog-list__cart");
       var addPopup = document.querySelector(".modal--add-cart");
+      var addOverlay = document.querySelector(".overlay");
+
       var addClose = document.querySelector(".modal__btn");
 
       for (var i=0; i < addLink.length; i++) {
         addLink[i].addEventListener("click", function (evt) {
           evt.preventDefault();
           addPopup.classList.add("modal--show");
+          addOverlay.classList.add("overlay--show");
         });
       };
 
       addClose.addEventListener("click", function (evt) {
         evt.preventDefault();
         addPopup.classList.remove("modal--show");
+        addOverlay.classList.remove("overlay--show");
       });
 
       window.addEventListener("keydown", function (evt) {
@@ -258,6 +264,7 @@
           evt.preventDefault();
           if (addPopup.classList.contains("modal--show")) {
             addPopup.classList.remove("modal--show");
+            addOverlay.classList.remove("overlay--show");
           }
         }
       });
