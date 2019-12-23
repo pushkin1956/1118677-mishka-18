@@ -24,12 +24,24 @@
   color: $text-color;
 }
 
-.form__fieldset {
-  padding: 0;
-  margin: 0;
+.form__inner {
+  padding-top: 10px;
   padding-bottom: 34px;
 
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+
   border: none;
+
+  &--tel {
+    padding-bottom: 34px;
+  }
 
   &--message {
     padding-bottom: 10px;
@@ -299,23 +311,31 @@
   }
 
   .form__inner {
-    background-color: $background-color;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &--bg-color {
+      background-color: $background-color;
+    }
   }
 
   .form__fieldset {
     position: relative;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 0;
 
     &--tel {
-      padding-bottom: 0;
+      padding-bottom: 50px;
+    }
+
+    &--message {
+      padding-bottom: 50px;
     }
   }
 
   .form__legend {
     position: absolute;
 
-    top: 65px;
+    top: 15px;
     left: 0;
 
     width: 170px;
