@@ -1,0 +1,14 @@
+.overlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(256, 256, 256, 0.8);
+  z-index: 10;
+}
+
+.overlay--show {
+  display: block;
+}
