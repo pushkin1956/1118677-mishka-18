@@ -1,18 +1,23 @@
 .reviews {
+  margin-bottom: 42px;
+}
+
+.reviews__wrapper {
   position: relative;
   padding-bottom: 45px;
-  margin-bottom: 42px;
 
   &::after {
     position: absolute;
     content: "";
+    display: block;
 
     bottom: 0;
-    background-image: url("../img/bg-zigzag-line.svg");
+    left: 0;
+    width: 100%;
     height: 6px;
+    background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
     background-size: auto 6px;
-    width: 100%;
   }
 }
 
@@ -90,14 +95,8 @@
 
 @media (min-width: $tablet-width) {
   .reviews {
-    padding-bottom: 84px;
+    /*padding-bottom: 84px;*/
     margin-bottom: 70px;
-
-    &::after {
-      height: 15px;
-
-      background-size: auto 15px;
-    }
   }
 
   .reviews__wrapper {
@@ -105,10 +104,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    padding-bottom: 84px;
+
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-size: 350px 457px;
     background-position: 0 0;
+
+    &::after {
+      height: 17px;
+      background-size: auto 17px; /* 15*/
+    }
   }
 
   @media (min-resolution: 144dpi),
@@ -123,7 +129,7 @@
 
     padding-top: 78px;
     margin-bottom: 50px;
-    margin-left: -5px;
+    margin-right: auto; /*-5px;*/
   }
 
   .reviews__item {
@@ -176,38 +182,21 @@
 
 @media (min-width: $desktop-width) {
   .reviews {
-    /*@include container;*/
     margin-bottom: 60px;
-
-    &::after {
-      display: none;
-      height: 23px;
-      width: 1050px;
-
-      background-size: 1050px 23px;
-    }
-  }
-
-  .reviews .container {
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-
-      bottom: 0;
-      left: 0;
-      height: 23px;
-      width: 1050px;
-      background-image: url("../img/bg-zigzag-line.svg");
-      background-repeat: repeat-x;
-      background-size: auto 23px;
-    }
   }
 
   .reviews__wrapper {
     padding-bottom: 90px;
     padding-left: 175px;
+    background-position: 50px 0;
+
+    &::after {
+      height: 23px;
+      width: 1050px;
+
+      left: 50px;
+      background-size: auto 23px;
+    }
   }
 
   .reviews__title {

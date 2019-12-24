@@ -1,12 +1,21 @@
 .superior {
-  position: relative;
-  padding-bottom: 40px;
   margin-bottom: 28px;
+}
+
+.superior__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-bottom: 40px;
 
   &::after {
     position: absolute;
     content: "";
+    display: block;
 
+    left: 0;
     bottom: 0;
     background-image: url("../img/bg-zigzag-line.svg");
     height: 6px;
@@ -15,12 +24,6 @@
     background-repeat: repeat-x;
     background-size: auto 6px;
   }
-}
-
-.superior__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .superior__title {
@@ -91,17 +94,16 @@
 
 @media (min-width: $tablet-width) {
   .superior {
-    padding-bottom: 66px;
     margin-bottom: 52px;
+  }
+
+  .superior__wrapper {
+    padding-bottom: 66px;
 
     &::after {
       height: 15px;
       background-size: auto 15px;
     }
-  }
-
-  .superior__wrapper {
-    position: relative;
   }
 
   .superior__wrapper-title {
@@ -131,8 +133,8 @@
 
   .superior__img {
     position: absolute;
-    bottom: 0;
-    left: calc(100% - 333px);
+    bottom: 66px;  /* равен паддингу обертки для линии */
+    left: calc(100% - 333px - 50px);
     margin: 0;
     width: 333px;
   }
@@ -157,27 +159,17 @@
 }
 
 @media (min-width: $desktop-width) {
-  .superior {
-    @include container;
+  .superior__wrapper {
+    justify-content: flex-start;
 
     &::after {
+      left: 50px;
       height: 23px;
       width: 1050px;
 
       background-size: auto 23px;
+      background-position: center;
     }
-  }
-
-  .superior .container {
-    padding-left: 0;
-    padding-right: 0;
-    width: 1050px;
-    padding-bottom: 96px;
-    margin-bottom: 70px;
-  }
-
-  .superior__wrapper {
-    justify-content: flex-start;
   }
 
   .superior__wrapper-title {
@@ -209,7 +201,7 @@
   }
 
   .superior__img {
-    left: calc(100% - 525px);
+    left: calc(100% - 525px - 50px);
     width: 525px;
   }
 

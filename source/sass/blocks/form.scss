@@ -264,9 +264,12 @@
   &--message {
     /*box-shadow: inset 0 -2px 0 0 #000000;*/
     border: solid 2px $button-border-color;
+    resize: vertical;
+    padding-left: 14px;
+
 
     &::placeholder {
-      padding-top: 15 px;
+      padding-top: 15px;
       padding-left: 14px;
 
       width: 165px;
