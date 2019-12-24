@@ -5,6 +5,24 @@
 .video__wrapper {
   /*padding-top: 20px;*/
   border: solid 1px $border-extra-color;
+
+  &:hover .video__title-wrapper,
+  &:focus .video__title-wrapper {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:hover .video__description-wrapper,
+  &:focus .video__description-wrapper {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .video__title-wrapper {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .video__description-wrapper {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .video__title-wrapper {
@@ -54,14 +72,7 @@
 
   &:active .video__svg-play {
     transform: scale(0.8);
-    opacity: 0.3; /* надо 0,3 но тогда кноки совсем не видно */
-  }
-}
-
-/* не работает тень */
-.video__picture .video__play-btn {
-  &:hover ~ .video__description-wrapper {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    opacity: 0.3;
   }
 }
 
@@ -85,6 +96,15 @@
     display: flex;
     flex-direction: column;
     border: none;
+
+    &:hover .video__title-wrapper,
+    &:focus .video__title-wrapper {
+      box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active .video__title-wrapper {
+      box-shadow: 0 -3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
   .video__title-wrapper {

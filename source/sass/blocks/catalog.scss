@@ -18,15 +18,13 @@
 
 .catalog-list__item {
   margin-bottom: 30px;
-}
 
-.catalog-list__image-wrap {
-  &:hover ~ .catalog-list__description,
-  &:focus ~ .catalog-list__description {
+  &:hover .catalog-list__description,
+  &:focus .catalog-list__description {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   }
 
-  &:active ~ .catalog-list__description {
+  &:active .catalog-list__description {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
 }
