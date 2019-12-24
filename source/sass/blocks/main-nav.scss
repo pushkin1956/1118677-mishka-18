@@ -93,7 +93,7 @@
   &:not(&--current) {
     &:hover,
     &:focus {
-      opacity: 0.6;
+      color: rgba(0, 0, 0, 0.6);
     }
 
     &:hover .nav-list__svg,

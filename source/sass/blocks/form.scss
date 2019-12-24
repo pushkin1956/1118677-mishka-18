@@ -67,10 +67,6 @@
     margin-bottom: 29px;
   }
 
-  &--margin-bottom {
-    margin-bottom: 24px;
-  }
-
   &::after {
     position: absolute;
     content: "";
@@ -92,6 +88,8 @@
 }
 
 .form__list {
+  display: block;
+
   &--type,
   &--color {
     @include ul-reset;
@@ -187,8 +185,7 @@
     }
 
     &:active::before {
-      border: 2px solid #444444;
-      opacity: 0.3;
+      border: 2px solid rgba(68, 68, 68, 0.3);
     }
   }
 }
@@ -214,10 +211,7 @@
     }
 
     &:hover,
-    &:focus {
-      border-bottom: 2px solid #62d1ba;
-    }
-
+    &:focus,
     &:active {
       border-bottom: 2px solid #62d1ba;
     }
