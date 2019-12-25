@@ -48,6 +48,8 @@
 
 .form__legend {
   position: relative;
+
+  display: block;
   margin-bottom: 23px;
 
   width: 100%;
@@ -84,6 +86,10 @@
       left: 81px;
       width: calc(100% - 81px);  /* 179px от 260px */
     }
+  }
+
+  &--cursor {
+    cursor: pointer;
   }
 }
 
@@ -164,7 +170,6 @@
     position: relative;
     padding-top: 10px;
     padding-left: 62px;
-
     height: 40px;
 
     &::before {
@@ -191,6 +196,7 @@
 }
 
 .form__input {
+  display: block;
   /*padding-top: 13px;*/
   padding-bottom: 7px;
   width: 100%;
