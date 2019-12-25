@@ -48,7 +48,6 @@
 
 .form__legend {
   position: relative;
-
   display: block;
   margin-bottom: 23px;
 
@@ -87,14 +86,11 @@
       width: calc(100% - 81px);  /* 179px от 260px */
     }
   }
-
-  &--cursor {
-    cursor: pointer;
-  }
 }
 
 .form__list {
-  display: block;
+  display: flex;
+  flex-direction: column;
 
   &--type,
   &--color {
@@ -103,17 +99,16 @@
 
   &--name {
     margin-bottom: 22px;
-    display: flex;
-    flex-direction: column;
+
 
     &:last-child {
       margin-bottom: 0;
     }
   }
 
-  &--relative {
+  /*&--relative {
     position: relative;
-  }
+  }*/
 }
 
 .form__type-item:not(:last-child) {
@@ -193,6 +188,46 @@
       border: 2px solid rgba(68, 68, 68, 0.3);
     }
   }
+
+  &--legend {
+    position: relative;
+    /*display: block;*/
+    margin-bottom: 1px;
+
+    width: 100%;
+
+    color: $contrast-color;
+    text-transform: uppercase;
+
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      top: 50%;
+      left: 62px;
+
+      width: calc(100% - 62px); /* 198px от 260px */
+      height: 1px;
+      background-color: $contrast-color;
+    }
+  }
+
+  &--mail {
+    &::after {
+      left: 81px;
+      width: calc(100% - 81px);  /* 179px от 260px */
+    }
+  }
+
+  &--message {
+    margin-bottom: 20px;
+  }
+}
+
+.form__wrapper-input {
+  position: relative;
+  width: 100%;
 }
 
 .form__input {
@@ -207,14 +242,14 @@
   border: none;
   cursor: pointer;
 
+  &::placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
   &--decorate {
     border-bottom: 2px solid #000000;
-
-    &::placeholder {
-      font-size: 17px;
-      line-height: 18px;
-      color: rgba(68, 68, 68, 0.3);
-    }
 
     &:hover,
     &:focus,
@@ -268,19 +303,12 @@
   }
 
   &--message {
+    padding-top: 15px;
+    padding-left: 14px;
     /*box-shadow: inset 0 -2px 0 0 #000000;*/
     border: solid 2px $button-border-color;
 
-    &::placeholder {
-      padding-top: 15 px;
-      padding-left: 14px;
-
-      width: 165px;
-
-      font-size: 17px;
-      line-height: 18px;
-      color: rgba(37, 14, 14, 0.3);
-    }
+    resize: vertical;
 
     &:hover,
     &:focus,
@@ -294,7 +322,7 @@
   position: absolute;
   content: "";
 
-  top: -6px;
+  top: -2px;
   right: 6px;
   opacity: 0.2;
 }
@@ -369,16 +397,20 @@
   }
 
   .form__list {
-    padding-left: 167px;
+    flex-direction: row;
+
+    &--type {
+      flex-direction: column;
+      padding-left: 167px;
+    }
 
     &--color {
-      display: flex;
       flex-wrap: wrap;
+      padding-left: 167px;
     }
 
     &--name {
-      flex-direction: row;
-
+      padding-left: 167px;
       margin-bottom: 40px;
     }
   }
@@ -390,6 +422,7 @@
 
   .form__label {
     font-size: 19px;
+    padding-top: 18px;
 
     &--radio {
       height: 53px;
@@ -413,6 +446,16 @@
       &::before {
         width: 54px;
         height: 52px;
+      }
+    }
+
+    &--legend {
+      margin-bottom: 0;
+
+      width: 166px;
+
+      &::after {
+        display: none;
       }
     }
   }
@@ -519,7 +562,7 @@
     padding-left: 111px;
 
     &--name,
-    &--relative,
+    /*&--relative,*/
     &--message {
       width: 808px;
     }
