@@ -232,8 +232,9 @@
 
 .form__input {
   display: block;
-  /*padding-top: 13px;*/
-  padding-bottom: 7px;
+  padding-top: 11px;
+  padding-bottom: 13px;
+
   width: 100%;
 
   font-size: 19px;
@@ -389,7 +390,7 @@
     top: 15px;
     left: 0;
 
-    width: 170px;
+    width: 167px;
 
     &::after {
       display: none;
@@ -453,6 +454,7 @@
       margin-bottom: 0;
 
       width: 166px;
+      flex-shrink: 0;
 
       &::after {
         display: none;
@@ -558,18 +560,34 @@
     margin-left: 62px;
   }
 
-  .form__list {
-    padding-left: 111px;
+  .form__label {
+    &--legend {
+      width: 111px;
+    }
+  }
 
-    &--name,
-    /*&--relative,*/
-    &--message {
-      width: 808px;
+  .form__list {
+    /*flex-grow: 0;*/
+    width: 813px;
+
+    &--type {
+      padding-left: 111px;
+      width: 867px;
+    }
+
+    &--color {
+      padding-left: 111px;
+      width: inherit;
+    }
+
+    &--name {
+      padding-left: 111px;
+      width: 813px;
     }
   }
 
   .form__color-item {
-    width: 30%; /* 225px; */
+    width: 30%; /* 225px; bkb 264 */
   }
 
   .form__svg {
