@@ -65,7 +65,8 @@
   border: solid 2px rgba(68, 68, 68, 0.1);
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: rgba(68, 68, 68, 0.3);
   }
 

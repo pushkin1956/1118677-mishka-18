@@ -79,7 +79,8 @@
   border: 1px solid $background-color;
   background-color: #ffffff;
 
-  &:hover .reviews__svg {
+  &:hover .reviews__svg,
+  &:focus .reviews__svg {
     opacity: 0.6;
   }
 

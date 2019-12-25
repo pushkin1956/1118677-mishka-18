@@ -71,10 +71,10 @@
         </div>
         <ul class="promo__list">
           <li class="promo__item promo__item--interior">
-            <a class="promo__link promo__link--interior" href="#">Предметы<br>интерьера</a>
+            <a class="promo__link promo__link--interior" href="interior.html">Предметы<br>интерьера</a>
           </li>
           <li class="promo__item promo__item--toys">
-            <a class="promo__link promo__link--toys" href="#">Детские<br>игрушки</a>
+            <a class="promo__link promo__link--toys" href="toys.html">Детские<br>игрушки</a>
           </li>
         </ul>
       </section>
@@ -110,7 +110,7 @@
               <img class="superior__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
             </picture>
             <p class="superior__price">Цена: 990 руб.</p>
-            <a class="superior__btn button" href="#">Заказать</a>
+            <a class="superior__btn button" href="order.html">Заказать</a>
           </div>
         </div>
 
@@ -140,10 +140,12 @@
           </blockquote>
           <cite class="reviews__author-mail">Анастасия Красильникова <span> @misssssiskras</span></cite>
           <div class="reviews__control-wrapper">
-            <button class="reviews__control-btn" type="button">
+            <button class="reviews__control-btn reviews__control-btn--prev" type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
               <svg class="reviews__svg" width="50" height="26"><use xlink:href="#icon-left-arrow"></use></svg>
             </button>
-            <button class="reviews__control-btn" type="button">
+            <button class="reviews__control-btn reviews__control-btn--next" type="button">
+              <span class="visually-hidden">Следующий слайд</span>
               <svg class="reviews__svg" width="50" height="26"><use xlink:href="#icon-right-arrow"></use></svg>
             </button>
           </div>
@@ -164,14 +166,16 @@
           </dl>
         </div>
         <div class="contacts__map">
+          <div class="contacts__map-API" id="map"></div>
           <picture>
             <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img class="contacts__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="Зайчик-попрыгайчик">
+            <img class="contacts__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="Адрес г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
           </picture>
+
         </div>
         <div class="contacts__wrapper-btn">
           <a class="contacts__btn button" href="feedback-create.html">Напишите нам</a>
@@ -231,6 +235,35 @@
     <div class="overlay"></div>
 
 
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=31fe77ce-3bbf-49a6-8659-007876585ad2&lang=ru_RU" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+      ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+          center: [59.938907, 30.323083],
+          zoom: 17
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/icon-map-pin.svg',
+            iconImageSize: [67, 100],
+            iconImageOffset: [-25, -38]
+        });
+        myMap.geoObjects
+        .add(myPlacemark)
+        });
+
+
+      </script>
+
+
     <script>
       var navToggle = document.querySelector('.main-nav__toggle');
 
@@ -244,6 +277,7 @@
           navToggle.classList.remove('main-nav__toggle--opened');
         }
       });
+
 
 
       var addLink = document.querySelector(".superior__btn");
@@ -279,9 +313,26 @@
         }
       });
 
+      function initMap() {
+        var mapContainer = document.getElementById("map");
+
+        if (mapContainer) {
+          var map = new google.maps.Map(mapContainer, {
+            center: {lat: 59.938907, lng: 30.323083},
+            scrollwheel: false,
+            zoom: 17,
+            disableDefaultUI: true
+          });
+
+          var image = "img/icon-map-pin.svg";
+          var mishkaMarker = new google.maps.Marker({
+            position: {lat: 59.938907, lng: 30.323083},
+            map: map,
+            icon: image
+          });
+        }
+      }
+
     </script>
-
-
-
   </body>
 </html>
