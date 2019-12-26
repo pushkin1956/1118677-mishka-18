@@ -111,12 +111,7 @@
   }
 
   .catalog__wrapper-title {
-    position: relative;
     margin-bottom: 79px;
-
-    &::after {
-      @include bg-zigzag-fill;
-    }
   }
 
   .catalog-list__item {
@@ -189,10 +184,6 @@
     margin-bottom: 122px;
     padding-top: 15px;
     padding-bottom: 90px;
-
-    &::after {
-      @include bg-zigzag-fill(34px);
-    }
   }
 
   .catalog__wrapper {
