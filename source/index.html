@@ -140,7 +140,7 @@
           </blockquote>
           <cite class="reviews__author-mail">Анастасия Красильникова <span> @misssssiskras</span></cite>
           <div class="reviews__control-wrapper">
-            <button class="reviews__control-btn reviews__control-btn--prev" type="button"></button>
+            <button class="reviews__control-btn reviews__control-btn--prev" type="button">
               <svg class="reviews__svg" width="50" height="26" aria-label="Предыдущий слайд"><use xlink:href="#icon-left-arrow"></use></svg>
             </button>
             <button class="reviews__control-btn reviews__control-btn--next" type="button">
@@ -190,7 +190,7 @@
             <ul class="page-footer__social social">
               <li class="social__item">
                 <a class="social__link" href="#">
-                  <svg class="social__svg social__svg--instagram" width="22" height="22" aria-label="Мы в Инстаграме"><use xlink:href="#icon-insta"></use></svg>
+                  <svg class="social__svg" width="22" height="22" aria-label="Мы в Инстаграме"><use xlink:href="#icon-insta"></use></svg>
                 </a>
               </li>
               <li class="social__item">
@@ -252,7 +252,7 @@
             iconLayout: 'default#image',
             iconImageHref: 'img/icon-map-pin.svg',
             iconImageSize: [67, 100],
-            iconImageOffset: [-25, -38]
+            iconImageOffset: [-23, -83]
         });
         myMap.geoObjects
         .add(myPlacemark)
@@ -275,7 +275,6 @@
           navToggle.classList.remove('main-nav__toggle--opened');
         }
       });
-
 
 
       var addLink = document.querySelector(".superior__btn");
@@ -310,26 +309,6 @@
           }
         }
       });
-
-      function initMap() {
-        var mapContainer = document.getElementById("map");
-
-        if (mapContainer) {
-          var map = new google.maps.Map(mapContainer, {
-            center: {lat: 59.938907, lng: 30.323083},
-            scrollwheel: false,
-            zoom: 17,
-            disableDefaultUI: true
-          });
-
-          var image = "img/icon-map-pin.svg";
-          var mishkaMarker = new google.maps.Marker({
-            position: {lat: 59.938907, lng: 30.323083},
-            map: map,
-            icon: image
-          });
-        }
-      }
 
     </script>
   </body>

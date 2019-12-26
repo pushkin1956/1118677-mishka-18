@@ -26,7 +26,7 @@
 
 .contacts__adress {
   margin-top: 0;
-  margin-bottom: 42px;
+  margin-bottom: 39px;
 }
 
 .contacts__mail-title,
@@ -100,19 +100,20 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    margin-bottom: 57px;
+    margin-bottom: 60px;
   }
 
   .contacts__title {
-    margin-bottom: 41px;
+    margin-bottom: 32px;
+    margin-left: -5px;
     width: 100%;
 
     font-size: 43px;
-    line-height: 2;
+    line-height: 86px;
 
     background-image: url("../img/icon-flag.svg");
     background-repeat: no-repeat;
-    background-position: 99% 30%;
+    background-position: 100% 30%;
   }
 
   .contacts .container {
@@ -122,14 +123,24 @@
 
   .contacts__mail,
   .contacts__adress {
-    width: 50%;
     align-self: flex-start;
+    margin-bottom: 54px;
 
+    width: 50%;
     font-size: 17px;
+  }
+
+  .contacts__mail-title,
+  .contacts__adress-title {
+    padding-right: 24px;
   }
 
   .contacts__adress-text {
     width: 225px;
+  }
+
+  .contacts__map {
+    margin-bottom: 56px;
   }
 
   .contacts__wrapper-btn {

@@ -1,5 +1,5 @@
 .form {
-  margin-bottom: 55px;
+  margin-bottom: 58px;
 }
 
 .form__wrapper-title {
@@ -38,11 +38,11 @@
   border: none;
 
   &--tel {
-    padding-bottom: 33px;
+    padding-bottom: 32px;
   }
 
   &--message {
-    padding-bottom: 15px;
+    padding-bottom: 17px;
   }
 }
 
@@ -105,10 +105,6 @@
       margin-bottom: 0;
     }
   }
-
-  /*&--relative {
-    position: relative;
-  }*/
 }
 
 .form__type-item:not(:last-child) {
@@ -121,8 +117,6 @@
 
 .form__label {
   display: flex;
-
-  /*height: 40px;*/
 
   font-size: 17px;
   font-weight: 700;
@@ -192,7 +186,7 @@
   &--legend {
     position: relative;
     /*display: block;*/
-    margin-bottom: 1px;
+    margin-bottom: 5px;
 
     width: 100%;
 
@@ -221,7 +215,7 @@
   }
 
   &--message {
-    margin-bottom: 20px;
+    margin-bottom: 23px;
   }
 }
 
@@ -319,6 +313,8 @@
     padding-top: 15px;
     padding-left: 14px;
 
+    min-height: 142px;
+
     border: solid 2px $button-border-color;
 
     resize: vertical;
@@ -335,7 +331,7 @@
   position: absolute;
   content: "";
 
-  top: -2px;
+  top: 10px;
   right: 6px;
   opacity: 0.2;
 }
