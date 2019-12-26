@@ -1,0 +1,41 @@
+.copyright {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.copyright__text {
+  margin: 0;
+  margin-right: 30px;
+  padding-top: 8px;
+
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 0.95;
+}
+
+.copyright__svg {
+  fill: #63d1bb;
+}
+
+.copyright__link {
+  &:hover .copyright__svg,
+  &:focus .copyright__svg {
+    fill: #46c1ae;
+  }
+
+  &:active .copyright__svg {
+    opacity: 0.3;
+  }
+
+  &:active + .copyright__text {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    margin-bottom: 0;
+  }
+}

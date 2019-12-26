@@ -1,12 +1,21 @@
 .superior {
-  position: relative;
-  padding-bottom: 36px;
   margin-bottom: 28px;
+}
+
+.superior__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-bottom: 40px;
 
   &::after {
     position: absolute;
     content: "";
+    display: block;
 
+    left: 0;
     bottom: 0;
     background-image: url("../img/bg-zigzag-line.svg");
     height: 6px;
@@ -17,14 +26,8 @@
   }
 }
 
-.superior__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .superior__title {
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
 .superior__type {
@@ -32,7 +35,7 @@
   margin-bottom: 26px;
 
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1;
 
   text-transform: uppercase;
@@ -40,7 +43,6 @@
 }
 
 .superior__img {
-  display: block;
   margin-bottom: 25px;
   width: 100%;
 }
@@ -80,7 +82,7 @@
   margin-bottom: 28px;
 
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.41;
   color: #444444;
   text-align: center;
@@ -92,8 +94,11 @@
 
 @media (min-width: $tablet-width) {
   .superior {
-    padding-bottom: 66px;
     margin-bottom: 52px;
+  }
+
+  .superior__wrapper {
+    padding-bottom: 66px;
 
     &::after {
       height: 15px;
@@ -101,25 +106,19 @@
     }
   }
 
-  .superior__wrapper {
-    position: relative;
-
-    /*justify-content: space-between;*/
-  }
-
   .superior__wrapper-title {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    margin-bottom: 51px;
+    margin-bottom: 48px;
     width: 100%;
   }
 
   .superior__type {
     margin: 0;
-    margin-right: 23px;
-    padding-top: 11px;
+    margin-right: 9px;
+    padding-top: 9px;
     text-align: center;
 
     width: 80px;
@@ -134,8 +133,8 @@
 
   .superior__img {
     position: absolute;
-    bottom: 0;
-    left: calc(100% - 333px);
+    bottom: 66px;  /* равен паддингу обертки для линии */
+    left: calc(100% - 333px - 50px);
     margin: 0;
     width: 333px;
   }
@@ -160,27 +159,17 @@
 }
 
 @media (min-width: $desktop-width) {
-  .superior {
-    @include container;
+  .superior__wrapper {
+    justify-content: flex-start;
 
     &::after {
+      left: 50px;
       height: 23px;
       width: 1050px;
 
       background-size: auto 23px;
+      background-position: center;
     }
-  }
-
-  .superior .container {
-    padding-left: 0;
-    padding-right: 0;
-    width: 1050px;
-    padding-bottom: 96px;
-    margin-bottom: 70px;
-  }
-
-  .superior__wrapper {
-    justify-content: flex-start;
   }
 
   .superior__wrapper-title {
@@ -212,7 +201,7 @@
   }
 
   .superior__img {
-    left: calc(100% - 525px);
+    left: calc(100% - 525px - 50px);
     width: 525px;
   }
 

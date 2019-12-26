@@ -8,7 +8,18 @@
 
 .main-nav__link-logo {
   padding-top: 22px;
-  min-height: 79px;
+  height: 79px;
+
+  &:not(&--current) {
+    &:hover .main-nav__img-logo,
+    &:focus .main-nav__img-logo {
+      opacity: 0.6;
+    }
+
+    &:active .main-nav__img-logo {
+      opacity: 0.3;
+    }
+  }
 }
 
 .main-nav__toggle {
@@ -51,24 +62,26 @@
 }
 
 .nav-list__svg {
-  margin-right: 24px;
+  margin-right: 28px;
   fill: #231f20;
   opacity: 0.2;
   cursor: pointer;
   transform: translateY(3px);
 
   &--cart {
-    margin-right: 21px;
+    margin-right: 25px;
   }
 }
 
 .nav-list__link {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   margin: 0 auto;
+  padding-top: 29px;
+  padding-bottom: 26px;
 
   max-width: 260px;
-  min-height: 79px;
+
   font-weight: 700;
   color: #000000;
 
@@ -77,13 +90,21 @@
     padding-left: 46px;
   }
 
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
+  &:not(&--current) {
+    &:hover,
+    &:focus {
+      color: rgba(0, 0, 0, 0.6);
+    }
 
-  &:active {
-    opacity: 0.3;
+    &:hover .nav-list__svg,
+    &:focus .nav-list__svg {
+      fill: #63d1bb;
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -118,7 +139,7 @@
     margin-right: 190px;
     padding-top: 22px; /* 22px такой же в мобайл - после всего можно удалить */
 
-    min-height: 88px;
+    height: 88px;
   }
 
   .main-nav__toggle {
@@ -150,7 +171,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      min-height: 88px;
+      height: 88px;  /* удалить? */
       /*width: 350px;*/
     }
   }
@@ -174,12 +195,15 @@
     &--search {
       padding-left: 31px;
       padding-right: 31px;
-      min-height: 88px;
+
+      padding-top: 35px;
+      padding-bottom: 35px;
     }
 
     &--cart {
       margin-left: 31px;
-      min-height: 88px;
+      padding-top: 33px;
+      padding-bottom: 35px;
     }
 
     &--catalog {
@@ -196,7 +220,6 @@
     margin-right: 0;
   }
 
-
   .nav-list__svg--cart {
     margin-right: 28px;
   }
@@ -206,7 +229,7 @@
     order: 4;
 
     margin: 0;
-    padding-top: 22px;
+    padding-top: 2px;
 
     font-size: 15px;
     line-height: 1.6;
@@ -232,8 +255,9 @@
     &--first {
       order: 1;
       padding-top: 0;
+      margin-bottom: 1px;
 
-      min-height: 88px;
+      height: 88px;
       font-size: 17px;
 
       background-color: #ffffff;
@@ -254,7 +278,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      padding-top: 1px;
+      padding-top: 21px;
       font-size: 15px;
 
       background-color: #f9f9f9;
@@ -269,16 +293,20 @@
     border-right: 1px solid rgba(0, 0, 0, 0.1);
   }
 
-  /* после установки собсвенноых лого возможно удалить - чтоб строки не перскакивали */
-  .nav-list__link--knitting {
-    /* обнуляю сдвиг  в tablet */
-    margin-right: 0;
-    margin-left: 35px;
-  }
-
   .nav-list__link {
     &--catalog {
       margin-right: 35px;
+
+      padding-top: 35px;
+      padding-bottom: 35px;
+    }
+
+    &--knitting {
+      margin-right: 0;
+      margin-left: 35px;
+
+      padding-top: 35px;
+      padding-bottom: 35px;
     }
 
     &--search {
