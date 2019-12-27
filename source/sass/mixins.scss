@@ -12,10 +12,14 @@
     padding-top: 52px;
     padding-bottom: 82px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 52px;
+    padding-bottom: 101px;
+  }
 }
 
 @mixin container {
-  /*width: 100%;*/
   margin: 0 auto;
   padding: 0 30px;
 
@@ -39,4 +43,26 @@
   border: 0;
   white-space: nowrap;
   clip-path: inset(100%);
+}
+
+@mixin banner($bg-size-heigt: 24px, $bg-position-x: 0) {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    content: "";
+    bottom: -12px;
+    width: 100%;
+    height: 24px;
+
+    background-size: 768px $bg-size-heigt;
+    background-position-x: $bg-position-x;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: -17px;
+    height: 34px;
+    background-size: auto $bg-size-heigt;
+    background-position-x: $bg-position-x;
+  }
 }

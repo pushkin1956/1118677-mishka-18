@@ -112,6 +112,11 @@
 
   .catalog__wrapper-title {
     margin-bottom: 79px;
+    position: relative;
+
+    &::after {
+      @include banner;
+    }
   }
 
   .catalog-list__item {
@@ -181,9 +186,11 @@
   }
 
   .catalog__wrapper-title {
-    margin-bottom: 122px;
-    padding-top: 15px;
-    padding-bottom: 90px;
+    margin-bottom: 130px;
+
+    &::after {
+      @include banner (34px);
+    }
   }
 
   .catalog__wrapper {
@@ -216,13 +223,10 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 27px;
-    /*padding-left: 28px;*/
+
+    min-height: 197px;
 
     border: solid 1px #ececec;
-  }
-
-  .catalog-list__text {
-    margin-bottom: 19px;
   }
 
   .catalog-list__buy {

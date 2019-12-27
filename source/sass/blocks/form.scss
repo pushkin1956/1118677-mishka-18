@@ -355,9 +355,14 @@
 
 @media (min-width: $tablet-width) {
   .form__wrapper-title {
+    position: relative;
     align-items: flex-start; /* удалить? */
 
     margin-bottom: 72px;
+
+    &::after {
+      @include banner;
+    }
   }
 
   .form__description {
@@ -556,6 +561,10 @@
     margin-bottom: 122px;
     padding-top: 15px;
     padding-bottom: 90px;
+
+    &::after {
+      @include banner (34px);
+    }
   }
 
   .form__description {
