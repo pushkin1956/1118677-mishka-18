@@ -194,7 +194,6 @@
   .video__picture {
     position: absolute;
     content: "";
-
     top: 0;
     left: 0;
 
@@ -207,6 +206,8 @@
     padding-left: 78px;
     padding-right: 57px;
     padding-bottom: 61px;
+
+    width: 368px;
   }
 
   .video__description {
