@@ -559,8 +559,6 @@
 
   .form__wrapper-title {
     margin-bottom: 122px;
-    padding-top: 15px;
-    padding-bottom: 90px;
 
     &::after {
       @include banner (34px);
@@ -585,7 +583,6 @@
   }
 
   .form__list {
-    /*flex-grow: 0;*/
     width: 813px;
 
     &--type {
@@ -604,9 +601,20 @@
     }
   }
 
+
   .form__color-item {
-    width: 30%; /* 225px; bkb 264 */
+    margin-bottom: 24px;
+
+    &:nth-child(n) {
+      width: 30%;
+    }
+
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
   }
+
+
 
   .form__svg {
     top: 3px;
