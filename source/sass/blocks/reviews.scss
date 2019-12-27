@@ -39,7 +39,7 @@
   font-size: 15px;
   line-height: 2;
 
-  color: #444444;
+  color: $text-color;
 }
 
 .reviews__author-mail {
@@ -58,16 +58,15 @@
   font-size: 15px;
   font-weight: normal;
 
-  color: #444444;
+  color: $text-color;
 }
 
 .reviews__control-wrapper {
   margin-bottom: 31px;
-  /*margin-left: 14.2%;/*37px;*/
 
   display: flex;
   justify-content: space-between;
-  width: 100%; /*71.5%; /*186px;*/
+  width: 100%;
 }
 
 .reviews__control-btn {
@@ -76,7 +75,7 @@
   padding-bottom: 13px;
   padding-left: 38px;
   padding-right: 42px;
-  /*border: none;*/
+
   border: 1px solid $background-color;
   background-color: #ffffff;
 
@@ -91,7 +90,7 @@
 }
 
 .reviews__btn {
-  /*width: 100%;*/
+  width: 100%;
   font-size: 18px;
 }
 
@@ -131,7 +130,7 @@
 
     padding-top: 78px;
     margin-bottom: 50px;
-    margin-right: auto; /*-5px;*/
+    margin-right: auto;
   }
 
   .reviews__item {
@@ -166,7 +165,7 @@
     margin-top: -18px;
     margin-right: 4px;
 
-    width: 170px; /*71.5%; /*186px;*/
+    width: 170px;
   }
 
   .reviews__control-btn {

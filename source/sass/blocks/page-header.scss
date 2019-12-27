@@ -27,6 +27,5 @@
 
   .page-header__wrapper {
     @include container;
-    min-width: 668px; /* почему то сдивагается на 15px до 653px */
   }
 }

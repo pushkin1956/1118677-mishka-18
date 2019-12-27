@@ -32,7 +32,7 @@
   padding-left: 57px;
   margin: 0;
 
-  width: 71%; /*183px от 258 */
+  width: 71%;
 
   line-height: 24px;
 
@@ -117,11 +117,7 @@
   }
 
   .video__title-wrapper {
-    padding-top: 37px;
-    padding-left: 41px;
-    padding-right: 41px;
-    padding-bottom: 20px;
-
+    padding: 37px 41px 20px;
     border: solid 1px $border-extra-color;
     border-bottom: none;
   }
@@ -129,7 +125,7 @@
   .video__title {
     padding-left: 66px;
 
-    width: 71%; /*183px от 258 */
+    width: 71%;
 
     font-size: 20px;
 

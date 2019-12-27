@@ -16,7 +16,7 @@
 
   font-size: 15px;
   line-height: 30px;
-  color: #444444;
+  color: $text-color;
 }
 
 .contacts__mail {
@@ -94,7 +94,7 @@
 }
 
 .contacts__btn {
-  /*width: 100%;*/
+  width: 100%;
   font-size: 18px;
 }
 

@@ -58,7 +58,7 @@
 }
 
 .nav__item {
-  box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
+  box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 $border-extra-color;
 }
 
 .nav__svg {
@@ -75,7 +75,6 @@
 
 .nav__link {
   display: flex;
-  /*align-items: center;*/
   margin: 0 auto;
   padding-top: 29px;
   padding-bottom: 26px;
@@ -98,7 +97,7 @@
 
     &:hover .nav__svg,
     &:focus .nav__svg {
-      fill: #63d1bb;
+      fill: $contrast-color;
       opacity: 1;
     }
 
@@ -137,7 +136,6 @@
     flex-grow: 1;
     margin-bottom: 17px;
     margin-right: 190px;
-    padding-top: 22px; /* 22px такой же в мобайл - после всего можно удалить */
 
     min-height: 88px;
   }
@@ -171,8 +169,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      min-height: 88px;  /* удалить? */
-      /*width: 350px;*/
+      min-height: 88px;
     }
   }
 
@@ -209,14 +206,13 @@
     &--catalog {
       margin-right: 36px;
     }
-    /*чтоб не наезжало на верхнюю строку */
+
     &--knitting {
       margin-right: 110px;
     }
   }
 
   .nav__svg--search {
-    /*width: 82px;*/
     margin-right: 0;
   }
 
@@ -233,7 +229,7 @@
 
     font-size: 15px;
     line-height: 1.6;
-    color: #444444;
+    color: $text-color;
   }
 }
 
@@ -261,8 +257,6 @@
       font-size: 17px;
 
       background-color: #ffffff;
-
-      /*width: 375px;*/
     }
 
     &--second {

@@ -37,7 +37,7 @@
   padding-top: 27px;
   padding-left: 28px;
   padding-right: 28px;
-  border: solid 1px #ececec;
+  border: solid 1px $border-extra-color;
 }
 
 .catalog-list__link {
@@ -64,7 +64,7 @@
   font-size: 13px;
   line-height: 2.31;
 
-  color: #444444;
+  color: $text-color;
 }
 
 .catalog-list__buy {
@@ -78,7 +78,7 @@
   font-weight: 700;
   line-height: 1.6;
 
-  border-top: 1px solid #ececec;
+  border-top: 1px solid $border-extra-color;
 }
 
 .catalog-list__price {
@@ -152,7 +152,7 @@
 
     padding-top: 25px;
     padding-left: 25px;
-    border: solid 1px #ececec;
+    border: solid 1px $border-extra-color;
   }
 
   .catalog-list__link-text {
@@ -226,7 +226,7 @@
 
     min-height: 197px;
 
-    border: solid 1px #ececec;
+    border: solid 1px $border-extra-color;
   }
 
   .catalog-list__buy {

@@ -39,7 +39,7 @@
   line-height: 1;
 
   text-transform: uppercase;
-  color: #63d1bb;
+  color: $contrast-color;
 }
 
 .superior__img {
@@ -53,7 +53,7 @@
 
   font-size: 15px;
   line-height: 1.6;
-  color: #444444;
+  color: $text-color;
 }
 
 .superior__list {
@@ -68,7 +68,7 @@
 
   font-size: 15px;
   line-height: 1.33;
-  color: #444444;
+  color: $text-color;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -84,12 +84,12 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 1.41;
-  color: #444444;
+  color: $text-color;
   text-align: center;
 }
 
 .superior__btn {
-  /*width: 100%;*/
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
@@ -133,12 +133,12 @@
   .superior__list,
   .superior__price,
   .superior__btn {
-    width: calc(100% - 44px - 333px); /*292px от 768*/
+    width: calc(100% - 44px - 333px);
   }
 
   .superior__img {
     position: absolute;
-    bottom: 66px;  /* равен паддингу обертки для линии */
+    bottom: 66px;
     left: calc(100% - 333px - 50px);
     margin: 0;
     width: 333px;
