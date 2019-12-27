@@ -98,7 +98,7 @@
 
 @media (min-width: $tablet-width) {
   .video {
-    margin-bottom: 108px;
+    margin-bottom: 110px;
   }
 
   .video__wrapper {
@@ -160,6 +160,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .video {
+    margin-bottom: 110px;
+  }
+
   .video__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
