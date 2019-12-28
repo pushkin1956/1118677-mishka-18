@@ -11,16 +11,6 @@
 
 .social__svg {
   fill: #231f20;
-
-  /*&:hover,
-  &:focus {
-    fill: $link-color--hover;
-    opacity: 1;
-  }*/
-  &:active {
-    opacity: 0.3;
-    fill: #231f20;
-  }
 }
 
 .social__link {
@@ -39,9 +29,9 @@
     fill: $link-color--hover;
   }
 
-  /*&:active .social__svg {
+  &:active .social__svg {
     opacity: 0.3;
-  }*/
+  }
 }
 
 @media (min-width: $tablet-width) {

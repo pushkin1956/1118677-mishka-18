@@ -1,5 +1,5 @@
 .video {
-  margin-bottom: 60px;
+  margin-bottom: 58px;
 }
 
 .video__wrapper {
@@ -88,7 +88,7 @@
 }
 
 .video__description {
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 24px;
 
   font-size: 13px;
@@ -97,10 +97,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .video {
-    margin-bottom: 110px;
-  }
-
   .video__wrapper {
     display: flex;
     flex-direction: column;
@@ -117,15 +113,20 @@
   }
 
   .video__title-wrapper {
-    padding: 37px 41px 20px;
+    padding-left: 41px;
+    padding-right: 41px;
+
     border: solid 1px $border-extra-color;
     border-bottom: none;
   }
 
   .video__title {
-    padding-left: 66px;
+    padding-top: 41px;
 
-    width: 71%;
+    padding-left: 66px;
+    margin-bottom: 20px;
+
+    width: 71%; /*183px от 258 */
 
     font-size: 20px;
 
@@ -136,34 +137,22 @@
     order: -1;
   }
 
-  .video__play-btn {
-    left: 49%;
-  }
-
   .video__description-wrapper {
-    padding-top: 0;
     padding-left: 41px;
     padding-right: 41px;
     padding-bottom: 46px;
-
-    min-height: 191px;
-
     border: solid 1px $border-extra-color;
     border-top: none;
   }
 
   .video__description {
     font-size: 15px;
-    line-height: 29px;
+    line-height: 24px;
     color: $text-color;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .video {
-    margin-bottom: 110px;
-  }
-
   .video__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
@@ -173,27 +162,25 @@
   }
 
   .video__title-wrapper {
-    margin-left: 682px;
-    padding-top: 41px;
-    padding-bottom: 34px;
-    padding-left: 75px;
-    padding-right: 57px;
     width: 368px;
+    padding-top: 60px;
+    padding-bottom: 42px;
   }
 
   .video__title {
-    padding-top: 53px;
+    padding-top: 47px;
     padding-left: 0;
     margin-bottom: 0;
 
     width: 148px;
 
-    background-position: 4px 0;
+    background-position: 0 0;
   }
 
   .video__picture {
     position: absolute;
     content: "";
+
     top: 0;
     left: 0;
 
@@ -201,16 +188,14 @@
     height: 455px;
   }
 
+  .video__title-wrapper,
   .video__description-wrapper {
     margin-left: 682px;
-    padding-left: 78px;
+    padding-left: 80px;
     padding-right: 57px;
-    padding-bottom: 61px;
-
-    width: 368px;
   }
 
   .video__description {
-    margin-bottom: 48px;
+    margin-bottom: 0;
   }
 }
