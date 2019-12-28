@@ -1,3 +1,5 @@
+//  открытия меню
+
 var navToggle = document.querySelector('.nav__toggle');
 
 navToggle.classList.remove('nav__toggle--nojs');
@@ -11,7 +13,7 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-
+// окно покупки для нескольких
 var addLink = document.querySelector(".superior__btn");
 var addPopup = document.querySelector(".modal--add-cart");
 var addOverlay = document.querySelector(".overlay");
@@ -54,7 +56,7 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-
+// яндекс карта со своей меткой
 ymaps.ready(function () {
 var myMap = new ymaps.Map('map', {
     center: [59.938907, 30.323083],

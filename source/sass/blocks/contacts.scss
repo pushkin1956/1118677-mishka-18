@@ -71,7 +71,6 @@
 
     width: 67px;
     height: 100px;
-    
     background-image: url("../img/icon-map-pin.svg");
     background-repeat: no-repeat;
     transform: translate(-50%, -50%);
@@ -79,7 +78,7 @@
 
   .contacts__map-API {
     position: absolute;
-    content: '';
+    content: "";
     width: 100%;
     height: 457px;
     z-index: 10;

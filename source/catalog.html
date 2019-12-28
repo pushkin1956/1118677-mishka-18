@@ -202,76 +202,25 @@
     </footer>
 
     <section class="modal modal--add-cart">
-        <h2 class="modal__title">Добавить в корзину</h2>
-        <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="modal__description">Выберите размер:</p>
-          <div class="modal__wrapper">
-            <input class="modal__input visually-hidden" id="s-size" type="radio" name="size" checked>
-            <label class="modal__label" for="s-size">S</label>
-            <input class="modal__input visually-hidden" id="m-size" type="radio" name="size">
-            <label class="modal__label" for="m-size">M</label>
-            <input class="modal__input visually-hidden" id="l-size" type="radio" name="size">
-            <label class="modal__label" for="l-size">L</label>
-          </div>
-          <button class="modal__btn button button--not-change" type="submit">Добавить</button>
-        </form>
-      </section>
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="modal__description">Выберите размер:</p>
+        <div class="modal__wrapper">
+          <input class="modal__input visually-hidden" id="s-size" type="radio" name="size" checked>
+          <label class="modal__label" for="s-size">S</label>
+          <input class="modal__input visually-hidden" id="m-size" type="radio" name="size">
+          <label class="modal__label" for="m-size">M</label>
+          <input class="modal__input visually-hidden" id="l-size" type="radio" name="size">
+          <label class="modal__label" for="l-size">L</label>
+        </div>
+        <button class="modal__btn button button--not-change" type="submit">Добавить</button>
+      </form>
+    </section>
 
-      <div class="overlay"></div>
+    <div class="overlay"></div>
 
-    <script>
-      var navToggle = document.querySelector('.nav__toggle');
-
-      navToggle.classList.remove('nav__toggle--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navToggle.classList.contains('nav__toggle--closed')) {
-          navToggle.classList.remove('nav__toggle--closed');
-          navToggle.classList.add('nav__toggle--opened');
-        } else {
-          navToggle.classList.add('nav__toggle--closed');
-          navToggle.classList.remove('nav__toggle--opened');
-        }
-      });
-
-
-      var addcartsLink = document.querySelectorAll(".catalog-list__cart");
-      var addPopup = document.querySelector(".modal--add-cart");
-      var addOverlay = document.querySelector(".overlay");
-
-      var addClose = document.querySelector(".modal__btn");
-
-      for (var i=0; i < addcartsLink.length; i++) {
-        addcartsLink[i].addEventListener("click", function (evt) {
-          evt.preventDefault();
-          addPopup.classList.add("modal--show");
-          addOverlay.classList.add("overlay--show");
-        });
-      };
-
-      addClose.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        addPopup.classList.remove("modal--show");
-        addOverlay.classList.remove("overlay--show");
-      });
-
-      addOverlay.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        addPopup.classList.remove("modal--show");
-        addOverlay.classList.remove("overlay--show");
-      });
-
-      window.addEventListener("keydown", function (evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          if (addPopup.classList.contains("modal--show")) {
-            addPopup.classList.remove("modal--show");
-            addOverlay.classList.remove("overlay--show");
-          }
-        }
-      });
-
-    </script>
+    <script src='js/picturefill.min.js' async></script>
+    <script src='js/script.js'></script>
 
   </body>
 </html>
