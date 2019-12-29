@@ -36,7 +36,7 @@
 
   font-size: 17px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 17px;
 
   text-transform: uppercase;
   color: $contrast-color;
@@ -52,7 +52,7 @@
   margin-bottom: 18px;
 
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 24px;
   color: $text-color;
 }
 
@@ -67,7 +67,7 @@
   width: 100%;
 
   font-size: 15px;
-  line-height: 1.33;
+  line-height: 20px;
   color: $text-color;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -83,7 +83,7 @@
 
   font-size: 17px;
   font-weight: 700;
-  line-height: 1.41;
+  line-height: 24px;
   color: $text-color;
   text-align: center;
 }
@@ -148,7 +148,7 @@
     margin-bottom: 39px;
 
     font-size: 17px;
-    line-height: 1.76;
+    line-height: 30px;
   }
 
   .superior__list {
@@ -159,7 +159,7 @@
     margin-bottom: 30px;
 
     font-size: 20px;
-    line-height: 1.41;
+    line-height: 28px;
   }
 }
 
@@ -229,6 +229,6 @@
   .superior__price {
     margin-bottom: 32px;
 
-    line-height: 1.2;
+    line-height: 24px;
   }
 }
