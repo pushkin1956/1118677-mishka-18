@@ -104,13 +104,13 @@ h3 {
   padding-top: 14px;
   padding-bottom: 14px;
   min-height: 52px;
-  border: 2px solid $button-field-border-color;
+  border: 2px solid $button-border-color;
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
-  color: #444444;
+  color: $text-color;
   text-transform: uppercase;
-  background-color: $button-bg-color;
+  background-color: #ffffff;
   cursor: pointer;
 
   &:hover,

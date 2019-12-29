@@ -54,7 +54,7 @@
     &:not(&--current) {
       &:hover .page-footer__svg-logo,
       &:focus .page-footer__svg-logo {
-        fill: #46c1ae;
+        fill: $link-color--hover;
       }
 
       &:active .page-footer__svg-logo {

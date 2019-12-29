@@ -606,7 +606,7 @@ h3 {
     opacity: 0.3; }
 
 .nav-list--third,
-.main-nav__delivery {
+.nav__delivery {
   display: none; }
 
 @media (max-width: 767px) {
@@ -714,7 +714,7 @@ h3 {
     margin-right: 0; }
   .nav-list__svg--cart {
     margin-right: 28px; }
-  .main-nav__delivery {
+  .nav__delivery {
     display: block;
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
@@ -785,7 +785,7 @@ h3 {
     padding-left: 35px; }
   .nav-list__link--new {
     margin-right: 60px; }
-  .main-nav__delivery {
+  .nav__delivery {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
             order: 5;

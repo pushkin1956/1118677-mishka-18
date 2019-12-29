@@ -37,7 +37,7 @@
   padding-top: 27px;
   padding-left: 28px;
   padding-right: 28px;
-  border: solid 1px #ececec;
+  border: solid 1px $border-extra-color;
 }
 
 .catalog-list__link {
@@ -64,7 +64,7 @@
   font-size: 13px;
   line-height: 2.31;
 
-  color: #444444;
+  color: $text-color;
 }
 
 .catalog-list__buy {
@@ -78,7 +78,7 @@
   font-weight: 700;
   line-height: 1.6;
 
-  border-top: 1px solid #ececec;
+  border-top: 1px solid $border-extra-color;
 }
 
 .catalog-list__price {
@@ -107,17 +107,15 @@
 
 @media (min-width: $tablet-width) {
   .catalog {
-    margin-bottom: 58px;
+    margin-bottom: 50px;
   }
 
   .catalog__wrapper-title {
-    position: relative;
     margin-bottom: 79px;
-    padding-top: 7px;
-    padding-bottom: 70px;
+    position: relative;
 
     &::after {
-      @include bg-zigzag-fill;
+      @include banner;
     }
   }
 
@@ -142,6 +140,9 @@
   .catalog-list__link {
     margin-bottom: 5px;
     width: 232px;
+
+    font-size: 20px;
+    line-height: 24px;
   }
 
   .catalog-list__description {
@@ -149,9 +150,9 @@
     flex-direction: column;
     justify-content: flex-start;
 
-    padding-top: 29px;
+    padding-top: 25px;
     padding-left: 25px;
-    border: solid 1px #ececec;
+    border: solid 1px $border-extra-color;
   }
 
   .catalog-list__link-text {
@@ -168,16 +169,14 @@
 
   .catalog-list__buy {
     margin-top: auto;
-    /*padding-top: 1px;*/
     margin-right: 3px;
     margin-bottom: 5px;
     margin-left: 6px;
+    padding-top: 23px;
+    padding-bottom: 19px;
 
     font-size: 17px;
-    font-weight: 700;
-    line-height: 1.6;
-
-    border-top: 1px solid #ececec;
+    line-height: 24px;
   }
 }
 
@@ -187,12 +186,10 @@
   }
 
   .catalog__wrapper-title {
-    margin-bottom: 122px;
-    padding-top: 15px;
-    padding-bottom: 90px;
+    margin-bottom: 130px;
 
     &::after {
-      @include bg-zigzag-fill(34px);
+      @include banner (34px);
     }
   }
 
@@ -226,17 +223,13 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 27px;
-    /*padding-left: 28px;*/
 
-    border: solid 1px #ececec;
-  }
+    min-height: 197px;
 
-  .catalog-list__text {
-    margin-bottom: 19px;
+    border: solid 1px $border-extra-color;
   }
 
   .catalog-list__buy {
-    /* padding-top: 2px; */
     margin-right: 0;
     margin-left: 1px;
   }

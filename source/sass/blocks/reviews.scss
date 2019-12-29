@@ -1,10 +1,10 @@
 .reviews {
-  margin-bottom: 42px;
+  margin-bottom: 36px;
 }
 
 .reviews__wrapper {
   position: relative;
-  padding-bottom: 45px;
+  padding-bottom: 51px;
 
   &::after {
     position: absolute;
@@ -18,6 +18,7 @@
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
     background-size: auto 6px;
+    background-position-x: 9px;
   }
 }
 
@@ -38,7 +39,7 @@
   font-size: 15px;
   line-height: 2;
 
-  color: #444444;
+  color: $text-color;
 }
 
 .reviews__author-mail {
@@ -57,16 +58,15 @@
   font-size: 15px;
   font-weight: normal;
 
-  color: #444444;
+  color: $text-color;
 }
 
 .reviews__control-wrapper {
   margin-bottom: 31px;
-  /*margin-left: 14.2%;/*37px;*/
 
   display: flex;
   justify-content: space-between;
-  width: 100%; /*71.5%; /*186px;*/
+  width: 100%;
 }
 
 .reviews__control-btn {
@@ -75,7 +75,7 @@
   padding-bottom: 13px;
   padding-left: 38px;
   padding-right: 42px;
-  /*border: none;*/
+
   border: 1px solid $background-color;
   background-color: #ffffff;
 
@@ -90,14 +90,13 @@
 }
 
 .reviews__btn {
-  /*width: 100%;*/
+  width: 100%;
   font-size: 18px;
 }
 
 @media (min-width: $tablet-width) {
   .reviews {
-    /*padding-bottom: 84px;*/
-    margin-bottom: 70px;
+    margin-bottom: 48px;
   }
 
   .reviews__wrapper {
@@ -105,7 +104,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    padding-bottom: 84px;
+    padding-bottom: 101px;
 
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
@@ -113,8 +112,9 @@
     background-position: 0 0;
 
     &::after {
-      height: 17px;
-      background-size: auto 17px; /* 15*/
+      height: 16px;
+      background-size: auto 16px;
+      background-position-x: 11px;
     }
   }
 
@@ -130,7 +130,7 @@
 
     padding-top: 78px;
     margin-bottom: 50px;
-    margin-right: auto; /*-5px;*/
+    margin-right: auto;
   }
 
   .reviews__item {
@@ -150,6 +150,8 @@
     display: block;
 
     width: 300px;
+
+    font-size: 18px;
   }
 
   .reviews__author-mail span {
@@ -160,10 +162,10 @@
     order: 5;
     margin: 0;
 
-    margin-right: 19px;
-    padding-top: 17px;
+    margin-top: -18px;
+    margin-right: 4px;
 
-    width: 137px; /*71.5%; /*186px;*/
+    width: 170px;
   }
 
   .reviews__control-btn {
@@ -178,6 +180,8 @@
 
     width: 175px;
     height: 52px;
+
+    font-size: 17px;
   }
 }
 
@@ -187,17 +191,23 @@
   }
 
   .reviews__wrapper {
-    padding-bottom: 90px;
-    padding-left: 175px;
+    padding-bottom: 94px;
+    padding-left: 225px;
     background-position: 50px 0;
 
     &::after {
-      height: 23px;
+      height: 21px;
       width: 1050px;
 
       left: 50px;
-      background-size: auto 23px;
+      background-size: auto 21px;
+      background-position-x: 30px;
     }
+  }
+
+  .reviews__author-mail {
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .reviews__title {
@@ -213,6 +223,7 @@
   }
 
   .reviews__control-wrapper {
+    margin-top: 18px;
     margin-bottom: 100px;
   }
 

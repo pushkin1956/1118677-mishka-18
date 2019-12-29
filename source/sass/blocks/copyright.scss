@@ -16,13 +16,13 @@
 }
 
 .copyright__svg {
-  fill: #63d1bb;
+  fill: $contrast-color;
 }
 
 .copyright__link {
   &:hover .copyright__svg,
   &:focus .copyright__svg {
-    fill: #46c1ae;
+    fill: $link-color--hover;
   }
 
   &:active .copyright__svg {

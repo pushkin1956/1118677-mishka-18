@@ -20,9 +20,9 @@
     background-image: url("../img/bg-zigzag-line.svg");
     height: 6px;
     width: 100%;
-    /*transform: rotate(180deg);*/
     background-repeat: repeat-x;
     background-size: auto 6px;
+    background-position-x: 9px;
   }
 }
 
@@ -39,7 +39,7 @@
   line-height: 1;
 
   text-transform: uppercase;
-  color: #63d1bb;
+  color: $contrast-color;
 }
 
 .superior__img {
@@ -53,7 +53,7 @@
 
   font-size: 15px;
   line-height: 1.6;
-  color: #444444;
+  color: $text-color;
 }
 
 .superior__list {
@@ -68,7 +68,7 @@
 
   font-size: 15px;
   line-height: 1.33;
-  color: #444444;
+  color: $text-color;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -84,12 +84,12 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 1.41;
-  color: #444444;
+  color: $text-color;
   text-align: center;
 }
 
 .superior__btn {
-  /*width: 100%;*/
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
@@ -101,8 +101,9 @@
     padding-bottom: 66px;
 
     &::after {
-      height: 15px;
-      background-size: auto 15px;
+      height: 16px;
+      background-size: auto 16px;
+      background-position-x: 11px;
     }
   }
 
@@ -115,10 +116,14 @@
     width: 100%;
   }
 
+  .superior__title {
+    margin-bottom: 3px;
+  }
+
   .superior__type {
     margin: 0;
-    margin-right: 9px;
-    padding-top: 9px;
+    margin-right: 22px;
+    padding-top: 13px;
     text-align: center;
 
     width: 80px;
@@ -128,12 +133,12 @@
   .superior__list,
   .superior__price,
   .superior__btn {
-    width: calc(100% - 44px - 333px); /*292px от 768*/
+    width: calc(100% - 44px - 333px);
   }
 
   .superior__img {
     position: absolute;
-    bottom: 66px;  /* равен паддингу обертки для линии */
+    bottom: 66px;
     left: calc(100% - 333px - 50px);
     margin: 0;
     width: 333px;
@@ -159,16 +164,21 @@
 }
 
 @media (min-width: $desktop-width) {
+  .superior {
+    margin-bottom: 58px;
+  }
+
   .superior__wrapper {
     justify-content: flex-start;
+    padding-bottom: 93px;
 
     &::after {
       left: 50px;
-      height: 23px;
+      height: 21px;
       width: 1050px;
 
-      background-size: auto 23px;
-      background-position: center;
+      background-size: auto 21px;
+      background-position-x: 25px;
     }
   }
 
@@ -176,7 +186,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    margin-bottom: 50px;
+    margin-bottom: 47px;
   }
 
   .superior__title {
@@ -201,6 +211,7 @@
   }
 
   .superior__img {
+    bottom: 93px;
     left: calc(100% - 525px - 50px);
     width: 525px;
   }

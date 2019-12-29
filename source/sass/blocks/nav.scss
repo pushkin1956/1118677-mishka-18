@@ -1,4 +1,4 @@
-.main-nav {
+.nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,62 +6,34 @@
   position: relative;
 }
 
-.main-nav__link-logo {
+.nav__link-logo {
   padding-top: 22px;
   height: 79px;
 
   &:not(&--current) {
-    &:hover .main-nav__img-logo,
-    &:focus .main-nav__img-logo {
+    &:hover .nav__img-logo,
+    &:focus .nav__img-logo {
       opacity: 0.6;
     }
 
-    &:active .main-nav__img-logo {
+    &:active .nav__img-logo {
       opacity: 0.3;
     }
   }
 }
 
-.main-nav__toggle {
-  position: absolute;
-  right: 20px;
-  display: block;
-  padding: 10px;
-  border: none;
-  font-size: 0;
-  cursor: pointer;
-
-  &--opened {
-    top: 18px;
-    width: 41px;
-    height: 40px;
-    background: url("../img/icon-menu-close.svg") no-repeat 50% 50%;
-  }
-
-  &--closed {
-    top: 21px;
-    width: 40px;
-    height: 34px;
-    background: url("../img/icon-menu-open.svg") no-repeat 50% 50%;
-  }
-
-  &--nojs {
-    display: none;
-  }
-}
-
-.main-nav__list {
+.nav__list {
   width: 100%;
   background-color: #ffffff;
 
   @include ul-reset;
 }
 
-.nav-list__item {
-  box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
+.nav__item {
+  box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 $border-extra-color;
 }
 
-.nav-list__svg {
+.nav__svg {
   margin-right: 28px;
   fill: #231f20;
   opacity: 0.2;
@@ -73,9 +45,8 @@
   }
 }
 
-.nav-list__link {
+.nav__link {
   display: flex;
-  /*align-items: center;*/
   margin: 0 auto;
   padding-top: 29px;
   padding-bottom: 26px;
@@ -96,9 +67,9 @@
       color: rgba(0, 0, 0, 0.6);
     }
 
-    &:hover .nav-list__svg,
-    &:focus .nav-list__svg {
-      fill: #63d1bb;
+    &:hover .nav__svg,
+    &:focus .nav__svg {
+      fill: $contrast-color;
       opacity: 1;
     }
 
@@ -108,19 +79,51 @@
   }
 }
 
-.nav-list--third,
-.main-nav__delivery {
+.nav__list--third,
+.nav__delivery {
   display: none;
 }
 
 @media (max-width: $mobile-width-only) {
-  .main-nav__toggle--closed ~ .main-nav__list .nav-list__item {
+  .nav__toggle--closed ~ .nav__list .nav__item {
     display: none;
+  }
+
+  .nav__toggle--nojs ~ .nav__list .nav__item {
+    display: block;
+  }
+
+  .nav__toggle {
+    position: absolute;
+    right: 20px;
+    display: block;
+    padding: 10px;
+    border: none;
+    font-size: 0;
+    cursor: pointer;
+
+    &--opened {
+      top: 18px;
+      width: 41px;
+      height: 40px;
+      background: url("../img/icon-menu-close.svg") no-repeat 50% 50%;
+    }
+
+    &--closed {
+      top: 21px;
+      width: 40px;
+      height: 34px;
+      background: url("../img/icon-menu-open.svg") no-repeat 50% 50%;
+    }
+
+    &--nojs {
+      display: none;
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
-  .main-nav {
+  .nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -128,25 +131,24 @@
     min-width: 668px;
   }
 
-  .main-nav__img-logo {
+  .nav__img-logo {
     width: 112px;
     height: 46px;
   }
 
-  .main-nav__link-logo {
+  .nav__link-logo {
     flex-grow: 1;
     margin-bottom: 17px;
     margin-right: 190px;
-    padding-top: 22px; /* 22px такой же в мобайл - после всего можно удалить */
 
-    height: 88px;
+    min-height: 88px;
   }
 
-  .main-nav__toggle {
+  .nav__toggle {
     display: none;
   }
 
-  .nav-list {
+  .nav__list {
     width: inherit;
 
     &--first {
@@ -171,12 +173,11 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      height: 88px;  /* удалить? */
-      /*width: 350px;*/
+      min-height: 88px;
     }
   }
 
-  .nav-list__item {
+  .nav__item {
     box-shadow: none;
 
     &--search {
@@ -185,11 +186,11 @@
     }
   }
 
-  .nav-list__span-hidden {
+  .nav__span-hidden {
     @include visually-hidden;
   }
 
-  .nav-list__link {
+  .nav__link {
     padding: 0;
 
     &--search {
@@ -203,28 +204,27 @@
     &--cart {
       margin-left: 31px;
       padding-top: 33px;
-      padding-bottom: 35px;
+      padding-bottom: 30px;
     }
 
     &--catalog {
       margin-right: 36px;
     }
-    /*чтоб не наезжало на верхнюю строку */
+
     &--knitting {
       margin-right: 110px;
     }
   }
 
-  .nav-list__svg--search {
-    /*width: 82px;*/
+  .nav__svg--search {
     margin-right: 0;
   }
 
-  .nav-list__svg--cart {
-    margin-right: 28px;
+  .nav__svg--cart {
+    margin-right: 30px;
   }
 
-  .main-nav__delivery {
+  .nav__delivery {
     display: block;
     order: 4;
 
@@ -233,17 +233,17 @@
 
     font-size: 15px;
     line-height: 1.6;
-    color: #444444;
+    color: $text-color;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav__img-logo {
+  .nav__img-logo {
     width: 149px;
     height: 72px;
   }
 
-  .main-nav__link-logo {
+  .nav__link-logo {
     order: 2;
     flex-grow: 0;
 
@@ -251,18 +251,16 @@
     padding-top: 9px;
   }
 
-  .nav-list {
+  .nav__list {
     &--first {
       order: 1;
       padding-top: 0;
       margin-bottom: 1px;
 
-      height: 88px;
+      min-height: 88px;
       font-size: 17px;
 
       background-color: #ffffff;
-
-      /*width: 375px;*/
     }
 
     &--second {
@@ -278,7 +276,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      padding-top: 21px;
+      padding-top: 17px;
       font-size: 15px;
 
       background-color: #f9f9f9;
@@ -289,24 +287,24 @@
     }
   }
 
-  .nav-list__item--catalog {
+  .nav__item--catalog {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
   }
 
-  .nav-list__link {
+  .nav__link {
     &--catalog {
       margin-right: 35px;
 
-      padding-top: 35px;
-      padding-bottom: 35px;
+      padding-top: 31px;
+      padding-bottom: 30px;
     }
 
     &--knitting {
       margin-right: 0;
       margin-left: 35px;
 
-      padding-top: 35px;
-      padding-bottom: 35px;
+      padding-top: 31px;
+      padding-bottom: 30px;
     }
 
     &--search {
@@ -318,7 +316,7 @@
     }
   }
 
-  .main-nav__delivery {
+  .nav__delivery {
     order: 5;
 
     padding-top: 18px;

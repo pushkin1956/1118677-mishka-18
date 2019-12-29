@@ -42,7 +42,7 @@
   font-size: 15px;
   line-height: 30px;
   text-align: center;
-  color: #444444;
+  color: $text-color;
 }
 
 .modal__wrapper {
@@ -60,7 +60,7 @@
   font-weight: 700;
   line-height: 16px;
   text-align: center;
-  color: #444444;
+  color: $text-color;
 
   border: solid 2px rgba(68, 68, 68, 0.1);
   cursor: pointer;
@@ -71,13 +71,13 @@
   }
 
   &:active {
-    border-color: #62d1ba;
+    border-color: $contrast-extra-color;
   }
 }
 
 .modal__input {
   &:checked + .modal__label {
-    border-color: #62d1ba;
+    border-color: $contrast-extra-color;
   }
 }
 
@@ -85,7 +85,7 @@
   width: 100%;
 
   color: #ffffff;
-  background-color: #63d1bb;
+  background-color: $contrast-color;
   border: none;
 }
 
