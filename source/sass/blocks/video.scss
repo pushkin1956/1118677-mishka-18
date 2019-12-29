@@ -1,5 +1,5 @@
 .video {
-  margin-bottom: 58px;
+  margin-bottom: 62px;
 }
 
 .video__wrapper {
@@ -16,7 +16,7 @@
 }
 
 .video__title-wrapper {
-  padding: 23px 31px 26px;
+  padding: 24px 31px;
 }
 
 .video__title {
@@ -29,7 +29,7 @@
 
   background-image: url("../img/icon-video.svg");
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: 2px 50%;
   background-size: 32px 32px;
 }
 
@@ -70,10 +70,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  padding-top: 27px;
-  padding-left: 34px;
-  padding-right: 34px;
-  padding-bottom: 31px;
+  padding: 28px 33px 31px;
 
   min-height: 205px;
 }
@@ -88,9 +85,14 @@
 }
 
 @media (min-width: $tablet-width) {
+  .video {
+    margin-bottom: 64px;
+  }
+
   .video__wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 
   .video__title-wrapper {
@@ -99,11 +101,8 @@
   }
 
   .video__title {
-    padding-top: 41px;
-
+    padding-top: 13px;
     padding-left: 66px;
-    margin-bottom: 20px;
-
     width: 71%;
 
     font-size: 20px;
@@ -115,20 +114,28 @@
     order: -1;
   }
 
+  .video__play-btn {
+    left: 49%;
+  }
+
   .video__description-wrapper {
-    padding-left: 41px;
-    padding-right: 41px;
-    padding-bottom: 46px;
+    padding: 7px 41px 46px;
+
+    min-height: 203px;
   }
 
   .video__description {
     font-size: 15px;
-    line-height: 24px;
+    line-height: 30px;
     color: $text-color;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .video {
+    margin-bottom: 107px;
+  }
+
   .video__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
@@ -139,16 +146,13 @@
 
   .video__title-wrapper {
     margin-left: 682px;
-    padding-top: 60px;
-    padding-left: 80px;
-    padding-bottom: 42px;
-    padding-right: 57px;
+    padding: 44px 57px 0 77px;
 
     width: 368px;
   }
 
   .video__title {
-    padding-top: 47px;
+    padding-top: 50px;
     padding-left: 0;
     margin-bottom: 0;
 
@@ -170,13 +174,14 @@
 
   .video__description-wrapper {
     margin-left: 682px;
-    padding-left: 80px;
-    padding-right: 57px;
+    padding: 7px 57px 59px 77px;
 
     width: 368px;
+    min-height: 280px;
   }
 
   .video__description {
     margin-bottom: 20px;
+    padding-top: 10px;
   }
 }

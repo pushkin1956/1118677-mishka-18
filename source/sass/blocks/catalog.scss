@@ -3,7 +3,7 @@
 }
 
 .catalog__wrapper-title {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 
   background-color: $background-color;
 }
@@ -34,15 +34,23 @@
 }
 
 .catalog-list__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   padding-top: 27px;
-  padding-left: 28px;
+  padding-left: 27px;
   padding-right: 28px;
+
+  min-height: 179px;
+
   border: solid 1px $border-extra-color;
 }
 
 .catalog-list__link {
   display: block;
-  margin-bottom: 6px;
+
+  margin-bottom: 5px;
 
   font-size: 17px;
   font-weight: 700;
@@ -60,7 +68,7 @@
 
 .catalog-list__text {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   font-size: 13px;
   line-height: 30px;
 
@@ -71,8 +79,8 @@
   display: flex;
   justify-content: space-between;
 
-  padding-top: 21px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 26px;
 
   font-size: 15px;
   font-weight: 700;
@@ -146,13 +154,8 @@
   }
 
   .catalog-list__description {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
     padding-top: 25px;
     padding-left: 25px;
-    border: solid 1px $border-extra-color;
   }
 
   .catalog-list__link-text {
@@ -168,11 +171,7 @@
 
   .catalog-list__buy {
     margin-top: auto;
-    margin-right: 3px;
-    margin-bottom: 5px;
-    margin-left: 6px;
-    padding-top: 23px;
-    padding-bottom: 19px;
+    padding: 21px 4px 26px;
 
     font-size: 17px;
     line-height: 24px;
@@ -218,18 +217,17 @@
 
   .catalog-list__description {
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 27px;
 
     min-height: 197px;
 
     border: solid 1px $border-extra-color;
   }
 
+  .catalog-list__text {
+    margin-bottom: 13px;
+  }
+
   .catalog-list__buy {
-    margin-right: 0;
-    margin-left: 1px;
+    padding: 22px 4px 25px 0;
   }
 }
