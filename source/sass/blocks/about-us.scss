@@ -77,7 +77,6 @@
 
   .about-us__item {
     padding-top: 60px;
-    /*padding-right: 40px;*/
     margin-bottom: 51px;
 
     width: 294px;
@@ -96,17 +95,20 @@
 
     &--ecology {
       order: 1;
-      margin-right: calc(100% - 232px - 334px); /*15.56% /*104px;*/
+
+      margin-right: calc(100% - 232px - 334px);
     }
 
     &--style {
       order: 3;
-      margin-right: calc(100% - 234px - 334px); /*15.27% /* 102px; */
+
+      margin-right: calc(100% - 234px - 334px);
     }
 
     &--likes {
       order: 5;
-      margin-right: calc(100% - 232px - 334px); /*15.27% /* 102px; */
+
+      margin-right: calc(100% - 232px - 334px);
     }
 
     &--by-hand {
@@ -133,29 +135,7 @@
     margin-bottom: 45px;
   }
 
- /* .about-us__wrapper-inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
-  .about-us__list {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-  }*/
-
   .about-us__item {
-    /*padding-top: 60px;
-    /*padding-right: 40px;*/
-    /*margin-bottom: 51px;
-
-    width: 294px;
-
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 22px;*/
-
     &--shorter {
       width: 232px;
     }
@@ -166,16 +146,17 @@
 
     &--ecology {
       order: 1;
-      margin-right:119px; /*15.56% /*104px;*/
+      margin-right: 119px;
     }
 
     &--style {
       order: 3;
-      margin-right:117px; /*15.27% /* 102px; */
+      margin-right: 117px;
     }
+
     &--likes {
       order: 5;
-      margin-right:119px; /*15.27% /* 102px; */
+      margin-right: 119px;
     }
   }
 }
