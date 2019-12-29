@@ -36,7 +36,7 @@
 
   font-size: 17px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 17px;
 
   text-transform: uppercase;
   color: $contrast-color;
@@ -52,7 +52,7 @@
   margin-bottom: 18px;
 
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 24px;
   color: $text-color;
 }
 
@@ -67,7 +67,7 @@
   width: 100%;
 
   font-size: 15px;
-  line-height: 1.33;
+  line-height: 20px;
   color: $text-color;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -83,7 +83,7 @@
 
   font-size: 17px;
   font-weight: 700;
-  line-height: 1.41;
+  line-height: 24px;
   color: $text-color;
   text-align: center;
 }
@@ -112,7 +112,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    margin-bottom: 48px;
+    margin-bottom: 45px;
     width: 100%;
   }
 
@@ -145,10 +145,10 @@
   }
 
   .superior__decription {
-    margin-bottom: 39px;
+    margin-bottom: 36px;
 
     font-size: 17px;
-    line-height: 1.76;
+    line-height: 30px;
   }
 
   .superior__list {
@@ -156,10 +156,10 @@
   }
 
   .superior__price {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 
     font-size: 20px;
-    line-height: 1.41;
+    line-height: 28px;
   }
 }
 
@@ -170,7 +170,7 @@
 
   .superior__wrapper {
     justify-content: flex-start;
-    padding-bottom: 93px;
+    padding-bottom: 95px;
 
     &::after {
       left: 50px;
@@ -223,12 +223,12 @@
   }
 
   .superior__list {
-    margin-bottom: 114px;
+    margin-bottom: 112px;
   }
 
   .superior__price {
-    margin-bottom: 32px;
+    margin-bottom: 35px;
 
-    line-height: 1.2;
+    line-height: 24px;
   }
 }
