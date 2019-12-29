@@ -14,7 +14,7 @@
   padding-top: 55px;
   margin-bottom: 28px;
 
-  width: 260px;
+  width: 250px;
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
@@ -51,11 +51,11 @@
   }
 
   &--shorter {
-    width: 194px;
+    width: 195px;
   }
 
   &--wider {
-    width: 224px;
+    width: 210px;
   }
 }
 
@@ -65,40 +65,60 @@
   }
 
   .about-us__title {
-    margin-bottom: 47px;
+    margin-bottom: 44px;
     margin-left: -5px;
-  }
-
-  .about-us__wrapper-inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .about-us__list {
     display: flex;
-    flex-direction: column;
-    width: 50%;
+    flex-wrap: wrap;
+    width: 100%;
   }
 
   .about-us__item {
-    position: relative;
     padding-top: 60px;
-    padding-right: 40px;
+    /*padding-right: 40px;*/
     margin-bottom: 51px;
 
-    width: 340px;
+    width: 294px;
 
     font-size: 20px;
     font-weight: 700;
     line-height: 22px;
 
     &--shorter {
-      width: 265px;
+      width: 232px;
     }
 
     &--wider {
-      width: 300px;
+      width: 234px;
+    }
+
+    &--ecology {
+      order: 1;
+      margin-right: calc(100% - 232px - 334px); /*15.56% /*104px;*/
+    }
+
+    &--style {
+      order: 3;
+      margin-right: calc(100% - 234px - 334px); /*15.27% /* 102px; */
+    }
+
+    &--likes {
+      order: 5;
+      margin-right: calc(100% - 232px - 334px); /*15.27% /* 102px; */
+    }
+
+    &--by-hand {
+      order: 2;
+    }
+
+    &--support {
+      order: 4;
+    }
+
+    &--gift {
+      order: 6;
     }
   }
 }
@@ -113,7 +133,7 @@
     margin-bottom: 45px;
   }
 
-  .about-us__wrapper-inner {
+ /* .about-us__wrapper-inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -123,5 +143,39 @@
     display: flex;
     flex-direction: column;
     width: 40%;
+  }*/
+
+  .about-us__item {
+    /*padding-top: 60px;
+    /*padding-right: 40px;*/
+    /*margin-bottom: 51px;
+
+    width: 294px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;*/
+
+    &--shorter {
+      width: 232px;
+    }
+
+    &--wider {
+      width: 234px;
+    }
+
+    &--ecology {
+      order: 1;
+      margin-right:119px; /*15.56% /*104px;*/
+    }
+
+    &--style {
+      order: 3;
+      margin-right:117px; /*15.27% /* 102px; */
+    }
+    &--likes {
+      order: 5;
+      margin-right:119px; /*15.27% /* 102px; */
+    }
   }
 }
