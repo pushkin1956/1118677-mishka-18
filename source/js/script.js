@@ -13,48 +13,79 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-// окно покупки для нескольких
-var addLink = document.querySelector(".superior__btn");
+// окно покупки для index.html и catalog.html
 var addPopup = document.querySelector(".modal--add-cart");
 var addOverlay = document.querySelector(".overlay");
 var addClose = document.querySelector(".modal__btn");
-var addcartsLink = document.querySelectorAll(".catalog-list__cart");
 
-addLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  addPopup.classList.add("modal--show");
-  addOverlay.classList.add("overlay--show");
-});
+// окно покупки для index.html
+if (document.querySelector(".superior__btn")) {
+  var addLink = document.querySelector(".superior__btn");
 
-for (var i=0; i < addcartsLink.length; i++) {
-  addcartsLink[i].addEventListener("click", function (evt) {
+  addLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     addPopup.classList.add("modal--show");
     addOverlay.classList.add("overlay--show");
   });
-};
 
-addClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  addPopup.classList.remove("modal--show");
-  addOverlay.classList.remove("overlay--show");
-});
-
-addOverlay.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  addPopup.classList.remove("modal--show");
-  addOverlay.classList.remove("overlay--show");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
+  addClose.addEventListener("click", function (evt) {
     evt.preventDefault();
-    if (addPopup.classList.contains("modal--show")) {
-      addPopup.classList.remove("modal--show");
-      addOverlay.classList.remove("overlay--show");
+    addPopup.classList.remove("modal--show");
+    addOverlay.classList.remove("overlay--show");
+  });
+
+  addOverlay.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    addPopup.classList.remove("modal--show");
+    addOverlay.classList.remove("overlay--show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (addPopup.classList.contains("modal--show")) {
+        addPopup.classList.remove("modal--show");
+        addOverlay.classList.remove("overlay--show");
+      }
     }
-  }
-});
+  });
+}
+
+// окно покупки для catalog.html
+if (document.querySelectorAll(".catalog-list__cart")) {
+  var addcartsLink = document.querySelectorAll(".catalog-list__cart");
+
+  for (var i=0; i < addcartsLink.length; i++) {
+    addcartsLink[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      addPopup.classList.add("modal--show");
+      addOverlay.classList.add("overlay--show");
+    });
+  };
+
+  addClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    addPopup.classList.remove("modal--show");
+    addOverlay.classList.remove("overlay--show");
+  });
+
+  addOverlay.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    addPopup.classList.remove("modal--show");
+    addOverlay.classList.remove("overlay--show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (addPopup.classList.contains("modal--show")) {
+        addPopup.classList.remove("modal--show");
+        addOverlay.classList.remove("overlay--show");
+      }
+    }
+  });
+}
+
 
 // яндекс карта со своей меткой
 ymaps.ready(function () {
